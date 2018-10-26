@@ -17,8 +17,6 @@
   grid-template-rows: 100%;
   grid-template-columns: 40% 20% 40%;
   height: 4em;
-
-  outline: 1px solid orchid;
 }
 
 .filter-bar input {
@@ -65,4 +63,22 @@ div.filter-or {
 /* CardsResults component  */
 .cards-results * {
   outline: 1px solid orange;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 85%;
+  width: 10em;
+}
+
+.cards-results p {
+  font-size: 2em;
+  margin: 0;
+  grid-row: 1;
+  width: 100%;
+
+}
+
+.cards-results img {
+  max-height: 12em;
+  grid-row: 2;
+  
 }
