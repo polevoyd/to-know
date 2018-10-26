@@ -8,10 +8,11 @@ class CardsFilterBar extends React.Component {
                     <input name="filterByKeyword" type="text" placeholder="find by keyword"></input>
                     <div className="filter-or"><p>or use</p></div>
                     <select name="filterBySelect">
-                        <option value="dataStructures">Concepts</option>
-                        <option value="dataStructures">Challanges</option>
-                        <option value="dataStructures">Data Structures</option>
-                        <option value="dataStructures">Algorithms</option>
+                        <option value="filterSelectDefault">filter</option>
+                        <option value="filterSelectConcepts">Concepts</option>
+                        <option value="filterSelectChallenges">Challanges</option>
+                        <option value="filterSelectDataStructures">Data Structures</option>
+                        <option value="filterSelectAlgorithms">Algorithms</option>
                     </select>
                 </form>
             </div>

@@ -5,17 +5,18 @@
 /* -------------------------------------------------- */
  /* app level  */
 .app {
-  padding: 10%;
+  padding: 5% 10% 5% 10%;
 }
 
 /* -------------------------------------------------- */
 /* CardsFilterBar component  */
 /* includes : .input, div, select  */
 
-.filter-bar {
+.filter-bar form{
   display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: 3;
+  grid-template-rows: 100%;
+  grid-template-columns: 40% 20% 40%;
+  height: 4em;
 }
 
 .filter-bar input {
@@ -32,15 +33,30 @@
 .filter-bar p {
   grid-column: 2;
   grid-row: 1;
+  font-size: 2em;
+  width: 100%;
+  align-self: center;
+
+  justify-self: center;
+}
+
+div.filter-or {
+  display: grid;
+  grid-template-rows: 100%;
 }
 
 .filter-bar select {
   grid-column: 3;
   grid-row: 1;
+  appearance: none;
+  border: none;
+  font-size: 2em;
+  background-color: white;
+  /* text-align: center; */
 }
 
 .filter-bar option {
-
+  
 }
 
 /* -------------------------------------  */
