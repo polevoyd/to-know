@@ -62,3 +62,7 @@ div.filter-or {
 }
 
 /* -------------------------------------  */
+/* CardsResults component  */
+.cards-results * {
+  outline: 1px solid orange;
+}
