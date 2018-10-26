@@ -3,7 +3,9 @@ import React from 'react';
 class CardsFilterBar extends React.Component {
     render(){
         return(
-            <h1>Something</h1>
+            <div className='filter-bar'>
+                <input type="text" placeholder="sorting"></input>
+            </div>
         );
     }
 }

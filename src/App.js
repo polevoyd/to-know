@@ -4,7 +4,7 @@ import CardsAll from './components/CardsAll';
 class App extends React.Component {
   render(){
     return(
-      <div>
+      <div className="app">
         <CardsAll />
       </div>
     );
