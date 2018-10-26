@@ -4,7 +4,10 @@ class CardsFilterBar extends React.Component {
     render(){
         return(
             <div className='filter-bar'>
-                <input type="text" placeholder="sorting"></input>
+                <form>
+                    <input type="text" placeholder="find by keyword"></input>
+                    <div><p>or use</p></div>
+                </form>
             </div>
         );
     }

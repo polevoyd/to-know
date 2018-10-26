@@ -1,11 +1,11 @@
 import React from 'react';
-import CardsAll from './components/CardsAll';
+import CardsMain from './components/CardsMain';
 
 class App extends React.Component {
   render(){
     return(
       <div className="app">
-        <CardsAll />
+        <CardsMain />
       </div>
     );
   }
