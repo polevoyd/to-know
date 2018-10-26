@@ -2,20 +2,25 @@
   outline: 1px solid orchid;
 }
 
+/* -------------------------------------------------- */
  /* app level  */
-
 .app {
   padding: 10%;
 }
 
+/* -------------------------------------------------- */
 /* CardsFilterBar component  */
+/* includes : .input, div, select  */
 
 .filter-bar {
   display: grid;
-  width: 18em;
+  grid-template-rows: 1;
+  grid-template-columns: 3;
 }
 
 .filter-bar input {
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
   height: 2em;
   font-size: 2em;
@@ -23,3 +28,19 @@
   border: none;
   border-bottom: 3px solid lightgrey;
 }
+
+.filter-bar p {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.filter-bar select {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.filter-bar option {
+
+}
+
+/* -------------------------------------  */
