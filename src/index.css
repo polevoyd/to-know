@@ -62,8 +62,11 @@
 
 /* font-family: 'Work Sans', sans-serif; */
 
+.cards-all-results *{
+  display: inline;
+}
 
-.cards-results{
+.card-preview{
   border: 1px solid lightgray;
   height: 16em;
   width: 16em;
@@ -74,11 +77,11 @@
   transition: 0.3s;
 }
 
-.cards-results:hover {
+.card-preview:hover {
   box-shadow: 0px 2px 8px 0px rgba(150,150,150,1);
 }
 
-.cards-results h4 {
+.card-preview h4 {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.4em;
   grid-row: 1;
@@ -87,7 +90,7 @@
   align-self: center
 }
 
-.cards-results p {
+.card-preview p {
   font-family: 'Work Sans', sans-serif;
   display: block;
   background-color: rgb(224, 224, 224);

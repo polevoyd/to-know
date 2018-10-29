@@ -16,14 +16,14 @@ class CardsResults extends React.Component {
 
     render(){
         const renderCards = this.state.cards.map(card => (
-            <div key={card.id} className="cards-results">
+            <div key={card.id} className="card-preview">
                 <h4>{`card#${card.id}`}</h4>
                 <p>{`keywords ${card.title}`}</p>
             </div>
         ));
 
         return(
-            <div>
+            <div className="cards-all-results">
                 <h3>Cards Results</h3>
                 {renderCards}
             </div>
