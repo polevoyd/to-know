@@ -1,5 +1,4 @@
 import React from 'react';
-import CardPreview from './CardPreview';
 
 class CardsResults extends React.Component {
     constructor(props){
@@ -16,18 +15,18 @@ class CardsResults extends React.Component {
     }
 
     render(){
-        const postItems = this.state.cards.map(card => {
-            
-        })
+        const renderCards = this.state.cards.map(card => (
+            <div key={card.id} className="cards-results">
+                <h4>{`card#${card.id}`}</h4>
+                <p>{`keywords ${card.title}`}</p>
+            </div>
+        ));
+
         return(
             <div>
                 <h3>Cards Results</h3>
-                <div className="cards-results">
-                    {/* here will be a logic for a loop of cards within selection on keyword */}
-                    <CardPreview />
-                </div>
+                {renderCards}
             </div>
- 
         );
     }
 }
