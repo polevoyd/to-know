@@ -5,7 +5,9 @@ class CardForm extends React.Component{
         return(
             <div className="card-edit-form">
                 <h4>Card#</h4>
-                <p>Title</p>
+                <div>
+                    
+                </div>
             </div>
         );
     }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CardForm from './CardForm';
+
 class CardsResults extends React.Component {
     constructor(props){
         super(props);
@@ -7,6 +9,7 @@ class CardsResults extends React.Component {
             cards: []
         }
     }
+
     componentDidMount(){
         // calling api and get data
         fetch('https://jsonplaceholder.typicode.com/todos/')
@@ -25,7 +28,8 @@ class CardsResults extends React.Component {
         return(
             <div className="cards-all-results">
                 <h3>Cards Results</h3>
-                {renderCards}
+                {/* {renderCards} */}
+                <CardForm />
             </div>
         );
     }
