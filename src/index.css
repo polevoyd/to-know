@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid orchid;
+  /* outline: 1px solid orchid; */
 }
 
 /* -------------------------------------------------- */
@@ -51,7 +51,7 @@ div.filter-or {
   grid-row: 1;
   appearance: none;
   border: none;
-  font-size: 2em;
+  font-size: 1.2em;
   background-color: white;
   /* text-align: center; */
 }

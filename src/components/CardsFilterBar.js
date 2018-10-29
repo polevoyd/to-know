@@ -10,7 +10,7 @@ class CardsFilterBar extends React.Component {
                         <option value="filterSelectDefault">category</option>
                         <option value="filterSelectConcepts">concepts</option>
                         <option value="filterSelectChallenges">challanges</option>
-                        <option value="filterSelectDataStructures">data Structures</option>
+                        <option value="filterSelectDataStructures">data structures</option>
                         <option value="filterSelectAlgorithms">algorithms</option>
                     </select>
                 </form>
