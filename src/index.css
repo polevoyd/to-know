@@ -1,5 +1,6 @@
 * {
   /* outline: 1px solid orchid; */
+  
 }
 
 /* -------------------------------------------------- */
@@ -58,20 +59,38 @@
 
 /* -------------------------------------  */
 /* CardsResults component  */
+
+/* font-family: 'Work Sans', sans-serif; */
+
+
 .cards-results{
-  border: 1px solid black;
-  border-radius: 1em;
+  border: 1px solid lightgray;
   height: 16em;
   width: 16em;
-
+  margin: 1em;
   display: grid;
-  grid-template: 
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr;
+  transition: 0.3s;
+}
+
+.cards-results:hover {
+  box-shadow: 0px 2px 8px 0px rgba(150,150,150,1);
 }
 
 .cards-results h4 {
-  /* font-size: 2em; */
-  /* margin: 0; */
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4em;
   grid-row: 1;
   width: 100%;
+  text-align: center;
+  align-self: center
+}
 
+.cards-results p {
+  font-family: 'Work Sans', sans-serif;
+  display: block;
+  background-color: rgb(224, 224, 224);
+  margin: 0;
+  padding: 6px;
 }
