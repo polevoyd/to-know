@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid orchid; */
+  outline: 1px solid orchid;
 }
 
 /* -------------------------------------------------- */
@@ -17,6 +17,7 @@
   grid-template-rows: 100%;
   grid-template-columns: 40% 20% 40%;
   height: 4em;
+  margin: 4em auto;
 }
 
 .filter-bar input {
@@ -41,11 +42,6 @@
   justify-self: center;
 }
 
-div.filter-or {
-  display: grid;
-  grid-template-rows: 100%;
-}
-
 .filter-bar select {
   grid-column: 3;
   grid-row: 1;
@@ -62,24 +58,19 @@ div.filter-or {
 
 /* -------------------------------------  */
 /* CardsResults component  */
-.cards-results * {
-  outline: 1px solid orange;
+.cards-results{
+  border: 1px solid black;
+  border-radius: 1em;
+  height: 16em;
+  width: 16em;
+
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 15% 85%;
-  width: 10em;
 }
 
-.cards-results p {
-  font-size: 2em;
-  margin: 0;
+.cards-results h4 {
+  /* font-size: 2em; */
+  /* margin: 0; */
   grid-row: 1;
   width: 100%;
 
-}
-
-.cards-results img {
-  max-height: 12em;
-  grid-row: 2;
-  
 }

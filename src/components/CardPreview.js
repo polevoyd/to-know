@@ -4,8 +4,8 @@ class CardPreview extends React.Component {
     render(){
         return(
             <div>
-                <p>Array</p>
-                <img src="https://via.placeholder.com/800"></img>
+                <h4>removeDuplicates</h4>
+                <p>algorithms, duplicates</p>
             </div>
         );
     }
