@@ -6,7 +6,6 @@ class CardsFilterBar extends React.Component {
             <div className='filter-bar'>
                 <form>
                     <input name="filterByKeyword" type="text" placeholder="find by keyword"></input>
-                    <div className="filter-or"><p>or use</p></div>
                     <select name="filterBySelect">
                         <option value="filterSelectDefault">category</option>
                         <option value="filterSelectConcepts">concepts</option>

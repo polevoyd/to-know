@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid orchid; */
+  outline: 1px solid orchid;
 }
 
 /* -------------------------------------------------- */
@@ -24,10 +24,11 @@
   grid-row: 1;
   width: 100%;
   height: 2em;
-  font-size: 2em;
+  font-size: 1.2em;
   padding-left: 0.5em;
   border: none;
   border-bottom: 3px solid lightgrey;
+  align-self: center;
 }
 
 .filter-bar p {
