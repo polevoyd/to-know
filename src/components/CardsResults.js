@@ -1,6 +1,7 @@
 import React from 'react';
-
 import CardForm from './CardForm';
+
+const Gist = require('react-gist');
 
 class CardsResults extends React.Component {
     constructor(props){

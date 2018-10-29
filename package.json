@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-gist": "^1.2.1",
+    "react-scripts": "2.0.5",
+    "super-react-gist": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
