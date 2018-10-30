@@ -19,6 +19,26 @@ class AddCards extends React.Component {
         event.preventDefault();
 
         console.log(this.state.link)
+        const link = 'https://repl.it/@polevoyd';
+
+        /////////////////////////////////////////////////
+
+        
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+
+            const doc = this.responseXML;
+            const arrayOfCards = [];
+            doc.querySelectorAll('.repl-item-title').forEach(element => {
+                arrayOfCards.push(element.innerText);
+            })
+            
+            console.log(arrayOfCards)
+        }
+        xhr.open("GET", link);
+        xhr.responseType = "document";
+        xhr.send();
+
     }
 
     render(){
