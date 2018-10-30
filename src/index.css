@@ -101,9 +101,10 @@
 
 /* --------------------------------------------------------------------- */
 .card-edit-form{
-  position: absolute;
-  display: grid;
+  position: fixed;
+  background-color: lightgrey;
   border: 1px solid lightgray;
-  grid-template-rows: 1fr 5fr;
+  width: 80%;
+  height: 50%;
 }
 
