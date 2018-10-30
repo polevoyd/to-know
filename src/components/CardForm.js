@@ -4,16 +4,19 @@ class CardForm extends React.Component{
  
     customizeLook(){
         
-        console.log(document.getElementsByClassName('side-nav-options'));
+        const newlink = document.createElement('link');
+        newlink.setAttribute('rel', 'stylesheet');
+        newlink.setAttribute('href', 'showSignature(xyz)');
+        console.log(newlink);
                 
-           
+        // <link rel="stylesheet" href="../src/components/customStyle.css"></link>
     }
 
     render(){
 
         // creating a link from name
         const link = `https://repl.it/@polevoyd/${this.props.cardToShow.split(' ').join('')}?lite=true`;
-        const embeddedCodeEl = <iframe onLoad={this.customizeLook} height="500px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+        const embeddedCodeEl = <iframe onLoad={this.customizeLook} height="500px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
         
         </iframe>;
  
