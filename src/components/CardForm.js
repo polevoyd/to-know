@@ -3,12 +3,10 @@ import React from 'react';
 class CardForm extends React.Component{
  
     customizeLook(){
-            console.log('loaded!');
-            setTimeout(() => {
+        
+        console.log(document.getElementsByClassName('side-nav-options'));
                 
-                console.log(document.getElementsByClassName('side-nav-options'));
-                
-            },3000)
+           
     }
 
     render(){
