@@ -19,13 +19,29 @@ class CardsResults extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     
+    // click on each card preview
     handleClick(name) {
-
         // change state to show/hide card
         this.setState({
             showCard: !this.state.showCard,
             showCardName: name
         })
+    }
+
+    // click on a panel buttons
+    handlePanelClicks(event) {
+ 
+        const operation = event.target.className.split(' ')[2];
+        switch (operation) {
+            case 'close':
+                return this.setState({
+                    showCard: false,
+                    showCardName: null
+                });
+            
+            default:
+                break;
+        }
     }
 
     render(){
@@ -38,7 +54,7 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                {this.state.showCard ? <CardForm cardToShow={this.state.showCardName}/> : null}
+                {this.state.showCard ? <CardForm cardToShow={this.state.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null}
                 {renderCards}
             </div>
         );

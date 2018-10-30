@@ -16,10 +16,6 @@ class CardForm extends React.Component{
         // <link rel="stylesheet" href="../src/components/customStyle.css"></link>
     }
 
-    handlePanelClicks(event) {
-        console.log(event.target.className.split(' ')[2])
-    }
-
     render(){
 
         // creating a link from name
@@ -32,9 +28,9 @@ class CardForm extends React.Component{
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
                     <h4>{this.props.cardToShow}</h4>
-                    <div className="card-form button close" onClick={this.handlePanelClicks}></div>
-                    <div className="card-form button edit" onClick={this.handlePanelClicks}></div>
-                    <div className="card-form button delete" onClick={this.handlePanelClicks}></div>
+                    <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
+                    <div className="card-form button edit" onClick={this.props.handlePanelClicks}></div>
+                    <div className="card-form button delete" onClick={this.props.handlePanelClicks}></div>
                 </div>
                 {embeddedCodeEl}
             </div>
