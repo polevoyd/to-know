@@ -1,8 +1,6 @@
 import React from 'react';
 import CardForm from './CardForm';
 
-const Gist = require('react-gist');
-
 class CardsResults extends React.Component {
     constructor(props){
         super(props);
@@ -11,7 +9,7 @@ class CardsResults extends React.Component {
             [
                 {name: 'first Duplicate',                keywords: ['keywords keywords keywords keywords keywords']},
                 {name: 'rotate Matrix',                  keywords: ['keywords keywords keywords keywords keywords']},
-                {name: 'first Not Repeating Character',    keywords: ['keywords keywords keywords keywords keywords']}
+                {name: 'first Not Repeating Character',  keywords: ['keywords keywords keywords keywords keywords']}
             ]
         }
     }
