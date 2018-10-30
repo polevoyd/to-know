@@ -35,11 +35,11 @@ class AddCards extends React.Component {
             })
 
             console.log(arrayOfCards)
+            // need to send it to a redux store here
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
         xhr.send();
-
     }
 
     render(){
