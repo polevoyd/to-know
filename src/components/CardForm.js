@@ -1,15 +1,20 @@
 import React from 'react';
 
 class CardForm extends React.Component{
-    componentDidMount(){
-        
+ 
+    customizeLook(){
+            console.log('loaded!');
+            setTimeout(() => {
+                
+                console.log(document.getElementsByClassName('side-nav-options'));
+            },3000)
     }
 
     render(){
-        console.log(this.props);
+
         // creating a link from name
         const link = `https://repl.it/@polevoyd/${this.props.cardToShow.split(' ').join('')}?lite=true`;
-        const embeddedCodeEl = <iframe height="70%" width="100%" src={link} scrolling="no" frameborder="no" allowtransparency="yes" allowfullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+        const embeddedCodeEl = <iframe onLoad={this.customizeLook} height="500px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
         
         </iframe>;
  
