@@ -10,9 +10,9 @@ class CardsResults extends React.Component {
             showCardName: null,
             cards:
             [
-                {name: 'first Duplicate',                keywords: ['keywords keywords keywords keywords keywords']},
-                {name: 'rotate Matrix',                  keywords: ['keywords keywords keywords keywords keywords']},
-                {name: 'first Not Repeating Character',  keywords: ['keywords keywords keywords keywords keywords']}
+                {name: 'first Duplicate',                keywords: ['challange array string']},
+                {name: 'rotate Matrix',                  keywords: ['challange array']},
+                {name: 'first Not Repeating Character',  keywords: ['challange string']}
             ]
         }
         // bind cause it is modifying state
