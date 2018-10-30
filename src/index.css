@@ -96,6 +96,7 @@
   background-color: rgb(224, 224, 224);
   margin: 0;
   padding: 6px;
+  overflow-wrap: break-word;
 }
 
 

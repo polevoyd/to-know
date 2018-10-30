@@ -9,9 +9,9 @@ class CardsResults extends React.Component {
         this.state = {
             cards:
             [
-                {name: 'firstDuplicate',                keywords: ['keywords','keywords','keywords','keywords']},
-                {name: 'rotateMatrix',                  keywords: ['keywords','keywords','keywords','keywords']},
-                {name: 'firstNotRepeatingCharacter',    keywords: ['keywords','keywords','keywords','keywords']}
+                {name: 'firstDuplicate',                keywords: ['keywords','keywords','keywords']},
+                {name: 'rotateMatrix',                  keywords: ['keywords','keywords','keywords']},
+                {name: 'firstNotRepeatingCharacter',    keywords: ['keywords','keywords','keywords']}
             ]
         }
     }
@@ -27,7 +27,7 @@ class CardsResults extends React.Component {
         const renderCards = this.state.cards.map(card => (
             <div key={card.name} className="card-preview">
                 <h4>{`${card.name}`}</h4>
-                <p>{`${card.keywords}`}</p>
+                <p>{`${card.keywords.map(word => word)} `}</p>
             </div>
         ));
 
