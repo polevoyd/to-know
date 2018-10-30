@@ -1,7 +1,7 @@
 import React from 'react';
 import CardsFilterBar from './CardsFilterBar';
 import CardsResults from './CardsResults';
-
+import AddCards from './AddCards';
 
 class CardsMain extends React.Component {
 
@@ -9,6 +9,7 @@ class CardsMain extends React.Component {
         return(
             <div>
                 <CardsFilterBar />
+                <AddCards />
                 <CardsResults />
             </div>
         );
