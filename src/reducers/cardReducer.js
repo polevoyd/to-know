@@ -2,7 +2,7 @@ const cardReducer = (state = [], action) => {
 
     switch (action.type) {
         case 'ADD_CARD':
-            break;
+            return state.concat([action.data]);
         case 'DELETE_CARD':
             break;
         case 'EDIT_CARD':
