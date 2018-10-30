@@ -119,6 +119,8 @@
 
 .card-edit-form-header{
   width: 100%;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 1px;
 }
 
 .card-edit-form-header h4{
@@ -134,6 +136,6 @@
   float: right;
 }
 
-iframe {
-overflow-x: hidden;
-} 
+.card-edit-form-header .button:hover {
+  background-color: rgb(30, 255, 180);
+}
