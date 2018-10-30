@@ -17,6 +17,7 @@ class CardsResults extends React.Component {
         }
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
+        this.handlePanelClicks = this.handlePanelClicks.bind(this);
     }
     
     // click on each card preview
