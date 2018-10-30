@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Gist from 'super-react-gist';
-
 class CardForm extends React.Component{
     render(){
         return(
             <div className="card-edit-form">
                 <h4>Card#</h4>
-                <Gist url='https://gist.github.com/polevoyd/2611bf68bdf153d8e7473928a06e9802' />
-                
+                {/* <iframe height="400px" width="100%" src="https://repl.it/@polevoyd/NuttyStripedProcedure?lite=true" scrolling="no" frameborder="no" allowtransparency="yes" allowfullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> */}
+                <p> Some interesting description </p>
             </div>
         );
     }
