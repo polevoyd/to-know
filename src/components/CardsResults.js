@@ -26,10 +26,6 @@ class CardsResults extends React.Component {
             showCard: !this.state.showCard,
             showCardName: name
         })
-        // creating a link from name
-        const link = `https://repl.it/@polevoyd/${name.split(' ').join('')}?lite=true`;
-        const embeddedCodeEl = <iframe height="400px" width="100%" src={link} scrolling="no" frameborder="no" allowtransparency="yes" allowfullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
-        
     }
 
     render(){
