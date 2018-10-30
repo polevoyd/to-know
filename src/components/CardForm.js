@@ -7,6 +7,7 @@ class CardForm extends React.Component{
             setTimeout(() => {
                 
                 console.log(document.getElementsByClassName('side-nav-options'));
+                
             },3000)
     }
 

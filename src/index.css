@@ -102,7 +102,7 @@
 /* --------------------------------------------------------------------- */
 /* CardForm Component  */
 
-.card-edit-form {
+.card-edit-form *{
   outline: 1px solid orange;
 }
 
