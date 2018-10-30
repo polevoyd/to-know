@@ -7,6 +7,7 @@ class CardsResults extends React.Component {
         // setting up initial state
         this.state = {
             showCard: false,
+            showCardName: null,
             cards:
             [
                 {name: 'first Duplicate',                keywords: ['keywords keywords keywords keywords keywords']},
@@ -22,12 +23,12 @@ class CardsResults extends React.Component {
 
         // change state : showCard: true
         this.setState({
-            showCard: !this.state.showCard
+            showCard: !this.state.showCard,
+            showCardName: name
         })
         // creating a link from name
         const link = `https://repl.it/@polevoyd/${name.split(' ').join('')}?lite=true`;
         const embeddedCodeEl = <iframe height="400px" width="100%" src={link} scrolling="no" frameborder="no" allowtransparency="yes" allowfullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
-        // console.log(embeddedCodeEl)
         
     }
 
@@ -41,7 +42,7 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                {this.state.showCard ? <CardForm /> : null}
+                {this.state.showCard ? <CardForm cardToShow={this.state.showCardName}/> : null}
                 {renderCards}
             </div>
         );
