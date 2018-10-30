@@ -41,11 +41,8 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                <div>
-                    {this.state.showCard ? <CardForm /> : null}
-                </div>
+                {this.state.showCard ? <CardForm /> : null}
                 {renderCards}
-                {/* <CardForm /> */}
             </div>
         );
     }
