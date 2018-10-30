@@ -4,11 +4,15 @@ class CardForm extends React.Component{
  
     customizeLook(){
         
-        const newlink = document.createElement('link');
-        newlink.setAttribute('rel', 'stylesheet');
-        newlink.setAttribute('href', 'showSignature(xyz)');
-        console.log(newlink);
-                
+        // const newlink = document.createElement('link');
+        // newlink.setAttribute('rel', 'stylesheet');
+        // newlink.setAttribute('href', '../src/components/customStyle.css');
+        // document.appendChild(newlink);
+        // console.log(newlink);
+        
+        
+
+
         // <link rel="stylesheet" href="../src/components/customStyle.css"></link>
     }
 
