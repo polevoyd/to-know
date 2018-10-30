@@ -4,6 +4,7 @@ import CardForm from './CardForm';
 class CardsResults extends React.Component {
     constructor(props){
         super(props);
+        // setting up initial state
         this.state = {
             showCard: false,
             cards:
@@ -13,11 +14,16 @@ class CardsResults extends React.Component {
                 {name: 'first Not Repeating Character',  keywords: ['keywords keywords keywords keywords keywords']}
             ]
         }
+        // bind cause it is modifying state
+        this.handleClick = this.handleClick.bind(this);
     }
-
-
+    
     handleClick(name) {
 
+        // change state : showCard: true
+        this.setState({
+            showCard: !this.state.showCard
+        })
         // creating a link from name
         const link = `https://repl.it/@polevoyd/${name.split(' ').join('')}?lite=true`;
         const embeddedCodeEl = <iframe height="400px" width="100%" src={link} scrolling="no" frameborder="no" allowtransparency="yes" allowfullscreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
