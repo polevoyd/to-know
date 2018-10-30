@@ -9,9 +9,9 @@ class CardsResults extends React.Component {
         this.state = {
             cards:
             [
-                {'firstDuplicate': 'keywords'},
-                {'rotateMatrix': 'keywords'},
-                {'firstNotRepeatingCharacter': 'keywords'}
+                {name: 'firstDuplicate',                keywords: ['keywords','keywords','keywords','keywords']},
+                {name: 'rotateMatrix',                  keywords: ['keywords','keywords','keywords','keywords']},
+                {name: 'firstNotRepeatingCharacter',    keywords: ['keywords','keywords','keywords','keywords']}
             ]
         }
     }
@@ -25,9 +25,9 @@ class CardsResults extends React.Component {
 
     render(){
         const renderCards = this.state.cards.map(card => (
-            <div key={card.id} className="card-preview">
-                <h4>{`${card.id}`}</h4>
-                <p>{`keywords ${card.title}`}</p>
+            <div key={card.name} className="card-preview">
+                <h4>{`${card.name}`}</h4>
+                <p>{`${card.keywords}`}</p>
             </div>
         ));
 
