@@ -2,7 +2,7 @@ import React from 'react';
 import CardsMain from './components/CardsMain';
 
 // import redux
-import {  createState, createStore   } from 'redux';
+import {  createStore   } from 'redux';
 import {  Provider      } from 'react-redux';
 import    cardReducer   from './reducers/cardReducer';
 
