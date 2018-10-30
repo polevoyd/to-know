@@ -63,7 +63,7 @@
 /* font-family: 'Work Sans', sans-serif; */
 
 .cards-all-results *{
-  display: inline;
+  float: left;
 }
 
 .card-preview{

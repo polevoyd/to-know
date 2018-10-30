@@ -28,7 +28,6 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                <h3>Cards Results</h3>
                 {renderCards}
                 {/* <CardForm /> */}
             </div>
