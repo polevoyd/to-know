@@ -9,9 +9,9 @@ class CardsResults extends React.Component {
         this.state = {
             cards:
             [
-                {name: 'firstDuplicate',                keywords: ['keywords','keywords','keywords']},
-                {name: 'rotateMatrix',                  keywords: ['keywords','keywords','keywords']},
-                {name: 'firstNotRepeatingCharacter',    keywords: ['keywords','keywords','keywords']}
+                {name: 'first Duplicate',                keywords: ['keywords keywords keywords keywords keywords']},
+                {name: 'rotate Matrix',                  keywords: ['keywords keywords keywords keywords keywords']},
+                {name: 'first Not Repeating Character',    keywords: ['keywords keywords keywords keywords keywords']}
             ]
         }
     }
