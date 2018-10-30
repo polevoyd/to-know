@@ -1,6 +1,5 @@
 * {
   /* outline: 1px solid orchid; */
-  
 }
 
 /* -------------------------------------------------- */
@@ -53,10 +52,6 @@
   /* text-align: center; */
 }
 
-.filter-bar option {
-  
-}
-
 /* -------------------------------------  */
 /* CardsResults component  */
 
@@ -103,10 +98,6 @@
 
 /* --------------------------------------------------------------------- */
 /* CardForm Component  */
-
-.card-edit-form *{
-  /* outline: 1px solid orange; */
-}
 
 .card-edit-form {
   position: fixed;

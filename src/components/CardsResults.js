@@ -4,6 +4,7 @@ import CardForm from './CardForm';
 class CardsResults extends React.Component {
     constructor(props){
         super(props);
+
         // setting up initial state
         this.state = {
             showCard: false,
@@ -15,6 +16,7 @@ class CardsResults extends React.Component {
                 {name: 'first Not Repeating Character',  keywords: ['challange string']}
             ]
         }
+
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
@@ -22,6 +24,7 @@ class CardsResults extends React.Component {
     
     // click on each card preview
     handleClick(name) {
+        
         // change state to show/hide card
         this.setState({
             showCard: !this.state.showCard,
