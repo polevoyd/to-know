@@ -2,6 +2,8 @@ import React from 'react';
 
 class CardForm extends React.Component{
     render(){
+
+        console.log(this.props)
         return(
             <div className="card-edit-form">
                 <h4>Card#</h4>
