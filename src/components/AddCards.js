@@ -18,8 +18,9 @@ class AddCards extends React.Component {
     handleLinkSubmit(event) {
         event.preventDefault();
 
-        console.log(this.state.link)
-        const link = 'https://repl.it/@polevoyd';
+        // console.log(this.state.link)
+        // set a page for parsing (need to make validation here)
+        const link = this.state.link || 'https://repl.it/@polevoyd';
 
         /////////////////////////////////////////////////
 
@@ -32,7 +33,7 @@ class AddCards extends React.Component {
             doc.querySelectorAll('.repl-item-title').forEach(element => {
                 arrayOfCards.push(element.innerText);
             })
-            
+
             console.log(arrayOfCards)
         }
         xhr.open("GET", link);
@@ -51,7 +52,6 @@ class AddCards extends React.Component {
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
-                <textarea></textarea>
             </div>
         );
     }
