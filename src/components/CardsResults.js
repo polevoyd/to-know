@@ -11,9 +11,9 @@ class CardsResults extends React.Component {
             showCardName: null,
             cards:
             [
-                {name: 'first Duplicate',                keywords: ['challange array string']},
-                {name: 'rotate Matrix',                  keywords: ['challange array']},
-                {name: 'first Not Repeating Character',  keywords: ['challange string']}
+                {name: 'first Duplicate',                keywords: ['']},
+                {name: 'rotate Matrix',                  keywords: ['']},
+                {name: 'first Not Repeating Character',  keywords: ['']}
             ]
         }
 
@@ -24,7 +24,7 @@ class CardsResults extends React.Component {
     
     // click on each card preview
     handleClick(name) {
-        
+
         // change state to show/hide card
         this.setState({
             showCard: !this.state.showCard,
