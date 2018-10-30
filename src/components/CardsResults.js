@@ -21,7 +21,7 @@ class CardsResults extends React.Component {
     
     handleClick(name) {
 
-        // change state : showCard: true
+        // change state to show/hide card
         this.setState({
             showCard: !this.state.showCard,
             showCardName: name

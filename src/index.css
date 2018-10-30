@@ -100,15 +100,42 @@
 }
 
 /* --------------------------------------------------------------------- */
-.card-edit-form{
+/* CardForm Component  */
+
+.card-edit-form {
+  outline: 1px solid orange;
+}
+
+.card-edit-form {
   position: fixed;
-  background-color: lightgrey;
-  border: 1px solid lightgray;
+  background-color: #f4f4f4;
+  border: 1px solid #e4e4e4;
   width: 80%;
-  height: 50%;
+  height: 600px;
+
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 0.8em;
+  box-shadow: 4px 4px 14px #000;
 }
 
-pre.jqconsole{
-  height: 30px;
+.card-edit-form-header{
+  width: 100%;
 }
 
+.card-edit-form-header h4{
+  margin: 1em 1em 1em 1em;
+}
+
+.card-edit-form-header .button {
+  margin: 1em 1em 1em 1em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  background-color: aquamarine;
+  float: right;
+}
+
+iframe {
+overflow-x: hidden;
+} 
