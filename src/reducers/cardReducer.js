@@ -19,7 +19,7 @@ const cardReducer = (state = initialState, action) => {
         case 'DELETE_CARD':
             break;
         case 'SHOW_CARD':
-        console.log('Inside of reducer!')
+        // console.log('Inside of reducer!')
             break;
         case 'UPDATE':
             break;

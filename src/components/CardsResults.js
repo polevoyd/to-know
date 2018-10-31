@@ -51,25 +51,19 @@ class CardsResults extends React.Component {
     }
 
     render(){
-        // const renderCards = this.state.cards.map(card => (
-        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
-        //         <h4>{`${card.name}`}</h4>
-        //         <p>{`${card.keywords.map(word => word)} `}</p>
-        //     </div>
-        // ));
+        console.log(this.props.cards.cards)
 
-        // console.log(this.props)
-        // const renderCards = this.props.cards.map(card => {
-        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
-        //         <h4>{`${card.name}`}</h4>
-        //         <p>{`${card.keywords.map(word => word)} `}</p>
-        //     </div>
-        // })
+        const renderCards = this.props.cards.cards.map(card => (
+            <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
+                <h4>{`${card.name}`}</h4>
+                <p>{`${card.tags.map(word => word)} `}</p>
+            </div>
+        ));
 
         return(
             <div className="cards-all-results">
                 {/* {this.state.showCard ? <CardForm cardToShow={this.state.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null} */}
-                {/* {renderCards} */}
+                {renderCards}
             </div>
         );
     }

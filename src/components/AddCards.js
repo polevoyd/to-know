@@ -47,7 +47,8 @@ class AddCards extends React.Component {
         xhr.responseType = "document";
         xhr.send();
 
-        console.log(arrayOfCards)
+        // TODO: ASYNC DISPATCH
+        
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
