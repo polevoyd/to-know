@@ -13,7 +13,8 @@ class AddCards extends React.Component {
         this.handleLinkSubmit = this.handleLinkSubmit.bind(this);
     }
 
-    // on submit take value from state
+    /***********************************************************/
+    // on submit 
     handleLinkSubmit(event) {
         event.preventDefault();
 
@@ -21,24 +22,25 @@ class AddCards extends React.Component {
         const link = `https://repl.it/@${event.target[0].value}` || 'https://repl.it/@polevoyd';
         const userName = event.target[0].value;
 
+        // prepare request to scrape cards from page
         let xhr = new XMLHttpRequest();
-        xhr.onload = function() {
-
+        xhr.onload = function(){
             const doc = this.responseXML;
+
+            // select all cards and push them into array
             doc.querySelectorAll('.repl-item-title').forEach(element => {
-               
                 const cardObject = { 
                     name: element.innerText,
                     tags: []
                 }
                 arrayOfCards.push(cardObject);
-                
             })
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
         xhr.send();
-         
+        
+        // after request sent, wait 2sec and dispatch array to state
         setTimeout(() => {
             this.props.dispatch({
                 type: 'ADD_CARDS',
@@ -64,11 +66,5 @@ class AddCards extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        cards: state
-    }
-}
-
 // connect gives access to dispatch as a prop
-export default connect(mapStateToProps)(AddCards);
+export default connect()(AddCards);
