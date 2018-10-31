@@ -144,10 +144,6 @@
 /* --------------------------------------------------------------------- */
 /* CardForm Component  */
 
-.card-edit-form * {
-  /* outline: 1px orange solid; */
-}
-
 .card-edit-form {
   position: fixed;
   background-color: #f4f4f4;
