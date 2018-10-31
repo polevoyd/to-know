@@ -40,8 +40,6 @@ class AddCards extends React.Component {
         xhr.send();
         /////////////////////////////////////////////////
 
-     
-
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
