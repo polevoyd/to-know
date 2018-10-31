@@ -6,14 +6,13 @@ class CardsFilterBar extends React.Component {
             <div className='filter-bar'>
                 <form>
                     <input name="filterByKeyword" type="text" placeholder="find by keyword"></input>
-                    <select name="filterBySelect">
-                        <option value="filterSelectDefault">category</option>
-                        <option value="filterSelectConcepts">concepts</option>
-                        <option value="filterSelectChallenges">challanges</option>
-                        <option value="filterSelectDataStructures">data structures</option>
-                        <option value="filterSelectAlgorithms">algorithms</option>
-                    </select>
+                    <div className="categories-filters">
+                        <div className="red"></div>
+                        <div className="yellow"></div>
+                        <div className="green"></div>
+                    </div>
                 </form>
+
             </div>
         );
     }

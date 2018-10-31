@@ -14,42 +14,45 @@
 
 .filter-bar form{
   display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 40% 20% 40%;
+  
   height: 4em;
   margin: 4em auto;
 }
 
 .filter-bar input {
-  grid-column: 1;
-  grid-row: 1;
-  width: 100%;
+
+  width: 50%;
   height: 2em;
   font-size: 1.2em;
   padding-left: 0.5em;
   border: none;
   border-bottom: 3px solid lightgrey;
-  align-self: center;
+  /* align-self: center; */
 }
 
-.filter-bar p {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 2em;
-  width: 100%;
-  align-self: center;
 
-  justify-self: center;
+.categories-filters {
+  /* display: grid; */
+  /* justify-self: right; */
+}
+.categories-filters * {
+  /* margin: 1em 1em 1em 1em; */
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  justify-self: right;
 }
 
-.filter-bar select {
-  grid-column: 3;
-  grid-row: 1;
-  appearance: none;
-  border: none;
-  font-size: 1.2em;
-  background-color: white;
-  /* text-align: center; */
+.categories-filters .red {
+  background-color: rgb(255, 118, 118);
+}
+
+.categories-filters .yellow {
+  background-color: rgb(246, 255, 118);
+}
+
+.categories-filters .green {
+  background-color: rgb(118, 255, 118);
 }
 
 /* -------------------------------------  */
@@ -95,7 +98,7 @@
   border-radius: 0em 0em 0.8em 0.8em;
 }
 
-/* * {outline: 1px solid orange} */
+* {outline: 1px solid orange}
 
 .card-preview .category-buttons {
   display: grid;
@@ -119,6 +122,7 @@
 .card-preview .category-buttons .green {
   background-color: rgb(118, 255, 118);
 }
+
 .card-preview .category-buttons * {
   /* margin: 1em 1em 1em 1em; */
   height: 1.5em;
