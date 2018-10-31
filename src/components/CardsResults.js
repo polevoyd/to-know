@@ -37,18 +37,24 @@ class CardsResults extends React.Component {
         }
     }
 
+    addSpacesToName(name){
+
+        return [...name].map(letter => {
+            return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
+        }).join('')
+    }
     render(){
         
         const renderCards = this.props.cards.cards.map(card => (
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
-                <h4>{`${card.name}`}</h4>
+                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
                 <p>{`${card.tags.map(word => word)} `}</p>
             </div>
         ));
 
         return(
             <div className="cards-all-results">
-                {this.props.cards.showCard ? <CardForm cardToShow={this.props.cards.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null}
+                {this.props.cards.showCard ? <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} handlePanelClicks={this.handlePanelClicks}/> : null}
                 {renderCards}
             </div>
         );
