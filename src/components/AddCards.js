@@ -1,7 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+/***********************************************************/
+// global array to push card elements from website
 let arrayOfCards = [];
+
 
 class AddCards extends React.Component {
 
@@ -16,9 +19,8 @@ class AddCards extends React.Component {
 
         // set a page for parsing (need to make validation here)
         const link = `https://repl.it/@${event.target[0].value}` || 'https://repl.it/@polevoyd';
+        const userName = event.target[0].value;
 
-
-        
         let xhr = new XMLHttpRequest();
         xhr.onload = function() {
 
@@ -30,29 +32,23 @@ class AddCards extends React.Component {
                     tags: []
                 }
                 arrayOfCards.push(cardObject);
+                
             })
-       
-
-            
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
         xhr.send();
-        /////////////////////////////////////////////////
-
-        // dispatching an array
-        this.props.dispatch({
-            type: 'ADD_CARDS',
-            user: event.target[0].value,
-            arrayOfCards
-        })
-        arrayOfCards = [];
-
-        /////////////////////////////////////////////////
+         
+        setTimeout(() => {
+            this.props.dispatch({
+                type: 'ADD_CARDS',
+                user: userName,
+                arrayOfCards
+            })
+            arrayOfCards = [];
+        }, 2000)
     }
     
-   
-
     render(){
         return(
             <div className="add-card">
