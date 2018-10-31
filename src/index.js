@@ -5,8 +5,12 @@ import App from './App';
 
 import {createStore} from 'redux';
 import cardReducer from './reducers/cardReducer';
-import Provider from 'react-redux';
+import {Provider} from 'react-redux';
 
 const store = createStore(cardReducer);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
