@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const arrayOfCards = [];
+let arrayOfCards = [];
 
 class AddCards extends React.Component {
 
@@ -24,7 +24,7 @@ class AddCards extends React.Component {
         // const arrayOfCards = [];
  
         // set a page for parsing (need to make validation here)
-        const link = this.state.link || 'https://repl.it/@polevoyd';
+        const link = 'https://repl.it/@polevoyd'; // this.state.link ||
 
         var xhr = new XMLHttpRequest();
         xhr.onload = function() {
@@ -46,13 +46,18 @@ class AddCards extends React.Component {
         xhr.open("GET", link);
         xhr.responseType = "document";
         xhr.send();
-    }
 
-    render(){
+        console.log(arrayOfCards)
+        // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
             arrayOfCards
         })
+        arrayOfCards = [];
+    }
+
+    render(){
+
 
         return(
             <div className="add-card">

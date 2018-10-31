@@ -1,12 +1,25 @@
-const cardReducer = (state = [], action) => {
+
+const initialState =
+{
+    showCard: false,
+    showCardName: null,
+    cards: []
+}
+
+const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'ADD_CARDS':
-            break
-            // return state.concat([action.data]);
+            return({
+                showCard: false,
+                showCardName: null,
+                cards: action.arrayOfCards
+            });
+            
         case 'DELETE_CARD':
             break;
-        case 'EDIT_CARD':
+        case 'SHOW_CARD':
+        console.log('Inside of reducer!')
             break;
         case 'UPDATE':
             break;
