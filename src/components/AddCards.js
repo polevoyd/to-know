@@ -29,6 +29,8 @@ class AddCards extends React.Component {
                 }
                 arrayOfCards.push(cardObject);
             })
+
+            
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
