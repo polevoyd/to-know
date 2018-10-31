@@ -19,8 +19,19 @@ const cardReducer = (state = initialState, action) => {
         case 'DELETE_CARD':
             break;
         case 'SHOW_CARD':
-        // console.log('Inside of reducer!')
-            break;
+            return({
+                showCard: !state.showCard,
+                showCardName: action.name,
+                cards: state.cards
+            })
+        
+        case 'HIDE_CARD':
+        return({
+            showCard: !state.showCard,
+            showCardName: '',
+            cards: state.cards
+        })
+
         case 'UPDATE':
             break;
         default:

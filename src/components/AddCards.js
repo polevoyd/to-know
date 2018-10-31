@@ -37,18 +37,14 @@ class AddCards extends React.Component {
                     tags: []
                 }
                 arrayOfCards.push(cardObject);
-
-                // showCard: !this.state.showCard,
-                // showCardName: name,
-                // arrayOfCards: []
             })
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
         xhr.send();
 
-        // TODO: ASYNC DISPATCH
-        
+        // TODO: CHAIN DISPATCH ASYNC
+
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
@@ -58,8 +54,6 @@ class AddCards extends React.Component {
     }
 
     render(){
-
-
         return(
             <div className="add-card">
                 <form onSubmit={this.handleLinkSubmit}>

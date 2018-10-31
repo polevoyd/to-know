@@ -6,18 +6,6 @@ class CardsResults extends React.Component {
     constructor(props){
         super(props);
 
-        // setting up initial state
-        // this.state = {
-        //     showCard: false,
-        //     showCardName: null,
-        //     cards:
-        //     [
-        //         {name: 'first Duplicate',                keywords: ['']},
-        //         {name: 'rotate Matrix',                  keywords: ['']},
-        //         {name: 'first Not Repeating Character',  keywords: ['']}
-        //     ]
-        // }
-
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
@@ -27,32 +15,30 @@ class CardsResults extends React.Component {
     handleClick(name) {
 
         // change state to show/hide card
-        // this.setState({
-        //     showCard: !this.state.showCard,
-        //     showCardName: name,
-        //     arrayOfCards: []
-        // })
+        this.props.dispatch({
+            type: 'SHOW_CARD',
+            name
+        })
     }
 
     // click on a panel buttons
     handlePanelClicks(event) {
  
-        // const operation = event.target.className.split(' ')[2];
-        // switch (operation) {
-        //     case 'close':
-        //         return this.setState({
-        //             showCard: false,
-        //             showCardName: null
-        //         });
+        console.log(event.target.className)
+        const operation = event.target.className.split(' ')[2];
+        switch (operation) {
+            case 'close':
+                return this.props.dispatch({
+                    type: 'SHOW_CARD'
+                })
             
-        //     default:
-        //         break;
-        // }
+            default:
+                break;
+        }
     }
 
     render(){
-        console.log(this.props.cards.cards)
-
+        
         const renderCards = this.props.cards.cards.map(card => (
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
                 <h4>{`${card.name}`}</h4>
@@ -62,7 +48,7 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                {/* {this.state.showCard ? <CardForm cardToShow={this.state.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null} */}
+                {this.props.cards.showCard ? <CardForm cardToShow={this.props.cards.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null}
                 {renderCards}
             </div>
         );
