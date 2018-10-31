@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import {  Provider      } from 'react-redux';
+
 import { connect } from 'react-redux';
 
 import CardsFilterBar from './CardsFilterBar';
