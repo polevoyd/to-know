@@ -17,7 +17,7 @@ class AddCards extends React.Component {
         // set a page for parsing (need to make validation here)
         const link = `https://repl.it/@${event.target[0].value}` || 'https://repl.it/@polevoyd';
 
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         xhr.onload = function() {
 
             const doc = this.responseXML;
@@ -29,8 +29,6 @@ class AddCards extends React.Component {
                 }
                 arrayOfCards.push(cardObject);
             })
-
-            
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
