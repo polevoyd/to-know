@@ -19,7 +19,7 @@ class AddCards extends React.Component {
 
         // set a page for parsing (need to make validation here)
         const link = event.target[0].value ? `https://repl.it/@${event.target[0].value}` : 'https://repl.it/@polevoyd';
-        const userName = event.target[0].value;
+        const userName = event.target[0].value || 'polevoyd';
 
         // prepare request to scrape cards from page
         let xhr = new XMLHttpRequest();
