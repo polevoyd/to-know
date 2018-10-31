@@ -13,14 +13,14 @@
 /* includes : .input, div, select  */
 
 .filter-bar form{
-  display: grid;
+  /* display: grid; */
   
   height: 4em;
   margin: 4em auto;
 }
 
 .filter-bar input {
-
+  /* grid-row: 1; */
   width: 50%;
   height: 2em;
   font-size: 1.2em;
@@ -32,15 +32,17 @@
 
 
 .categories-filters {
-  /* display: grid; */
-  /* justify-self: right; */
+ 
+  width: 40%;
+  display: block;
+  float: right;
 }
 .categories-filters * {
-  /* margin: 1em 1em 1em 1em; */
+  margin: 1em 1em 1em 0.5em;
   height: 1.5em;
   width: 1.5em;
   border-radius: 50%;
-  justify-self: right;
+  float: right;
 }
 
 .categories-filters .red {
