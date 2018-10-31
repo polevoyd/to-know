@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 class AddCards extends React.Component {
 
@@ -22,20 +23,32 @@ class AddCards extends React.Component {
         // set a page for parsing (need to make validation here)
         const link = this.state.link || 'https://repl.it/@polevoyd';
 
-        /////////////////////////////////////////////////
-
-        
         var xhr = new XMLHttpRequest();
         xhr.onload = function() {
 
             const doc = this.responseXML;
             const arrayOfCards = [];
             doc.querySelectorAll('.repl-item-title').forEach(element => {
-                arrayOfCards.push(element.innerText);
+               
+                const cardObject = { 
+                    cardName: element.innerText,
+                    cardTags: []
+                }
+                arrayOfCards.push(cardObject);
+
+                // showCard: !this.state.showCard,
+                // showCardName: name,
+                // arrayOfCards: []
             })
 
-            console.log(arrayOfCards)
-            // need to send it to a redux store here
+            console.log(this.props)
+            // dispatch it to a redux store here
+
+            // this.props.dispatch({
+            //     type: 'ADD_CARDS',
+            //     arrayOfCards
+            // })
+          
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
@@ -57,4 +70,5 @@ class AddCards extends React.Component {
     }
 }
 
-export default AddCards;
+// connect gives access to dispatch as a prop
+export default connect()(AddCards);

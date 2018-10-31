@@ -17,6 +17,7 @@ class App extends React.Component {
   render(){
     return(
       <div className="app">
+      {/* wrapping in provider to make available for children  */}
       <Provider store={store}>
         <CardsMain />
       </Provider>

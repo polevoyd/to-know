@@ -28,7 +28,8 @@ class CardsResults extends React.Component {
         // change state to show/hide card
         this.setState({
             showCard: !this.state.showCard,
-            showCardName: name
+            showCardName: name,
+            arrayOfCards: []
         })
     }
 
