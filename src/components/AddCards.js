@@ -17,6 +17,8 @@ class AddCards extends React.Component {
         // set a page for parsing (need to make validation here)
         const link = `https://repl.it/@${event.target[0].value}` || 'https://repl.it/@polevoyd';
 
+
+        
         let xhr = new XMLHttpRequest();
         xhr.onload = function() {
 
@@ -29,15 +31,17 @@ class AddCards extends React.Component {
                 }
                 arrayOfCards.push(cardObject);
             })
+       
+
+            
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
-        // xhr.send();
+        xhr.send();
         /////////////////////////////////////////////////
 
-        
-        xhr.send();
-            
+     
+
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
@@ -46,20 +50,10 @@ class AddCards extends React.Component {
         })
         arrayOfCards = [];
 
-        
-
-        // TODO: CHAIN DISPATCH ASYNC
-
-        // // dispatching an array
-        // this.props.dispatch({
-        //     type: 'ADD_CARDS',
-        //     user: event.target[0].value,
-        //     arrayOfCards
-        // })
-        // arrayOfCards = [];
-
         /////////////////////////////////////////////////
     }
+    
+   
 
     render(){
         return(
