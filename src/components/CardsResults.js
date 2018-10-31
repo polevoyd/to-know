@@ -1,21 +1,22 @@
 import React from 'react';
 import CardForm from './CardForm';
+import {connect} from 'react-redux';
 
 class CardsResults extends React.Component {
     constructor(props){
         super(props);
 
         // setting up initial state
-        this.state = {
-            showCard: false,
-            showCardName: null,
-            cards:
-            [
-                {name: 'first Duplicate',                keywords: ['']},
-                {name: 'rotate Matrix',                  keywords: ['']},
-                {name: 'first Not Repeating Character',  keywords: ['']}
-            ]
-        }
+        // this.state = {
+        //     showCard: false,
+        //     showCardName: null,
+        //     cards:
+        //     [
+        //         {name: 'first Duplicate',                keywords: ['']},
+        //         {name: 'rotate Matrix',                  keywords: ['']},
+        //         {name: 'first Not Repeating Character',  keywords: ['']}
+        //     ]
+        // }
 
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
@@ -26,44 +27,58 @@ class CardsResults extends React.Component {
     handleClick(name) {
 
         // change state to show/hide card
-        this.setState({
-            showCard: !this.state.showCard,
-            showCardName: name,
-            arrayOfCards: []
-        })
+        // this.setState({
+        //     showCard: !this.state.showCard,
+        //     showCardName: name,
+        //     arrayOfCards: []
+        // })
     }
 
     // click on a panel buttons
     handlePanelClicks(event) {
  
-        const operation = event.target.className.split(' ')[2];
-        switch (operation) {
-            case 'close':
-                return this.setState({
-                    showCard: false,
-                    showCardName: null
-                });
+        // const operation = event.target.className.split(' ')[2];
+        // switch (operation) {
+        //     case 'close':
+        //         return this.setState({
+        //             showCard: false,
+        //             showCardName: null
+        //         });
             
-            default:
-                break;
-        }
+        //     default:
+        //         break;
+        // }
     }
 
     render(){
-        const renderCards = this.state.cards.map(card => (
-            <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
-                <h4>{`${card.name}`}</h4>
-                <p>{`${card.keywords.map(word => word)} `}</p>
-            </div>
-        ));
+        // const renderCards = this.state.cards.map(card => (
+        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
+        //         <h4>{`${card.name}`}</h4>
+        //         <p>{`${card.keywords.map(word => word)} `}</p>
+        //     </div>
+        // ));
+
+        // console.log(this.props)
+        // const renderCards = this.props.cards.map(card => {
+        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
+        //         <h4>{`${card.name}`}</h4>
+        //         <p>{`${card.keywords.map(word => word)} `}</p>
+        //     </div>
+        // })
 
         return(
             <div className="cards-all-results">
-                {this.state.showCard ? <CardForm cardToShow={this.state.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null}
-                {renderCards}
+                {/* {this.state.showCard ? <CardForm cardToShow={this.state.showCardName} handlePanelClicks={this.handlePanelClicks}/> : null} */}
+                {/* {renderCards} */}
             </div>
         );
     }
 }
 
-export default CardsResults;
+const mapStateToProps = (state) => {
+    return {
+        cards: state
+    }
+}
+
+export default connect(mapStateToProps)(CardsResults);

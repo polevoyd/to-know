@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+const arrayOfCards = [];
+
 class AddCards extends React.Component {
 
     constructor(props){
@@ -19,7 +21,8 @@ class AddCards extends React.Component {
     handleLinkSubmit(event) {
         event.preventDefault();
 
-        // console.log(this.state.link)
+        // const arrayOfCards = [];
+ 
         // set a page for parsing (need to make validation here)
         const link = this.state.link || 'https://repl.it/@polevoyd';
 
@@ -27,12 +30,11 @@ class AddCards extends React.Component {
         xhr.onload = function() {
 
             const doc = this.responseXML;
-            const arrayOfCards = [];
             doc.querySelectorAll('.repl-item-title').forEach(element => {
                
                 const cardObject = { 
-                    cardName: element.innerText,
-                    cardTags: []
+                    name: element.innerText,
+                    tags: []
                 }
                 arrayOfCards.push(cardObject);
 
@@ -40,15 +42,6 @@ class AddCards extends React.Component {
                 // showCardName: name,
                 // arrayOfCards: []
             })
-
-            console.log(this.props)
-            // dispatch it to a redux store here
-
-            // this.props.dispatch({
-            //     type: 'ADD_CARDS',
-            //     arrayOfCards
-            // })
-          
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
@@ -56,6 +49,11 @@ class AddCards extends React.Component {
     }
 
     render(){
+        this.props.dispatch({
+            type: 'ADD_CARDS',
+            arrayOfCards
+        })
+
         return(
             <div className="add-card">
                 <form onSubmit={this.handleLinkSubmit}>
