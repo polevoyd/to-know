@@ -14,7 +14,14 @@ class AddCards extends React.Component {
 
     // on change send value to state
     handleChange(event) {
-        this.setState({link: event.target.value})
+        
+        const link = event.target.value;
+
+        // dispatching an link
+        this.props.dispatch({
+            type: 'SET_LINK',
+            link
+        });
     }
 
     // on submit take value from state
@@ -24,7 +31,7 @@ class AddCards extends React.Component {
         // const arrayOfCards = [];
  
         // set a page for parsing (need to make validation here)
-        const link = 'https://repl.it/@polevoyd'; // this.state.link ||
+        const link = this.state.link || 'https://repl.it/@polevoyd'; // this.state.link ||
 
         var xhr = new XMLHttpRequest();
         xhr.onload = function() {
