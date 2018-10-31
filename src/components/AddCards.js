@@ -32,10 +32,12 @@ class AddCards extends React.Component {
         }
         xhr.open("GET", link);
         xhr.responseType = "document";
+        // xhr.send();
+        /////////////////////////////////////////////////
+
+        
         xhr.send();
-
-        // TODO: CHAIN DISPATCH ASYNC
-
+            
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
@@ -43,6 +45,20 @@ class AddCards extends React.Component {
             arrayOfCards
         })
         arrayOfCards = [];
+
+        
+
+        // TODO: CHAIN DISPATCH ASYNC
+
+        // // dispatching an array
+        // this.props.dispatch({
+        //     type: 'ADD_CARDS',
+        //     user: event.target[0].value,
+        //     arrayOfCards
+        // })
+        // arrayOfCards = [];
+
+        /////////////////////////////////////////////////
     }
 
     render(){
