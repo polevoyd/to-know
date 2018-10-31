@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 class CardForm extends React.Component{
  
@@ -23,4 +24,10 @@ class CardForm extends React.Component{
     }
 }
 
-export default CardForm;
+const mapStateToProps = (state) => {
+    return {
+        cards: state
+    }
+}
+
+export default connect(mapStateToProps)(CardForm);

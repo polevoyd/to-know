@@ -24,7 +24,6 @@ class CardsResults extends React.Component {
     // click on a panel buttons
     handlePanelClicks(event) {
  
-        console.log(event.target.className)
         const operation = event.target.className.split(' ')[2];
         switch (operation) {
             case 'close':
