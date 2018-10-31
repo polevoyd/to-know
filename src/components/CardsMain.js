@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 import CardsFilterBar from './CardsFilterBar';
 import CardsResults from './CardsResults';
@@ -9,7 +9,6 @@ import AddCards from './AddCards';
 
 class CardsMain extends React.Component {    
     render(){
-
         return(
             <div>
                 <CardsFilterBar />
@@ -20,4 +19,4 @@ class CardsMain extends React.Component {
     }
 }
 
-export default connect()(CardsMain);
+export default CardsMain;
