@@ -5,8 +5,8 @@ import App from './App';
 
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-
 import cardReducer from './reducers/cardReducer';
+
 const store = createStore(cardReducer); 
 
 ReactDOM.render(
