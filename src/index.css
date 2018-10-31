@@ -148,3 +148,8 @@
 .card-edit-form-header .button.delete:hover {
   background-color: rgb(58, 255, 51);
 }
+
+.add-card {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}

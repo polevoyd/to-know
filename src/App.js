@@ -1,7 +1,10 @@
 import React from 'react';
 import CardsMain from './components/CardsMain';
 
-// import redux
+// import
+// createStore - to initialise store
+// provider - to provide store for all children in tree
+// cardReducer - reducer function
 import {  createStore   } from 'redux';
 import {  Provider      } from 'react-redux';
 import    cardReducer   from './reducers/cardReducer';

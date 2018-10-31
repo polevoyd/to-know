@@ -44,7 +44,7 @@ class AddCards extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="add-card">
                 <form onSubmit={this.handleLinkSubmit}>
                     <label>
                         Profile Link:
