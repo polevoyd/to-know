@@ -67,8 +67,7 @@
   width: 16em;
   margin: 1em;
   display: grid;
-  grid-template-rows: 3fr 1fr;
-  grid-template-columns: 1fr;
+ 
   transition: 0.3s;
   border-radius: 0.8em;
 }
@@ -80,7 +79,7 @@
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.4em;
-  grid-row: 1;
+
   width: 100%;
   text-align: center;
   align-self: center
@@ -95,6 +94,24 @@
   overflow-wrap: break-word;
   border-radius: 0em 0em 0.8em 0.8em;
 }
+
+
+.card-preview .close {
+  margin: 1em 1em 1em 1em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  background-color: rgb(255, 118, 118);
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  
+}
+
+.card-preview-button-close:hover {
+  background-color: rgb(255, 79, 79);
+}
+
 
 /* --------------------------------------------------------------------- */
 /* CardForm Component  */
@@ -137,8 +154,11 @@
 }
 
 
-
 .add-card {
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
+}
+
+* {
+  /* outline: 1px solid orange; */
 }
