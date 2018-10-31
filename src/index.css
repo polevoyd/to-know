@@ -13,30 +13,25 @@
 /* includes : .input, div, select  */
 
 .filter-bar form{
-  /* display: grid; */
-  
   height: 4em;
   margin: 4em auto;
 }
 
 .filter-bar input {
-  /* grid-row: 1; */
   width: 50%;
   height: 2em;
   font-size: 1.2em;
   padding-left: 0.5em;
   border: none;
   border-bottom: 3px solid lightgrey;
-  /* align-self: center; */
 }
 
-
 .categories-filters {
- 
   width: 40%;
   display: block;
   float: right;
 }
+
 .categories-filters * {
   margin: 1em 1em 1em 0.5em;
   height: 1.5em;
