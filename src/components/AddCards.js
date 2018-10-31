@@ -71,4 +71,4 @@ class AddCards extends React.Component {
 }
 
 // connect gives access to dispatch as a prop
-export default AddCards;
+export default connect()(AddCards);

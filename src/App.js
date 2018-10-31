@@ -8,7 +8,7 @@ class App extends React.Component {
   render(){
     return(
       <div className="app">
-        <CardsMain />
+        <CardsMain/>
       </div>
     );
   }
