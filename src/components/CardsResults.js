@@ -53,7 +53,7 @@ class CardsResults extends React.Component {
 
         return(
             <div className="cards-all-results">
-                {this.props.cards.showCard ? <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} handlePanelClicks={this.handlePanelClicks}/> : null}
+                {this.props.cards.showCard ? <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 {renderCards}
             </div>
         );

@@ -3,7 +3,7 @@ const initialState =
 {
     showCard: false,
     showCardName: null,
-    link: '',
+    user: '',
     cards: []
 }
 
@@ -11,25 +11,19 @@ const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'ADD_CARDS':
+        
             return({
                 showCard: false,
                 showCardName: null,
-                link: state.link,
+                user: action.user,
                 cards: action.arrayOfCards
             });
-            
-        case 'SET_LINK':
-            return({
-                showCard: false,
-                showCardName: null,
-                link: action.link,
-                cards: action.arrayOfCards
-            });
+
         case 'SHOW_CARD':
             return({
                 showCard: !state.showCard,
                 showCardName: action.name,
-                link: state.link,
+                user: state.user,
                 cards: state.cards
             })
         
@@ -37,7 +31,7 @@ const cardReducer = (state = initialState, action) => {
         return({
             showCard: !state.showCard,
             showCardName: '',
-            link: state.link,
+            user: state.user,
             cards: state.cards
         })
 

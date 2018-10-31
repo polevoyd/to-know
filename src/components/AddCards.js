@@ -15,7 +15,7 @@ class AddCards extends React.Component {
         event.preventDefault();
 
         // set a page for parsing (need to make validation here)
-        const link = event.target[0].value || 'https://repl.it/@polevoyd'; // this.state.link ||
+        const link = `https://repl.it/@${event.target[0].value}` || 'https://repl.it/@polevoyd';
 
         var xhr = new XMLHttpRequest();
         xhr.onload = function() {
@@ -39,6 +39,7 @@ class AddCards extends React.Component {
         // dispatching an array
         this.props.dispatch({
             type: 'ADD_CARDS',
+            user: event.target[0].value,
             arrayOfCards
         })
         arrayOfCards = [];

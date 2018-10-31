@@ -5,8 +5,9 @@ class CardForm extends React.Component{
  
     render(){
 
+        // console.log(this.props.user);
         // creating a link from name
-        const link = `https://repl.it/@polevoyd/${this.props.cardToShow.split(' ').join('')}?lite=true`;
+        const link = `https://repl.it/@${this.props.user}/${this.props.cardToShow.split(' ').join('')}?lite=true`;
         const embeddedCodeEl = <iframe height="700px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
         
         </iframe>;
@@ -24,10 +25,4 @@ class CardForm extends React.Component{
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        cards: state
-    }
-}
-
-export default connect(mapStateToProps)(CardForm);
+export default connect()(CardForm);
