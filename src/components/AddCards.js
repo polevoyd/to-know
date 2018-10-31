@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 // global array to push card elements from website
 let arrayOfCards = [];
 
-
 class AddCards extends React.Component {
 
     constructor(props){
@@ -51,6 +50,8 @@ class AddCards extends React.Component {
         }, 2000)
     }
     
+    /***********************************************************/
+    // rendering
     render(){
         return(
             <div className="add-card">

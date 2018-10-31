@@ -11,6 +11,7 @@ class CardsResults extends React.Component {
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
     }
     
+    /***********************************************************/
     // click on each card preview
     handleClick(name) {
 
@@ -21,6 +22,7 @@ class CardsResults extends React.Component {
         })
     }
 
+    /***********************************************************/
     // click on a panel buttons
     handlePanelClicks(event) {
  
@@ -36,12 +38,15 @@ class CardsResults extends React.Component {
         }
     }
 
+    /***********************************************************/
+    // helper function to add spaces to a card name
     addSpacesToName(name){
-
         return [...name].map(letter => {
             return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
         }).join('')
     }
+    /***********************************************************/
+    // rendering
     render(){
         
         const renderCards = this.props.cards.cards.map(card => (

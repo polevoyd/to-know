@@ -4,13 +4,10 @@ import {connect} from 'react-redux';
 class CardForm extends React.Component{
  
     render(){
-
-        // console.log(this.props.user);
-        // creating a link from name
-        const link = `https://repl.it/@${this.props.user}/${this.props.cardToShow.split(' ').join('')}?lite=true`;
-        const embeddedCodeEl = <iframe height="700px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
         
-        </iframe>;
+        // creating a link from username + taking card name from a state
+        const link = `https://repl.it/@${this.props.user}/${this.props.cardToShow.split(' ').join('')}?lite=true`;
+        const embeddedCodeEl = <iframe height="700px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
  
         return(
             <div className="card-edit-form">
@@ -25,4 +22,5 @@ class CardForm extends React.Component{
     }
 }
 
+// connect because we using this.props.cardToShow
 export default connect()(CardForm);
