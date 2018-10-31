@@ -102,13 +102,13 @@
   width: 1.5em;
   border-radius: 50%;
   background-color: rgb(255, 118, 118);
-  display: inline-block;
-  vertical-align: top;
+  /* display: inline-block; */
+  /* vertical-align: top; */
   float: right;
   
 }
 
-.card-preview-button-close:hover {
+.card-preview .close:hover {
   background-color: rgb(255, 79, 79);
 }
 
