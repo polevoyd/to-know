@@ -62,6 +62,10 @@ body {
   background-color: rgb(118, 255, 118);
 }
 
+button {
+  border: none;
+}
+
 /* -------------------------------------  */
 /* CardsResults component  */
 

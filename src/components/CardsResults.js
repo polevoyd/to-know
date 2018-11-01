@@ -65,15 +65,15 @@ class CardsResults extends React.Component {
 
         const filterAndRenderCards = this.props.cards.cards
         // .filter(card => {
-        //     return this.props.cards.groupToShow.includes(card.group);
+        //     return this.props.cards.groupToShow === card.group;
         // })
         .map(card => (
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
                 <div className="category-buttons">
-                    <div className="group-one"></div>
-                    <div className="group-two"></div>
-                    <div className="group-three"></div>
+                    <button className="group-one"></button>
+                    <button className="group-two"></button>
+                    <button className="group-three"></button>
                 </div>
             </div>
         ));

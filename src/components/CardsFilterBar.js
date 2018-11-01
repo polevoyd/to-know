@@ -7,9 +7,9 @@ class CardsFilterBar extends React.Component {
                 <form>
                     <input name="filterByKeyword" type="text" placeholder="find by keyword"></input>
                     <div className="categories-filters">
-                        <div className="group-one"></div>
-                        <div className="group-two"></div>
-                        <div className="group-three"></div>
+                        <button className="group-one"></button>
+                        <button className="group-two"></button>
+                        <button className="group-three"></button>
                     </div>
                 </form>
 

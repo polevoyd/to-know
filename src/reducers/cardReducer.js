@@ -5,7 +5,7 @@ const initialState =
     showCardName: null,
     user: '',
     cards: [],
-    groupToShow: []
+    groupToShow: 1
 }
 
 const cardReducer = (state = initialState, action) => {
