@@ -50,14 +50,16 @@ class CardsResults extends React.Component {
     // on drag start
     onDragStart(event, cardName){
 
-        console.log(cardName)
+        console.log(cardName);
+        event.dataTransfer.setData('name', cardName);
     }
 
     /***********************************************************/
     // on drag over
     onDragOver(event) {
+        event.preventDefault();
 
-        console.log(event)
+        // console.log(event)
     }
 
     /***********************************************************/
@@ -133,9 +135,9 @@ class CardsResults extends React.Component {
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
-                    <div onDragOver={(event) => this.onDragOver(event)} className="new">{filterNew}</div>
-                    <div onDragOver={(event) => this.onDragOver(event)} className="active">{filterActive}</div>
-                    <div onDragOver={(event) => this.onDragOver(event)} className="done">{filterComplete}</div> 
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new">{filterNew}</div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active">{filterActive}</div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'complete')} className="complete">{filterComplete}</div> 
                 </div>
                               
             </div>
