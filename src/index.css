@@ -72,8 +72,12 @@
 }
 
 .cards-all-results .card-edit-form {
-  position: fixed;
+  position: absolute;
   left: 10%;
+  top: 30%;
+
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-all-results .card-edit-form *{
