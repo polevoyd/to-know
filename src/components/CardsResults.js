@@ -63,6 +63,13 @@ class CardsResults extends React.Component {
     }
 
     /***********************************************************/
+    // on drag over
+    onDrop(event, category) {
+
+        
+    }
+
+    /***********************************************************/
     // rendering
 
     render(){
