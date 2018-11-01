@@ -74,8 +74,10 @@
 .cards-all-results .card-edit-form {
   position: fixed;
   left: 10%;
+}
 
-  
+.cards-all-results .card-edit-form *{
+  float: left;
 }
 
 .card-preview{
