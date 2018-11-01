@@ -49,7 +49,25 @@ class CardsResults extends React.Component {
     // rendering
     render(){
         
-        const renderCards = this.props.cards.cards.map(card => (
+        // const filterAndRenderCards = this.props.cards.cards.map(card => (
+        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
+        //         <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+        //         <div className="category-buttons">
+        //             <div className="group-one"></div>
+        //             <div className="group-two"></div>
+        //             <div className="group-three"></div>
+        //         </div>
+        //     </div>
+        // ));
+
+
+
+
+        const filterAndRenderCards = this.props.cards.cards
+        // .filter(card => {
+        //     return this.props.cards.groupToShow.includes(card.group);
+        // })
+        .map(card => (
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
                 <div className="category-buttons">
@@ -60,12 +78,19 @@ class CardsResults extends React.Component {
             </div>
         ));
 
+
+
+
+
+
+
+
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? <CardForm 
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
-                {renderCards}               
+                {filterAndRenderCards}               
             </div>
         );
     }
