@@ -15,63 +15,6 @@ body {
   padding: 5% 10% 5% 10%;
 }
 
-/* -------------------------------------------------- */
-/* CardsFilterBar component  */
-/* includes : .input, div, select  */
-
-.filter-bar form{
-  height: 4em;
-  margin: 4em auto;
-}
-
-.filter-bar input {
-  width: 10em;
-  height: 2em;
-  font-size: 1.2em;
-  padding-left: 0.5em;
-  border: none;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: black;
-  border-bottom: 3px solid lightgrey;
-  display: inline-block;
-  vertical-align:baseline;
-}
-
-.categories-filters {
-  width: 100%;
-  /* display: grid; */
-}
-
-.categories-filters * {
-  margin: 1em 1em 1em 0.5em;
-  height: 1.5em;
-  width: 1.5em;
-  border-radius: 50%;
-}
-
-.categories-filters button {
-  border: none;
-}
-
-.categories-filters .group-one:disabled {
-  background-color: black;
-  outline: none;
-}
-
-.categories-filters .group-one {
-  background-color: rgb(255, 118, 118);
-}
-
-.categories-filters .group-two {
-  background-color: rgb(246, 255, 118);
-}
-
-.categories-filters .group-three {
-  background-color: rgb(118, 255, 118);
-}
-
 /* -------------------------------------  */
 /* CardsResults component  */
 
