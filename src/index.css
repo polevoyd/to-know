@@ -50,6 +50,14 @@ body {
   float: right;
 }
 
+.categories-filters button {
+  border: none;
+}
+
+.categories-filters button:active {
+  background-color: black;
+}
+
 .categories-filters .group-one {
   background-color: rgb(255, 118, 118);
 }
@@ -60,10 +68,6 @@ body {
 
 .categories-filters .group-three {
   background-color: rgb(118, 255, 118);
-}
-
-button {
-  border: none;
 }
 
 /* -------------------------------------  */
