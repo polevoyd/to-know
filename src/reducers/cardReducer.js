@@ -4,8 +4,7 @@ const initialState =
     showCard: false,
     showCardName: null,
     user: '',
-    cards: [],
-    groupToShow: 'group-one'
+    cards: []
 }
 
 const cardReducer = (state = initialState, action) => {
@@ -17,8 +16,7 @@ const cardReducer = (state = initialState, action) => {
                 showCard: false,
                 showCardName: null,
                 user: action.user,
-                cards: action.arrayOfCards,
-                groupToShow: state.groupToShow
+                cards: action.arrayOfCards
             });
 
         case 'SHOW_CARD':
@@ -26,8 +24,7 @@ const cardReducer = (state = initialState, action) => {
                 showCard: !state.showCard,
                 showCardName: action.name,
                 user: state.user,
-                cards: state.cards,
-                groupToShow: state.groupToShow
+                cards: state.cards
             })
         
         case 'HIDE_CARD':
@@ -35,8 +32,7 @@ const cardReducer = (state = initialState, action) => {
             showCard: !state.showCard,
             showCardName: '',
             user: state.user,
-            cards: state.cards,
-            groupToShow: state.groupToShow
+            cards: state.cards
         })
 
         case 'SET_FILTER':
@@ -44,8 +40,7 @@ const cardReducer = (state = initialState, action) => {
                 showCard: false,
                 showCardName: state.showCardName,
                 user: state.user,
-                cards: state.cards,
-                groupToShow: action.groupName
+                cards: state.cards
             })
            
         default:

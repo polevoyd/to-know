@@ -1,11 +1,11 @@
 import React from 'react';
-import CardsFilterBar from './CardsFilterBar';
+// import CardsFilterBar from './CardsFilterBar';
 import CardsResults from './CardsResults';
 import AddCards from './AddCards';
 
 const CardsMain = () => (
     <div>
-        <CardsFilterBar />
+        {/* <CardsFilterBar /> */}
         <AddCards />
         <CardsResults />
     </div>
