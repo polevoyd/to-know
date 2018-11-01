@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid orchid; */
+  outline: 1px solid orchid;
 }
 
 body {
@@ -74,9 +74,9 @@ body {
 
 /* font-family: 'Work Sans', sans-serif; */
 
-/* .cards-all-results *{
-  float: left;
-} */
+.cards-all-results {
+  width: 100%;
+}
 
 .cards-all-results .card-preview {
   float: left;
@@ -221,4 +221,10 @@ body {
 
 * {
   /* outline: 1px solid orange; */
+}
+
+/* DRAG SECTIONS  */
+.drag-sections {
+  width: 100%;
+  height: 30em;
 }

@@ -62,7 +62,12 @@ class CardsResults extends React.Component {
                 {this.props.cards.showCard ? <CardForm 
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
-                {filterAndRenderCards}               
+                <div className="drag-sections">
+                    <div className="new">{filterAndRenderCards}</div>
+                    <div className="active"></div>
+                    <div className="done"></div> 
+                </div>
+                              
             </div>
         );
     }

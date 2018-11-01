@@ -58,7 +58,7 @@ class AddCards extends React.Component {
                 <form onSubmit={this.handleLinkSubmit}>
                     <label>
                         Profile Link:
-                        <input type="text"/>
+                        <input type="text" defaultValue="polevoyd"/>
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
