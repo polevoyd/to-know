@@ -101,8 +101,8 @@ body {
 
 .card-preview{
   border: 1px solid lightgray;
-  height: 16em;
-  width: 16em;
+  min-height: 10%;
+  min-width: 10%;
   margin: 1em;
   display: grid;
  
@@ -116,7 +116,7 @@ body {
 
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.4em;
+  font-size: 4vw;
 
   width: 100%;
   text-align: center;
