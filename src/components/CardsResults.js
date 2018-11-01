@@ -60,12 +60,15 @@ class CardsResults extends React.Component {
             </div>
         ));
 
+                                            // OnAfterClose={() => document.body.style.overflow = 'hidden' }
+                                            // OnRequestClose={() => document.body.removeAttribute('style') }
+
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? <CardForm 
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
-                {renderCards}
+                {renderCards}               
             </div>
         );
     }

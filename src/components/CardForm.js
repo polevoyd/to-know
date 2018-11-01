@@ -3,6 +3,17 @@ import {connect} from 'react-redux';
 
 class CardForm extends React.Component{
  
+    // make body unscrollable when form is open
+    componentDidMount() {
+        document.body.style.overflow = 'hidden';
+        
+    }
+
+    // make body scrollable when form is closed
+    componentWillUnmount() {
+        document.body.removeAttribute('style');
+    }
+
     render(){
         
         // creating a link from username + taking card name from a state
