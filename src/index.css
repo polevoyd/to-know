@@ -75,9 +75,9 @@ body {
   width: 100%;
 }
 
-.cards-all-results .card-preview {
+/* .cards-all-results .card-preview {
   float: left;
-}
+} */
 
 .cards-all-results .card-edit-form {
   /* position: absolute; */
@@ -227,18 +227,32 @@ body {
 }
 
 .drag-sections > div{
-  width: 100%;
-  height: 18em;
+  display: inline-block;
+  width: 33%;
+  height: 1600px;
 }
 
 .new {
   background-color: aliceblue;
+  /* white-space: nowrap; */
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .active {
   background-color: antiquewhite;
+  /* white-space: nowrap; */
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .done {
   background-color:beige;
+  /* white-space: nowrap; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.drag-sections .card-preview {
+  display: inline-block;
 }
