@@ -50,8 +50,8 @@ class CardsResults extends React.Component {
     // on drag start
     onDragStart(event, cardName){
 
-        console.log(cardName);
-        event.dataTransfer.setData('name', cardName);
+        // console.log(event.target.parentNode.className);
+        event.dataTransfer.setData('id', [event.target.parentNode.className, cardName]);
     }
 
     /***********************************************************/
@@ -64,9 +64,25 @@ class CardsResults extends React.Component {
 
     /***********************************************************/
     // on drag over
-    onDrop(event, category) {
+    onDrop(event, cat) {
 
-        
+        const id = event.dataTransfer.getData('id');
+        const landingArea = event.target.className;
+
+        const cards = this.props.cards.cards.filter((card) => {
+            if (card.cardName === id) {
+                card.category = cat;
+            }
+            return card;
+        })
+
+        console.log(id)
+
+        // this.props.dispatch({
+        //     type: 'CHANGE_CATEGORY',
+        //     name,
+    
+        // })
     }
 
     /***********************************************************/
