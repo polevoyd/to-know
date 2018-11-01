@@ -40,18 +40,24 @@ class CardsResults extends React.Component {
 
     /***********************************************************/
     // helper function to add spaces to a card name
-    W
     addSpacesToName(name){
         return [...name].map(letter => {
             return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
         }).join('')
     }
+
     /***********************************************************/
     // on drag start
-
     onDragStart(event, cardName){
 
         console.log(cardName)
+    }
+
+    /***********************************************************/
+    // on drag over
+    onDragOver(event) {
+
+        console.log(event)
     }
 
     /***********************************************************/
@@ -87,12 +93,12 @@ class CardsResults extends React.Component {
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
             </div>)
         });
-        
+
         const filterComplete = this.props.cards.complete.map(card => {
             return(<div key={card.name} 
                 className="card-preview" 
-                onClick={() => this.handleClick(card.name)}
-                onDragStart={(event) => this.onDragStart(event, card.name)}
+                onClick={() => this.handleClick(card.name)} 
+                onDragStart={(event) => this.onDragStart(event, card.name)} 
                 draggable>
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
             </div>)
@@ -127,9 +133,9 @@ class CardsResults extends React.Component {
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
-                    <div className="new">{filterNew}</div>
-                    <div className="active">{filterActive}</div>
-                    <div className="done">{filterComplete}</div> 
+                    <div onDragOver={(event) => this.onDragOver(event)} className="new">{filterNew}</div>
+                    <div onDragOver={(event) => this.onDragOver(event)} className="active">{filterActive}</div>
+                    <div onDragOver={(event) => this.onDragOver(event)} className="done">{filterComplete}</div> 
                 </div>
                               
             </div>
