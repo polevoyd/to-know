@@ -53,9 +53,9 @@ class CardsResults extends React.Component {
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
                 <div className="category-buttons">
-                    <div className="red"></div>
-                    <div className="yellow"></div>
-                    <div className="green"></div>
+                    <div className="group-one"></div>
+                    <div className="group-two"></div>
+                    <div className="group-three"></div>
                 </div>
             </div>
         ));
