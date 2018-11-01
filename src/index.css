@@ -37,9 +37,8 @@ body {
 }
 
 .categories-filters {
-  width: 40%;
-  display: block;
-  float: right;
+  width: 100%;
+  /* display: grid; */
 }
 
 .categories-filters * {
@@ -47,15 +46,15 @@ body {
   height: 1.5em;
   width: 1.5em;
   border-radius: 50%;
-  float: right;
 }
 
 .categories-filters button {
   border: none;
 }
 
-.categories-filters button:active {
+.categories-filters button:focus, .categories-filters button:focus button:focus, .categories-filters button:target {
   background-color: black;
+  outline: none;
 }
 
 .categories-filters .group-one {

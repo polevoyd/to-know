@@ -5,6 +5,7 @@ class CardsFilterBar extends React.Component {
     handleFilterClick(event){
         event.preventDefault();
 
+        console.log(event)
     }
 
     render(){
