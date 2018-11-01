@@ -2,6 +2,10 @@
   outline: 1px solid orchid;
 }
 
+body {
+  overflow: hidden;
+}
+
 /* -------------------------------------------------- */
  /* app level  */
 .app {
@@ -72,9 +76,10 @@
 }
 
 .cards-all-results .card-edit-form {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   left: 10%;
-  top: 30%;
+  top: 10%;
 
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
