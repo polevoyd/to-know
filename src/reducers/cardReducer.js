@@ -4,7 +4,10 @@ const initialState =
     showCard: false,
     showCardName: null,
     user: '',
-    cards: []
+    cards: [],
+    new: [],
+    active: [],
+    complete: []
 }
 
 const cardReducer = (state = initialState, action) => {

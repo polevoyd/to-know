@@ -30,7 +30,7 @@ class AddCards extends React.Component {
             doc.querySelectorAll('.repl-item-title').forEach(element => {
                 const cardObject = { 
                     name: element.innerText,
-                    group: 'group-one'
+                    category: 'new'
                 }
                 arrayOfCards.push(cardObject);
             })
