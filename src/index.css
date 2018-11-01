@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid orchid;
-}
 
 body {
   /* overflow: hidden; */
@@ -226,5 +223,22 @@ body {
 /* DRAG SECTIONS  */
 .drag-sections {
   width: 100%;
-  height: 30em;
+  height: 100%;
+}
+
+.drag-sections > div{
+  width: 100%;
+  height: 18em;
+}
+
+.new {
+  background-color: aliceblue;
+}
+
+.active {
+  background-color: antiquewhite;
+}
+
+.done {
+  background-color:beige;
 }
