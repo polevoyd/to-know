@@ -5,7 +5,7 @@ const initialState =
     showCardName: null,
     user: '',
     cards: [],
-    groupToShow: 1
+    groupToShow: 'group-one'
 }
 
 const cardReducer = (state = initialState, action) => {
@@ -39,9 +39,10 @@ const cardReducer = (state = initialState, action) => {
             groupToShow: state.groupToShow
         })
 
-        case 'FILTER_BY_GROUPS':
-
+        case 'SET_FILTER':
+            console.log(action)
             break;
+
         default:
             return state;
     }

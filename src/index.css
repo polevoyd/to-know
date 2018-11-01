@@ -52,7 +52,7 @@ body {
   border: none;
 }
 
-.categories-filters button:focus, .categories-filters button:focus button:focus, .categories-filters button:target {
+.categories-filters .group-one:disabled {
   background-color: black;
   outline: none;
 }
