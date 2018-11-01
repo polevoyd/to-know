@@ -40,9 +40,14 @@ const cardReducer = (state = initialState, action) => {
         })
 
         case 'SET_FILTER':
-            console.log(action)
-            break;
-
+            return({
+                showCard: false,
+                showCardName: state.showCardName,
+                user: state.user,
+                cards: state.cards,
+                groupToShow: action.groupName
+            })
+           
         default:
             return state;
     }
