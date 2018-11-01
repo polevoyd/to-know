@@ -19,7 +19,10 @@ const cardReducer = (state = initialState, action) => {
                 showCard: false,
                 showCardName: null,
                 user: action.user,
-                cards: action.arrayOfCards
+                cards: action.arrayOfCards,
+                new: action.arrayOfCards,
+                active: state.active,
+                complete: state.complete
             });
 
         case 'SHOW_CARD':
@@ -27,7 +30,10 @@ const cardReducer = (state = initialState, action) => {
                 showCard: !state.showCard,
                 showCardName: action.name,
                 user: state.user,
-                cards: state.cards
+                cards: state.cards,
+                new: state.new,
+                active: state.active,
+                complete: state.complete
             })
         
         case 'HIDE_CARD':
@@ -35,16 +41,11 @@ const cardReducer = (state = initialState, action) => {
             showCard: !state.showCard,
             showCardName: '',
             user: state.user,
-            cards: state.cards
+            cards: state.cards,
+            new: state.new,
+            active: state.active,
+            complete: state.complete
         })
-
-        case 'SET_FILTER':
-            return({
-                showCard: false,
-                showCardName: state.showCardName,
-                user: state.user,
-                cards: state.cards
-            })
            
         default:
             return state;

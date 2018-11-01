@@ -40,30 +40,96 @@ class CardsResults extends React.Component {
 
     /***********************************************************/
     // helper function to add spaces to a card name
+    W
     addSpacesToName(name){
         return [...name].map(letter => {
             return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
         }).join('')
     }
     /***********************************************************/
+    // on drag start
+
+    onDragStart(event, cardName){
+
+        console.log(cardName)
+    }
+
+    /***********************************************************/
     // rendering
+
     render(){
         
-        const filterAndRenderCards = this.props.cards.cards.map(card => (
-            <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
-                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
-            </div>
-        ));
+        // const filterAndRenderCards = this.props.cards.cards.map(card => (
+        //     <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
+        //         <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+        //     </div>
+        // ));
 
+        ///////////////////////////////////////////////////
+
+        
+        const filterNew = this.props.cards.new.map(card => {
+            return(<div key={card.name} 
+                className="card-preview" 
+                onClick={() => this.handleClick(card.name)}
+                onDragStart={(event) => this.onDragStart(event, card.name)}
+                draggable>
+                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+            </div>)
+        });
+
+        const filterActive = this.props.cards.active.map(card => {
+            return(<div key={card.name} 
+                className="card-preview" 
+                onClick={() => this.handleClick(card.name)}
+                onDragStart={(event) => this.onDragStart(event, card.name)}
+                draggable>
+                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+            </div>)
+        });
+        
+        const filterComplete = this.props.cards.complete.map(card => {
+            return(<div key={card.name} 
+                className="card-preview" 
+                onClick={() => this.handleClick(card.name)}
+                onDragStart={(event) => this.onDragStart(event, card.name)}
+                draggable>
+                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+            </div>)
+        });
+        
+
+
+        // const filterAndRenderCards = this.props.cards.cards.map(card => {
+        //     return(<div key={card.name} 
+        //         className="card-preview" 
+        //         onClick={() => this.handleClick(card.name)}
+        //         onDragStart={(event) => this.onDragStart(event, card.name)}
+        //         draggable>
+        //         <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+        //     </div>)
+        // });
+
+
+
+ 
+
+
+
+
+
+
+
+        ///////////////////////////////////////////////////
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? <CardForm 
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
-                    <div className="new">{filterAndRenderCards}</div>
-                    <div className="active"></div>
-                    <div className="done"></div> 
+                    <div className="new">{filterNew}</div>
+                    <div className="active">{filterActive}</div>
+                    <div className="done">{filterComplete}</div> 
                 </div>
                               
             </div>
