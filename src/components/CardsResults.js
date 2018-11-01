@@ -49,7 +49,9 @@ class CardsResults extends React.Component {
     // rendering
     render(){
         
-        const filterAndRenderCards = this.props.cards.cards.map(card => (
+        const filterAndRenderCards = this.props.cards.cards
+        .filter(card => card.group === this.props.cards.groupToShow)
+        .map(card => (
             <div key={card.name} className="card-preview" onClick={() => this.handleClick(card.name)}>
                 <h4>{`${this.addSpacesToName(card.name)}`}</h4>
                 <div className="category-buttons">
