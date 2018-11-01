@@ -67,7 +67,7 @@ class CardsResults extends React.Component {
     onDrop(event, cat) {
 
         const oldCategory = event.dataTransfer.getData('card').split(',')[0];
-        const cardName = event.dataTransfer.getData('card')[1];
+        const cardName = event.dataTransfer.getData('card').split(',')[1]
         const newCategory = event.target.className;
 
         // console.log(oldCategory + ' | ' + newCategory);
