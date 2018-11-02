@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { ADD_CARDS } from '../actions/actions';
 
 /***********************************************************/
 // global array to push card elements from website

@@ -6,6 +6,7 @@ import CardsMain from './components/CardsMain';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import cardReducer from './reducers/cardReducer';
+import {ADD_CARDS} from './actions/actions';
 
 
 const store = createStore(cardReducer); 

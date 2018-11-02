@@ -3,7 +3,7 @@
  * action types 
  */
 
-const ADD_CARDS = 'ADD_CARDS'
+export const ADD_CARDS = 'ADD_CARDS'
 
 
 
