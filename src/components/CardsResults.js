@@ -125,27 +125,6 @@ class CardsResults extends React.Component {
         });
         
 
-
-        // const filterAndRenderCards = this.props.cards.cards.map(card => {
-        //     return(<div key={card.name} 
-        //         className="card-preview" 
-        //         onClick={() => this.handleClick(card.name)}
-        //         onDragStart={(event) => this.onDragStart(event, card.name)}
-        //         draggable>
-        //         <h4>{`${this.addSpacesToName(card.name)}`}</h4>
-        //     </div>)
-        // });
-
-
-
- 
-
-
-
-
-
-
-
         ///////////////////////////////////////////////////
         return(
             <div className="cards-all-results">
