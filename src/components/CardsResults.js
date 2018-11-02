@@ -6,6 +6,7 @@ class CardsResults extends React.Component {
     constructor(props){
         super(props);
 
+        //---------------------------------------------------------
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
@@ -52,6 +53,7 @@ class CardsResults extends React.Component {
 
         // console.log(event.target.parentNode.className);
         event.dataTransfer.setData('card', [event.target.parentNode.className, cardName]);
+        
     }
 
     /***********************************************************/
@@ -72,12 +74,12 @@ class CardsResults extends React.Component {
 
         // console.log(oldCategory + ' | ' + newCategory);
 
-        this.props.dispatch({
-            type: 'CHANGE_CATEGORY',
-            name,
-            oldCategory,
-            newCategory
-        })
+        // this.props.dispatch({
+        //     type: 'CHANGE_CATEGORY',
+        //     name,
+        //     oldCategory,
+        //     newCategory
+        // })
     }
 
     /***********************************************************/
@@ -95,7 +97,7 @@ class CardsResults extends React.Component {
 
         
         const filterNew = this.props.cards.new.map(card => {
-            return(<div key={card.name} 
+            return(<div key={'new' + card.name} 
                 className="card-preview" 
                 onClick={() => this.handleClick(card.name)}
                 onDragStart={(event) => this.onDragStart(event, card.name)}
@@ -105,7 +107,7 @@ class CardsResults extends React.Component {
         });
 
         const filterActive = this.props.cards.active.map(card => {
-            return(<div key={card.name} 
+            return(<div key={'active' + card.name} 
                 className="card-preview" 
                 onClick={() => this.handleClick(card.name)}
                 onDragStart={(event) => this.onDragStart(event, card.name)}
@@ -115,7 +117,7 @@ class CardsResults extends React.Component {
         });
 
         const filterComplete = this.props.cards.complete.map(card => {
-            return(<div key={card.name} 
+            return(<div key={'complete' + card.name} 
                 className="card-preview" 
                 onClick={() => this.handleClick(card.name)} 
                 onDragStart={(event) => this.onDragStart(event, card.name)} 

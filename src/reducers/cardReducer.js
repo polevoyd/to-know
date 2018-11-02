@@ -19,8 +19,8 @@ const cardReducer = (state = initialState, action) => {
                 showCardName: null,
                 user: action.user,
                 new: action.arrayOfCards,
-                active: state.active,
-                complete: state.complete
+                active: [],
+                complete: []
             });
 
         case 'SHOW_CARD':
