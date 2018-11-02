@@ -16,21 +16,21 @@ class CardsResults extends React.Component {
     }
     
     /***********************************************************/
-    // click on each card preview to show/hide card
+    // Click on each card preview to show/hide card
 
     handleClick(name) {
         this.props.dispatch(showCard(name));
     }
 
     /***********************************************************/
-    // red close button
+    // Close button
 
     handlePanelClicks(event) {
         this.props.dispatch(hideCard());
     }
 
     /***********************************************************/
-    // helper function to add spaces to a card name (for wrapping)
+    // Helper function to add spaces to a card name (for wrapping)
 
     addSpacesToName(name){
         return [...name].map(letter => {
