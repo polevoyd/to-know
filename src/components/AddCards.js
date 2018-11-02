@@ -4,6 +4,7 @@ import {addCards} from '../actions/actions';
 
 /***********************************************************/
 // global array to push card elements from website
+
 let arrayOfCards = [];
 
 class AddCards extends React.Component {
@@ -15,6 +16,7 @@ class AddCards extends React.Component {
 
     /***********************************************************/
     // on submit 
+
     handleLinkSubmit(event) {
         event.preventDefault();
 
@@ -48,7 +50,7 @@ class AddCards extends React.Component {
     }
     
     /***********************************************************/
-    // rendering
+    
     render(){
         return(
             <div className="add-card">
