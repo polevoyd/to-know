@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { ADD_CARDS } from '../actions/actions';
+import {addCards} from '../actions/actions';
 
 /***********************************************************/
 // global array to push card elements from website
@@ -42,13 +42,7 @@ class AddCards extends React.Component {
         
         // after request sent, wait 2 sec and dispatch array to state
         setTimeout(() => {
-            this.props.dispatch({
-                type: 'ADD_CARDS',
-                user: userName,
-                arrayOfCards
-            })
-
-            
+            this.props.dispatch(addCards(userName, arrayOfCards));
             arrayOfCards = [];
         }, 2000)
     }
