@@ -1,19 +1,12 @@
 import React from 'react';
 
 class CardPreview extends React.Component {
-
-
-
     render() {
-
         const cards = this.props.cards;
         const categoryToFilter = this.props.category;
-        console.log(categoryToFilter);
 
         const filteredCards = cards.cardsObjects
-        .filter(cardObj => {
-            return cardObj.category === categoryToFilter;
-        })
+        .filter(cardObj => cardObj.category === categoryToFilter)
         .map(card => {
             return(<div key={categoryToFilter + card.name} 
                 className="card-preview" 
