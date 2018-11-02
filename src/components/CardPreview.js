@@ -2,6 +2,8 @@ import React from 'react';
 
 class CardPreview extends React.Component {
     render() {
+
+        // filter cards by specific category
         const cards = this.props.cards;
         const categoryToFilter = this.props.category;
 
