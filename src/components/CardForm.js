@@ -6,7 +6,6 @@ class CardForm extends React.Component{
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
-        
     }
 
     // make body scrollable when form is closed
@@ -32,5 +31,5 @@ class CardForm extends React.Component{
     }
 }
 
-// connect because we using this.props.cardToShow
+// connect to access store (this.props.cardToShow)
 export default connect()(CardForm);
