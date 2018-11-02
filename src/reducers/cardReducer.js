@@ -36,19 +36,15 @@ const cardReducer = (state = initialState, action) => {
         })
 
         case 'CHANGE_CATEGORY':
-        
-        const modifiedCard = {
-            name: action.name,
-            category: action.newCategory
-        }
-        
-        let stateCopy = state;
-        // stateCopy[action.newCategory] = stateCopy[action.newCategory].concat(modifiedCard);
-        // stateCopy[action.oldCategory] = stateCopy[action.oldCategory].filter(card => card.name !== action.name );
-        
-        console.log(action);
-
-        return stateCopy;
+        const newCardsArray = state.cardsObjects.map(card => {
+            return (card.name === action.name) ? { name : card.name, category : action.newCategory} : card;
+        })
+        return({
+            showCard: !state.showCard,
+            showCardName: '',
+            user: state.user,
+            cardsObjects: newCardsArray
+        })
         
         default:
             return state;
