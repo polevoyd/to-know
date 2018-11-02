@@ -4,9 +4,7 @@ const initialState =
     showCard: false,
     showCardName: null,
     user: '',
-    new: [],
-    active: [],
-    complete: []
+    cardsObjects: []
 }
 
 const cardReducer = (state = initialState, action) => {
@@ -18,9 +16,7 @@ const cardReducer = (state = initialState, action) => {
                 showCard: false,
                 showCardName: null,
                 user: action.user,
-                new: action.arrayOfCards,
-                active: [],
-                complete: []
+                cardsObjects: action.arrayOfCards
             });
 
         case 'SHOW_CARD':
@@ -28,9 +24,7 @@ const cardReducer = (state = initialState, action) => {
                 showCard: !state.showCard,
                 showCardName: action.name,
                 user: state.user,
-                new: state.new,
-                active: state.active,
-                complete: state.complete
+                cardsObjects: state.cardsObjects
             })
         
         case 'HIDE_CARD':
@@ -38,9 +32,7 @@ const cardReducer = (state = initialState, action) => {
             showCard: !state.showCard,
             showCardName: '',
             user: state.user,
-            new: state.new,
-            active: state.active,
-            complete: state.complete
+            cardsObjects: state.cardsObjects
         })
 
         case 'CHANGE_CATEGORY':
@@ -51,10 +43,10 @@ const cardReducer = (state = initialState, action) => {
         }
         
         let stateCopy = state;
-        stateCopy[action.newCategory] = stateCopy[action.newCategory].concat(modifiedCard);
-        stateCopy[action.oldCategory] = stateCopy[action.oldCategory].filter(card => card.name !== action.name );
+        // stateCopy[action.newCategory] = stateCopy[action.newCategory].concat(modifiedCard);
+        // stateCopy[action.oldCategory] = stateCopy[action.oldCategory].filter(card => card.name !== action.name );
         
-        console.log(stateCopy);
+        console.log(action);
 
         return stateCopy;
         

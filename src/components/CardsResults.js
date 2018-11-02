@@ -39,13 +39,7 @@ class CardsResults extends React.Component {
         }
     }
 
-    /***********************************************************/
-    // helper function to add spaces to a card name
-    addSpacesToName(name){
-        return [...name].map(letter => {
-            return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
-        }).join('')
-    }
+
 
     /***********************************************************/
     // on drag start
@@ -70,14 +64,13 @@ class CardsResults extends React.Component {
 
         const oldCategory = event.dataTransfer.getData('card').split(',')[0];
         const name = event.dataTransfer.getData('card').split(',')[1]
-        const newCategory = event.target.className;
+        const newCategory = cat;
 
         // console.log(oldCategory + ' | ' + newCategory);
 
         this.props.dispatch({
             type: 'CHANGE_CATEGORY',
             name,
-            oldCategory,
             newCategory
         })
     }
@@ -96,35 +89,17 @@ class CardsResults extends React.Component {
         ///////////////////////////////////////////////////
 
         
-        const filterNew = this.props.cards.new.map(card => {
-            return(<div key={'new' + card.name} 
-                className="card-preview" 
-                onClick={() => this.handleClick(card.name)}
-                onDragStart={(event) => this.onDragStart(event, card.name)}
-                draggable>
-                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
-            </div>)
-        });
+        
 
-        const filterActive = this.props.cards.active.map(card => {
-            return(<div key={'active' + card.name} 
-                className="card-preview" 
-                onClick={() => this.handleClick(card.name)}
-                onDragStart={(event) => this.onDragStart(event, card.name)}
-                draggable>
-                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
-            </div>)
-        });
-
-        const filterComplete = this.props.cards.complete.map(card => {
-            return(<div key={'complete' + card.name} 
-                className="card-preview" 
-                onClick={() => this.handleClick(card.name)} 
-                onDragStart={(event) => this.onDragStart(event, card.name)} 
-                draggable>
-                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
-            </div>)
-        });
+        // const filterComplete = this.props.cards.complete.map(card => {
+        //     return(<div key={'complete' + card.name} 
+        //         className="card-preview" 
+        //         onClick={() => this.handleClick(card.name)} 
+        //         onDragStart={(event) => this.onDragStart(event, card.name)} 
+        //         draggable>
+        //         <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+        //     </div>)
+        // });
         
 
         ///////////////////////////////////////////////////
@@ -134,9 +109,9 @@ class CardsResults extends React.Component {
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new"><CardPreview cards={this.props.cards} category="new"/></div>
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active"><CardPreview cards={this.props.cards} category="active"/></div>
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'complete')} className="complete"><CardPreview cards={this.props.cards} category="complete"/></div> 
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new"><CardPreview cards={this.props.cards} category="new" onDragStart={this.onDragStart}/></div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active"><CardPreview cards={this.props.cards} category="active" onDragStart={this.onDragStart}/></div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'complete')} className="complete"><CardPreview cards={this.props.cards} category="complete" onDragStart={this.onDragStart}/></div> 
 
                 </div>
                               
