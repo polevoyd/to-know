@@ -24,8 +24,8 @@ class CardsResults extends React.Component {
     }
 
     /***********************************************************/
-    // click on a panel buttons
-    
+    // red close button
+
     handlePanelClicks(event) {
         this.props.dispatch({
             type: 'SHOW_CARD'
