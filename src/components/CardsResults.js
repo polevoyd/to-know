@@ -2,6 +2,9 @@ import React from 'react';
 import CardForm from './CardForm';
 import {connect} from 'react-redux';
 import CardPreview from './CardPreview';
+import {showCard} from '../actions/actions';
+import {hideCard} from '../actions/actions';
+import {changeCategory} from '../actions/actions'
 
 class CardsResults extends React.Component {
     constructor(props){
@@ -16,19 +19,14 @@ class CardsResults extends React.Component {
     // click on each card preview to show/hide card
 
     handleClick(name) {
-        this.props.dispatch({
-            type: 'SHOW_CARD',
-            name
-        })
+        this.props.dispatch(showCard(name));
     }
 
     /***********************************************************/
     // red close button
 
     handlePanelClicks(event) {
-        this.props.dispatch({
-            type: 'SHOW_CARD'
-        })
+        this.props.dispatch(hideCard());
     }
 
     /***********************************************************/
@@ -44,7 +42,6 @@ class CardsResults extends React.Component {
     // Drag start
 
     onDragStart(event, cardName){
-
         event.dataTransfer.setData('card', cardName);    
     }
 
@@ -58,16 +55,9 @@ class CardsResults extends React.Component {
     /***********************************************************/
     // Drop
 
-    onDrop(event, cat) {
-
+    onDrop(event, newCategory) {
         const name = event.dataTransfer.getData('card');
-        const newCategory = cat;
-
-        this.props.dispatch({
-            type: 'CHANGE_CATEGORY',
-            name,
-            newCategory
-        })
+        this.props.dispatch(changeCategory(name, newCategory));
     }
 
     /***********************************************************/

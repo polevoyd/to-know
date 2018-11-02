@@ -11,7 +11,6 @@ const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'ADD_CARDS':
-        console.log(action)
             return({
                 showCard: false,
                 showCardName: null,
