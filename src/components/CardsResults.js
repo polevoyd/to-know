@@ -73,12 +73,12 @@ class CardsResults extends React.Component {
 
         // console.log(oldCategory + ' | ' + newCategory);
 
-        // this.props.dispatch({
-        //     type: 'CHANGE_CATEGORY',
-        //     name,
-        //     oldCategory,
-        //     newCategory
-        // })
+        this.props.dispatch({
+            type: 'CHANGE_CATEGORY',
+            name,
+            oldCategory,
+            newCategory
+        })
     }
 
     /***********************************************************/
