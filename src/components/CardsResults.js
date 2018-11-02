@@ -47,14 +47,12 @@ class CardsResults extends React.Component {
         }).join('')
     }
 
-
     /***********************************************************/
-    // on drag start
+    // Drag start
+
     onDragStart(event, cardName){
 
-        // console.log(event.target.parentNode.className);
-        event.dataTransfer.setData('card', cardName);
-        
+        event.dataTransfer.setData('card', cardName);    
     }
 
     /***********************************************************/
