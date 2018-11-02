@@ -13,10 +13,9 @@ class CardsResults extends React.Component {
     }
     
     /***********************************************************/
-    // click on each card preview
-    handleClick(name) {
+    // click on each card preview to show/hide card
 
-        // change state to show/hide card
+    handleClick(name) {
         this.props.dispatch({
             type: 'SHOW_CARD',
             name
