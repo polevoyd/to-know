@@ -39,7 +39,7 @@ class AddCards extends React.Component {
         xhr.responseType = "document";
         xhr.send();
         
-        // after request sent, wait 2sec and dispatch array to state
+        // after request sent, wait 2 sec and dispatch array to state
         setTimeout(() => {
             this.props.dispatch({
                 type: 'ADD_CARDS',
