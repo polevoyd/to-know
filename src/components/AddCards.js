@@ -47,6 +47,8 @@ class AddCards extends React.Component {
                 user: userName,
                 arrayOfCards
             })
+
+            
             arrayOfCards = [];
         }, 2000)
     }
