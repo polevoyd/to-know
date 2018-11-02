@@ -6,7 +6,6 @@ class CardsResults extends React.Component {
     constructor(props){
         super(props);
 
-        //---------------------------------------------------------
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
