@@ -25,18 +25,11 @@ class CardsResults extends React.Component {
 
     /***********************************************************/
     // click on a panel buttons
+    
     handlePanelClicks(event) {
- 
-        const operation = event.target.className.split(' ')[2];
-        switch (operation) {
-            case 'close':
-                return this.props.dispatch({
-                    type: 'SHOW_CARD'
-                })
-            
-            default:
-                break;
-        }
+        this.props.dispatch({
+            type: 'SHOW_CARD'
+        })
     }
 
     /***********************************************************/
