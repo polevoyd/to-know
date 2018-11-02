@@ -1,6 +1,7 @@
 import React from 'react';
 import CardForm from './CardForm';
 import {connect} from 'react-redux';
+import CardPreview from './CardPreview';
 
 class CardsResults extends React.Component {
     constructor(props){
@@ -133,9 +134,10 @@ class CardsResults extends React.Component {
                                             cardToShow={this.addSpacesToName(this.props.cards.showCardName)} 
                                             user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new">{filterNew}</div>
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active">{filterActive}</div>
-                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'complete')} className="complete">{filterComplete}</div> 
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new"><CardPreview cards={this.props.cards} category="new"/></div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active"><CardPreview cards={this.props.cards} category="active"/></div>
+                    <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'complete')} className="complete"><CardPreview cards={this.props.cards} category="complete"/></div> 
+
                 </div>
                               
             </div>
