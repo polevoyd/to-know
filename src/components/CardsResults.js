@@ -40,7 +40,8 @@ class CardsResults extends React.Component {
     }
 
     /***********************************************************/
-    // helper function to add spaces to a card name
+    // helper function to add spaces to a card name (for wrapping)
+
     addSpacesToName(name){
         return [...name].map(letter => {
             return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
