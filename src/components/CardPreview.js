@@ -2,13 +2,7 @@ import React from 'react';
 
 class CardPreview extends React.Component {
 
-    /***********************************************************/
-    // helper function to add spaces to a card name
-    addSpacesToName(name){
-        return [...name].map(letter => {
-            return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
-        }).join('')
-    }
+
 
     render() {
 
@@ -23,10 +17,10 @@ class CardPreview extends React.Component {
         .map(card => {
             return(<div key={categoryToFilter + card.name} 
                 className="card-preview" 
-                onClick={() => this.handleClick(card.name)}
+                onClick={() => this.props.handleClick(card.name)}
                 onDragStart={(event) => this.props.onDragStart(event, card.name)}
                 draggable>
-                <h4>{`${this.addSpacesToName(card.name)}`}</h4>
+                <h4>{`${this.props.addSpacesToName(card.name)}`}</h4>
             </div>)
         });
 

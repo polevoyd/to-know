@@ -30,7 +30,7 @@ const cardReducer = (state = initialState, action) => {
         case 'HIDE_CARD':
         return({
             showCard: !state.showCard,
-            showCardName: '',
+            showCardName: null,
             user: state.user,
             cardsObjects: state.cardsObjects
         })
@@ -40,7 +40,7 @@ const cardReducer = (state = initialState, action) => {
             return (card.name === action.name) ? { name : card.name, category : action.newCategory} : card;
         })
         return({
-            showCard: !state.showCard,
+            showCard: state.showCard,
             showCardName: '',
             user: state.user,
             cardsObjects: newCardsArray
