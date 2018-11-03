@@ -1,4 +1,10 @@
 
+
+iframe {
+  border: none;
+}
+
+/* ///////////////////////////////////////////////////////// */
 html {
   min-height: 100%;
   position: relative;
