@@ -25,7 +25,8 @@ class AddCards extends React.Component {
         fetch(link)
         .then(res => res.json())
         .then(res => {
-            console.log(res);
+            
+            // get array of cards and dispatch it
             const arrayOfCards = res.map(card => {
                 return {
                     name: card.name,
@@ -35,55 +36,6 @@ class AddCards extends React.Component {
             })
             this.props.dispatch(addCards('polevoyd', arrayOfCards));
         })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ///////////////////////////////////////////////////////////////////////////
-        // // set a page for parsing (need to make validation here)
-        // const link = event.target[0].value ? `https://repl.it/@${event.target[0].value}` : 'https://repl.it/@polevoyd';
-        // const userName = event.target[0].value || 'polevoyd';
-
-        // // prepare request to scrape cards from page
-        // let xhr = new XMLHttpRequest();
-        // xhr.onload = function(){
-        //     const doc = this.responseXML;
-
-        //     // select all cards and push them into array
-        //     doc.querySelectorAll('.repl-item-title').forEach(element => {
-        //         const cardObject = { 
-        //             name: element.innerText,
-        //             category: 'new'
-        //         }
-        //         arrayOfCards.push(cardObject);
-        //     })
-        // }
-        // xhr.open("GET", link);
-        // xhr.responseType = "document";
-        // xhr.send();
-        
-        // // after request sent, wait 2 sec and dispatch array to state
-        // setTimeout(() => {
-        //     this.props.dispatch(addCards(userName, arrayOfCards));
-        //     arrayOfCards = [];
-        // }, 2000)
     }
     
     /***********************************************************/
