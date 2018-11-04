@@ -215,3 +215,8 @@ body {
 .drag-sections .card-preview {
   /* display: inline-block; */
 }
+
+object {
+  height: 200px;
+  width: 200px;
+}
