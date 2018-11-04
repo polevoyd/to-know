@@ -19,6 +19,8 @@ class CardForm extends React.Component{
         const link = `https://repl.it/@${this.props.user}/${this.props.cardToShow.split(' ').join('')}?lite=true`;
         const embeddedCodeEl = <iframe title="currentCard" height="700px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
 
+        // LINK TO REQUEST NAMES AND LINKS: https://to-know.herokuapp.com/
+
         return(
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
