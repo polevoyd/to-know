@@ -17,6 +17,8 @@ class CardForm extends React.Component{
             };
         };
         request.send();
+
+        console.log(this)
     }
 
     // make body unscrollable when form is open
