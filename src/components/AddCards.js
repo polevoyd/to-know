@@ -27,7 +27,7 @@ class AddCards extends React.Component {
         .then(res => {
             console.log(res);
             const arrayOfCards = res.map(card => {
-                const cardObject = {
+                return {
                     name: card.name,
                     link: card.link,
                     category: 'new'

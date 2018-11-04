@@ -4,10 +4,6 @@ import {setCodeData} from '../actions/actions';
 
 class CardForm extends React.Component{
  
-    // constructor(props) {
-    //     super(props);
-    // }
-
     // get textcode from link
     componentWillMount() {
         var request = new XMLHttpRequest();
