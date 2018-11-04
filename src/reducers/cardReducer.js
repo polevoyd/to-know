@@ -49,6 +49,10 @@ const cardReducer = (state = initialState, action) => {
             user: state.user,
             cardsObjects: newCardsArray
         })
+
+        case 'SET_CODE_DATA':
+            console.log(action.codeData)
+            return state;
         
         default:
             return state;

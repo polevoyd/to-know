@@ -3,6 +3,22 @@ import {connect} from 'react-redux';
 
 class CardForm extends React.Component{
  
+    // get textcode from link
+    componentWillMount() {
+        var request = new XMLHttpRequest();
+        request.open('GET', "https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js", true);
+        request.responseType = 'blob';
+        request.onload = function() {
+            var reader = new FileReader();
+            reader.readAsText(request.response);
+            reader.onload =  function(e){
+                console.log('DataURL:', e.target.result);
+                
+            };
+        };
+        request.send();
+    }
+
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
@@ -24,28 +40,17 @@ class CardForm extends React.Component{
         
         // src="https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js"
 
-        let el = null;
-        var request = new XMLHttpRequest();
-        request.open('GET', "https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js", true);
-        request.responseType = 'blob';
-        request.onload = function() {
-            var reader = new FileReader();
-            reader.readAsText(request.response);
-            reader.onload =  function(e){
-                console.log('DataURL:', e.target.result);
+        
+        
 
-            el = 
+        const el = 
             <figure>
                 <pre>
                     <code>
-                        {e.target.result}
+                        {}
                     </code>
                 </pre>
             </figure>;
-
-            };
-        };
-        request.send();
 
         return(
             <div className="card-edit-form">
