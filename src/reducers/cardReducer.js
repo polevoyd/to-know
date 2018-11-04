@@ -3,6 +3,7 @@ const initialState =
 {
     showCard: false,
     showCardName: null,
+    showCardData: null,
     user: '',
     cardsObjects: []
 }
@@ -14,6 +15,7 @@ const cardReducer = (state = initialState, action) => {
             return({
                 showCard: false,
                 showCardName: null,
+                showCardData: null,
                 user: action.user,
                 cardsObjects: action.arrayOfCards
             });
@@ -22,6 +24,7 @@ const cardReducer = (state = initialState, action) => {
             return({
                 showCard: !state.showCard,
                 showCardName: action.name,
+                showCardData: state.showCardData,
                 user: state.user,
                 cardsObjects: state.cardsObjects
             })
@@ -30,6 +33,7 @@ const cardReducer = (state = initialState, action) => {
         return({
             showCard: !state.showCard,
             showCardName: null,
+            showCardData: null,
             user: state.user,
             cardsObjects: state.cardsObjects
         })
@@ -41,6 +45,7 @@ const cardReducer = (state = initialState, action) => {
         return({
             showCard: state.showCard,
             showCardName: '',
+            showCardData: null,
             user: state.user,
             cardsObjects: newCardsArray
         })

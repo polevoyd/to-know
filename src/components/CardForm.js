@@ -22,9 +22,31 @@ class CardForm extends React.Component{
         // LINK TO REQUEST NAMES AND LINKS: https://to-know.herokuapp.com/
         // https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js
         
-        const el = <div>
-            <object src="https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js"></object>
-        </div>
+        // src="https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js"
+
+        let el = null;
+        var request = new XMLHttpRequest();
+        request.open('GET', "https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js", true);
+        request.responseType = 'blob';
+        request.onload = function() {
+            var reader = new FileReader();
+            reader.readAsText(request.response);
+            reader.onload =  function(e){
+                console.log('DataURL:', e.target.result);
+
+            el = 
+            <figure>
+                <pre>
+                    <code>
+                        {e.target.result}
+                    </code>
+                </pre>
+            </figure>;
+
+            };
+        };
+        request.send();
+
         return(
             <div className="card-edit-form">
                 <div className="card-edit-form-header">

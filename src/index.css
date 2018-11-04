@@ -216,7 +216,7 @@ body {
   /* display: inline-block; */
 }
 
-object {
+pre {
   height: 200px;
   width: 200px;
 }
