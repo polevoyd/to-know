@@ -1,24 +1,29 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {setCodeData} from '../actions/actions';
 
 class CardForm extends React.Component{
  
+    // constructor(props) {
+    //     super(props);
+    // }
+
     // get textcode from link
     componentWillMount() {
         var request = new XMLHttpRequest();
         request.open('GET', "https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js", true);
         request.responseType = 'blob';
-        request.onload = function() {
+        request.onload = () => {
             var reader = new FileReader();
             reader.readAsText(request.response);
-            reader.onload =  function(e){
-                console.log('DataURL:', e.target.result);
-                
+            reader.onload =  (e) => {
+                // console.log('DataURL:', e.target.result);
+                this.props.dispatch(setCodeData(e.target.result))
             };
         };
         request.send();
 
-        console.log(this)
+        // console.log(this)
     }
 
     // make body unscrollable when form is open
@@ -45,11 +50,11 @@ class CardForm extends React.Component{
         
         
 
-        const el = 
+        const codeTextData = 
             <figure>
                 <pre>
                     <code>
-                        {}
+                        {this.props.cards.showCardData}
                     </code>
                 </pre>
             </figure>;
@@ -60,11 +65,15 @@ class CardForm extends React.Component{
                     <h4>{this.props.cardToShow}</h4>
                     <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
                 </div>
-                {el}
+                {codeTextData}
             </div>
         );
     }
 }
 
+const mapStateToProps = (state) => {
+    return { cards: state };
+}
+
 // connect to access store (this.props.cardToShow)
-export default connect()(CardForm);
+export default connect(mapStateToProps)(CardForm);
