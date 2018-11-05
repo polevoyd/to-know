@@ -12,7 +12,7 @@ const initialState =
 const cardReducer = (state = initialState, action) => {
 
     // TODO
-    // rewrite actions using spread operator for object? Object.assing({})
+    // rewrite actions using spread operator for object? Object.assing()
     switch (action.type) {
         case 'ADD_CARDS':
             return({
@@ -25,47 +25,30 @@ const cardReducer = (state = initialState, action) => {
             });
 
         case 'SHOW_CARD':
-            return({
-                showCard: !state.showCard,
-                showCardName: action.name,
-                showCardData: state.showCardData,
-                showCardLink: action.link,
-                user: state.user,
-                cardsObjects: state.cardsObjects
-            })
+        return {
+            ...state,
+            showCard: !state.showCard,
+            showCardName: action.name,
+            showCardLink: action.link
+        }
         
         case 'HIDE_CARD':
-        return({
+        return {...initialState,
             showCard: !state.showCard,
-            showCardName: null,
-            showCardData: null,
-            showCardLink: null,
             user: state.user,
             cardsObjects: state.cardsObjects
-        })
+        }
 
         case 'CHANGE_CATEGORY':
         const newCardsArray = state.cardsObjects.map(card => {
             return (card.name === action.name) ? { name : card.name, category : action.newCategory} : card;
         })
-        return({
-            showCard: state.showCard,
-            showCardName: '',
-            showCardData: null,
-            showCardLink: null,
-            user: state.user,
-            cardsObjects: newCardsArray
-        })
-
+        return { ...state,
+            showCardName: '', showCardData: null, showCardLink: null, cardsObjects: newCardsArray
+        }
+ 
         case 'SET_CODE_DATA':
-            return({
-                showCard: state.showCard,
-                showCardName: state.showCardName,
-                showCardData: action.codeData,
-                showCardLink: state.showCardLink,
-                user: state.user,
-                cardsObjects: state.cardsObjects
-            })
+            return {...state, showCardData: action.codeData }
         
         default:
             return state;
