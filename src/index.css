@@ -154,18 +154,35 @@ body {
 }
 
 .card-edit-form-header .button.close {
-  margin: 1em 1em 1em 0.5em;
-  height: 1.5em;
-  width: 1.5em;
-  border-radius: 50%;
   background-color: rgb(255, 118, 118);
-  float: right;
 }
 
 .card-edit-form-header .button.close:hover {
   background-color: rgb(255, 79, 79);
 }
 
+.card-edit-form-header .button.close {
+  background-color: rgb(255, 118, 118);
+}
+
+.card-edit-form-header .button.close {
+  background-color: rgb(255, 118, 118);
+}
+
+.card-edit-form-header .button.close {
+  background-color: rgb(255, 118, 118);
+}
+
+.card-edit-form-header .button.close {
+  background-color: rgb(255, 118, 118);
+}
+.card-edit-form-header .button {
+  margin: 1em 1em 1em 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  float: right;
+}
 
 .add-card {
   font-family: 'Work Sans', sans-serif;
