@@ -15,14 +15,11 @@ const cardReducer = (state = initialState, action) => {
     // rewrite actions using spread operator for object? Object.assing()
     switch (action.type) {
         case 'ADD_CARDS':
-            return({
-                showCard: false,
-                showCardName: null,
-                showCardData: null,
-                showCardLink: null,
+            return {
+                ...initialState,
                 user: action.user,
                 cardsObjects: action.arrayOfCards
-            });
+            }
 
         case 'SHOW_CARD':
         return {
