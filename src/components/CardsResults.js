@@ -22,11 +22,14 @@ class CardsResults extends React.Component {
 
 
 
-    
+
     // Make server side be able to read from any repo user request
     
-    // create persistance with a local storage
+    // Create persistance with a local storage
 
+    // Styling embedded code + button to clipboard copy
+
+    
 
 
 
