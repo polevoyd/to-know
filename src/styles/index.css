@@ -250,3 +250,8 @@ pre > code {
   padding: 1rem;
   word-wrap: normal;
 }
+
+iframe {
+  height: 100%;
+  width: 100%;
+}

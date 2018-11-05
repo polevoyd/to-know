@@ -53,7 +53,19 @@ class CardForm extends React.Component{
     // copy to clipboard and go to repl.it to try
     handleTryitClick() {
         console.log('Try it clicked!');
-        //  https://repl.it/languages/javascript
+
+        const text = document.querySelector('code').innerText;
+
+        // window.location.assign('https://repl.it/languages/javascript');
+
+        const win = window.open('https://repl.it/languages/javascript', '_blank');
+        // win.focus();
+        
+        console.log(win)
+        
+        document.execCommand('paste');
+       
+        
     }
 
     render(){
