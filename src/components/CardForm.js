@@ -27,6 +27,20 @@ class CardForm extends React.Component{
         request.send();
     }
 
+    // input: format, output: language
+    formatToLanguage(format) {
+
+        switch (format) {
+            case '.js':
+                return 'javascript';
+                break;
+        
+            default:
+                break;
+        }
+
+    }
+
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
