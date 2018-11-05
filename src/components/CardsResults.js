@@ -18,13 +18,7 @@ class CardsResults extends React.Component {
     //-----------------------------------
     //              TODO:
     //-----------------------------------
-
-
-
-
-
-    // Make server side be able to read from any repo user request
-    
+  
     // Create persistance with a local storage
 
     // Styling embedded code + button to clipboard copy
@@ -39,7 +33,13 @@ class CardsResults extends React.Component {
     // Click on each card preview to show/hide card
 
     handleClick(name) {
-        const link = `https://raw.githubusercontent.com/polevoyd/to-know-content/master/${name}`;
+
+
+        const userSlashRepo = this.props.cards.user.split('/').splice(3,2).join('/');
+        console.log(userSlashRepo)
+
+
+        const link = `https://raw.githubusercontent.com/${userSlashRepo}/master/${name}`;
         this.props.dispatch(showCard(name, link));
     }
 

@@ -11,6 +11,8 @@ const initialState =
 
 const cardReducer = (state = initialState, action) => {
 
+    // TODO
+    // rewrite actions using spread operator for object? Object.assing({})
     switch (action.type) {
         case 'ADD_CARDS':
             return({
