@@ -15,7 +15,7 @@ class CardForm extends React.Component{
         request.onload = () => {
             const reader = new FileReader();
             reader.readAsText(request.response);
-            
+
             reader.onload =  (e) => {
                 this.props.dispatch(setCodeData(e.target.result))
             };
@@ -35,18 +35,6 @@ class CardForm extends React.Component{
 
     render(){
         
-        // creating a link from username + taking card name from a state
-        const link = `https://repl.it/@${this.props.user}/${this.props.cardToShow.split(' ').join('')}?lite=true`;
-        const embeddedCodeEl = <iframe title="currentCard" height="700px" width="100%" src={link} scrolling="no" frameBorder="no" allowtransparency="yes" allowFullScreen="yes" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>;
-
-        // LINK TO REQUEST NAMES AND LINKS: https://to-know.herokuapp.com/
-        // https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js
-        
-        // src="https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js"
-
-        
-        
-
         const codeTextData = 
             <figure>
                 <pre>
