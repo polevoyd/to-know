@@ -39,33 +39,20 @@ class CardForm extends React.Component{
 
     // copy code to a clipboard
     handleCopyClick() {
-        
         const text = document.querySelector('code').innerText;
-        const el = document.createElement('textarea');
-        el.value = text;
-        document.body.appendChild(el);
-        el.select();
+        const tempEl = document.createElement('textarea');
+        tempEl.value = text;
+        document.body.appendChild(tempEl);
+        tempEl.select();
         document.execCommand('copy');
-        document.body.removeChild(el);
+        document.body.removeChild(tempEl);
         console.log('Text copied to clipboard!');
     }
 
     // copy to clipboard and go to repl.it to try
     handleTryitClick() {
-        console.log('Try it clicked!');
-
-        const text = document.querySelector('code').innerText;
-
-        // window.location.assign('https://repl.it/languages/javascript');
-
         const win = window.open('https://repl.it/languages/javascript', '_blank');
-        // win.focus();
-        
-        console.log(win)
-        
-        document.execCommand('paste');
-       
-        
+        win.focus();
     }
 
     render(){
