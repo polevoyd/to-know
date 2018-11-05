@@ -26,8 +26,6 @@ class CardsResults extends React.Component {
     
 
 
-
-
     
     /***********************************************************/
     // Click on each card preview to show/hide card
