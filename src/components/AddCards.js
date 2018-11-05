@@ -3,9 +3,6 @@ import {connect} from 'react-redux';
 import {addCards} from '../actions/actions';
 
 /***********************************************************/
-// global array to push card elements from website
-
-let arrayOfCards = [];
 
 class AddCards extends React.Component {
 
@@ -25,7 +22,7 @@ class AddCards extends React.Component {
         fetch(link)
         .then(res => res.json())
         .then(res => {
-            
+
             // get array of cards and dispatch it
             const arrayOfCards = res.map(card => {
                 return {
