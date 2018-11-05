@@ -37,16 +37,31 @@ class CardForm extends React.Component{
         document.body.removeAttribute('style');
     }
 
+    // copy code to a clipboard
     handleCopyClick() {
-
+        
+        const text = document.querySelector('code').innerText;
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        console.log('Text copied to clipboard!');
     }
-    
+
+    // copy to clipboard and go to repl.it to try
+    handleTryitClick() {
+        console.log('Try it clicked!');
+        //  https://repl.it/languages/javascript
+    }
+
     render(){
         
         const codeTextData = 
             <figure>
                 <pre>
-                    <code contentEditable spellCheck={false}>
+                    <code contentEditable={true} spellCheck={false} suppressContentEditableWarning={true}>
                         {this.props.cards.showCardData}
                     </code>
                 </pre>
@@ -58,7 +73,7 @@ class CardForm extends React.Component{
                     <h4>{this.props.cardToShow}</h4>
                     <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
                     <div className="card-form button copy" onClick={this.handleCopyClick}></div>
-                    <div className="card-form button try-it"></div>
+                    <div className="card-form button try-it" onClick={this.handleTryitClick}></div>
                 </div>
                 {codeTextData}
             </div>
