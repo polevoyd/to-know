@@ -2,10 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setCodeData} from '../actions/actions';
 
-// TODO
-// add button to copy whole code
-// add link to complier environment (https://repl.it/languages/javascript) for JS
-
 class CardForm extends React.Component{
  
     /***********************************************************/
