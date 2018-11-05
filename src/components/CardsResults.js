@@ -72,6 +72,10 @@ class CardsResults extends React.Component {
     onDrop(event, newCategory) {
         const name = event.dataTransfer.getData('card');
         this.props.dispatch(changeCategory(name, newCategory));
+
+        // here we need to save current state to a local storage
+        // localStorage.setItem('cards',   )
+        // console.log(this.props.state)
     }
 
     /***********************************************************/

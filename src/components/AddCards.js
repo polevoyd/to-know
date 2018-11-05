@@ -17,7 +17,8 @@ class AddCards extends React.Component {
     handleLinkSubmit(event) {
         event.preventDefault();
         event.persist();
-        
+
+        // validation
         const valid = new RegExp(/^\https:\/\/github.com\/\w{1,15}\/.{1,70}/);
 
         if (valid.test(event.target[0].value.trim())){
