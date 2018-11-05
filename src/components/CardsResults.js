@@ -33,12 +33,7 @@ class CardsResults extends React.Component {
     // Click on each card preview to show/hide card
 
     handleClick(name) {
-
-
         const userSlashRepo = this.props.cards.user.split('/').splice(3,2).join('/');
-        console.log(userSlashRepo)
-
-
         const link = `https://raw.githubusercontent.com/${userSlashRepo}/master/${name}`;
         this.props.dispatch(showCard(name, link));
     }
