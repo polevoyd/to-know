@@ -187,7 +187,7 @@ body {
   display: inline-block;
   width: 33%;
   height: 1600px;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: -1;
 }
 
