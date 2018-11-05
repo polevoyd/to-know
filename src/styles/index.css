@@ -235,14 +235,14 @@ body {
 
 pre, code {
   font-family: monospace, monospace;
-  /* color: #c5c8c6;
+  color: #c5c8c6;
   border-radius: 1em;
-  width: 80%; */
+  width: 80%;
 }
 
 pre {
   overflow: auto;
-  /* background-color: #1d1f21; */
+  background-color: #1d1f21;
 }
 
 pre > code {

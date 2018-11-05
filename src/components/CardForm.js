@@ -28,17 +28,19 @@ class CardForm extends React.Component{
     }
 
     // input: format, output: language
-    formatToLanguage(format) {
-
+    formatToLanguage() {
+        const format = this.props.cardToShow.split('.')[this.props.cardToShow.split('.').length-1];
         switch (format) {
-            case '.js':
-                return 'javascript';
-                break;
-        
-            default:
-                break;
+            case 'js': return 'javascript';
+            case 'py': return 'python3';
+            case 'rb': return 'ruby';
+            case 'html': return 'html';
+            case 'css': return 'html';
+            case 'java': return 'java';
+            case 'cpp': return 'cpp';
+            case 'cs': return 'csharp';
+            default: return '';
         }
-
     }
 
     // make body unscrollable when form is open
@@ -64,8 +66,9 @@ class CardForm extends React.Component{
     }
 
     // copy to clipboard and go to repl.it to try
-    handleTryitClick() {
-        const win = window.open('https://repl.it/languages/javascript', '_blank');
+    // arrow cause we need access to global 'this'
+    handleTryitClick = () => {
+        const win = window.open(`https://repl.it/languages/${this.formatToLanguage()}`, `_blank`);
         win.focus();
     }
 
