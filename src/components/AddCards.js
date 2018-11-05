@@ -16,51 +16,27 @@ class AddCards extends React.Component {
 
     handleLinkSubmit(event) {
         event.preventDefault();
-
         event.persist();
-       
 
+        // TODO
+        // need to validate a event.target[0].value here
+        
+        const link = `https://to-know.herokuapp.com?repo=${event.target[0].value}`;
 
+        fetch(link)
+        .then(res => res.json())
+        .then(res => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ///////////////////////////////////////////////////////////////
-        // const link = `https://to-know.herokuapp.com/`;
-
-        // fetch(link)
-        // .then(res => res.json())
-        // .then(res => {
-
-        //     // get array of cards and dispatch it
-        //     const arrayOfCards = res.map(card => {
-        //         return {
-        //             name: card.name,
-        //             link: card.link,
-        //             category: 'new'
-        //         }
-        //     })
-        //     this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
-        // })
+            // get array of cards and dispatch it
+            const arrayOfCards = res.map(card => {
+                return {
+                    name: card.name,
+                    link: card.link,
+                    category: 'new'
+                }
+            })
+            this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
+        })
     }
     
     /***********************************************************/
@@ -71,7 +47,7 @@ class AddCards extends React.Component {
                 <form onSubmit={this.handleLinkSubmit}>
                     <label>
                         Profile Link:
-                        <input type="text" defaultValue="polevoyd"/>
+                        <input type="text" defaultValue="https://github.com/polevoyd/to-know-content"/>
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
