@@ -20,7 +20,7 @@ class AddCards extends React.Component {
 
         // TODO
         // need to validate a event.target[0].value here
-        
+
         const link = `https://to-know.herokuapp.com?repo=${event.target[0].value}`;
 
         fetch(link)
