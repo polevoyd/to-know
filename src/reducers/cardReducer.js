@@ -45,9 +45,8 @@ const cardReducer = (state = initialState, action) => {
         case 'SET_CODE_DATA':
             return {...state, showCardData: action.codeData }
         
-        case 'GET_STATE_FROM_LOCAL_STORAGE':
-            console.log(action.state)
-            return state;
+        case 'SET_STATE_FROM_LOCAL_STORAGE':
+            return action.state;
 
         default:
             return state;

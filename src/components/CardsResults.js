@@ -83,11 +83,12 @@ class CardsResults extends React.Component {
         const name = event.dataTransfer.getData('card');
         this.props.dispatch(changeCategory(name, newCategory));
 
-        // here we need to save current state to a local storage
-        localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
-        
-        // localStorage.setItem('chartData', JSON.stringify(imgsObj));
-        // JSON.parse(localStorage.getItem('chartData'));
+        // save updated state to a local storage
+        setTimeout(() => {
+            // here we need to save current state to a local storage
+            // sleep needed cause it saving faster than dispatch
+            localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
+        }, 300);
     }
 
     /***********************************************************/

@@ -38,6 +38,11 @@ class AddCards extends React.Component {
                 })
                 this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
             })
+            .then(() => {
+                // save updated state in a local storage
+                // here we need to save current state to a local storage
+                localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
+            })
         } else {
             console.log('Wrong link format!')
         }
