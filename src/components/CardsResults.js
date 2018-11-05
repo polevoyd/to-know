@@ -15,6 +15,23 @@ class CardsResults extends React.Component {
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
     }
     
+    //-----------------------------------
+    //              TODO:
+    //-----------------------------------
+
+
+
+
+    
+    // Make server side be able to read from any repo user request
+    
+    // create persistance with a local storage
+
+
+
+
+
+    
     /***********************************************************/
     // Click on each card preview to show/hide card
 
