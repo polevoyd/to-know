@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setCodeData} from '../actions/actions';
+import Prism from 'prismjs';
+import '../styles/prism.css';
 
 // TODO
 // add button to copy whole code
@@ -30,6 +32,7 @@ class CardForm extends React.Component{
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
+        Prism.highlightAll();
     }
 
     // make body scrollable when form is closed
@@ -42,7 +45,7 @@ class CardForm extends React.Component{
         const codeTextData = 
             <figure>
                 <pre>
-                    <code>
+                    <code className="language-javascript" contentEditable spellCheck={false}>
                         {this.props.cards.showCardData}
                     </code>
                 </pre>

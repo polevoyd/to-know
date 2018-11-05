@@ -1,4 +1,4 @@
-
+/* * { outline: 1px solid orange } */
 
 iframe {
   border: none;
@@ -161,20 +161,20 @@ body {
   background-color: rgb(255, 79, 79);
 }
 
-.card-edit-form-header .button.close {
-  background-color: rgb(255, 118, 118);
+.card-edit-form-header .button.copy {
+  background-color: rgb(255, 242, 121);
 }
 
-.card-edit-form-header .button.close {
-  background-color: rgb(255, 118, 118);
+.card-edit-form-header .button.copy:hover {
+  background-color: rgb(255, 222, 75);
 }
 
-.card-edit-form-header .button.close {
-  background-color: rgb(255, 118, 118);
+.card-edit-form-header .button.try-it {
+  background-color: rgb(145, 255, 118);
 }
 
-.card-edit-form-header .button.close {
-  background-color: rgb(255, 118, 118);
+.card-edit-form-header .button.try-it:hover {
+  background-color: rgb(70, 255, 64);
 }
 .card-edit-form-header .button {
   margin: 1em 1em 1em 0.5em;
@@ -233,7 +233,16 @@ body {
   /* display: inline-block; */
 }
 
-pre {
-  height: 200px;
-  width: 200px;
+/* pre, code {
+  font-family: monospace, monospace;
 }
+
+pre {
+  overflow: auto;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+} */
