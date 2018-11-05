@@ -14,6 +14,7 @@ class CardsResults extends React.Component {
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
+        // this.componentWillMount = this.componentWillMount.bind(this);
     }
     
     //-----------------------------------
@@ -25,14 +26,13 @@ class CardsResults extends React.Component {
     // Styling embedded code + button to clipboard copy
 
     
+    /***********************************************************/
+    // Set state from local storage if it exist there
 
     componentWillMount() {
-
         const store = JSON.parse(localStorage.getItem('cardsState'));
-
-        // set state from local storage if it exist there
         if (store) {
-            this.dispatch(setStateFromLocalStorage(store));
+            this.props.dispatch(setStateFromLocalStorage(store));
         }
     }
 
