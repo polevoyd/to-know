@@ -84,7 +84,7 @@ class CardForm extends React.Component{
         const codeTextData = 
             <figure>
                 <pre>
-                    <code className="language-javascript" contentEditable={true} spellCheck={false} suppressContentEditableWarning={true}>
+                    <code contentEditable={true} spellCheck={false} suppressContentEditableWarning={true}>
                         {this.props.cards.showCardData}
                     </code>
                 </pre>
