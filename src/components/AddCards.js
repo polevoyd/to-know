@@ -17,26 +17,29 @@ class AddCards extends React.Component {
     handleLinkSubmit(event) {
         event.preventDefault();
         event.persist();
+        
+        const valid = new RegExp(/^\https:\/\/github.com\/\w{1,15}\/.{1,70}/);
 
-        // TODO
-        // need to validate a event.target[0].value here
+        if (valid.test(event.target[0].value.trim())){
+            
+            const link = `https://to-know.herokuapp.com?repo=${event.target[0].value}`;
+            fetch(link)
+            .then(res => res.json())
+            .then(res => {
 
-        const link = `https://to-know.herokuapp.com?repo=${event.target[0].value}`;
-
-        fetch(link)
-        .then(res => res.json())
-        .then(res => {
-
-            // get array of cards and dispatch it
-            const arrayOfCards = res.map(card => {
-                return {
-                    name: card.name,
-                    link: card.link,
-                    category: 'new'
-                }
+                // get array of cards and dispatch it
+                const arrayOfCards = res.map(card => {
+                    return {
+                        name: card.name,
+                        link: card.link,
+                        category: 'new'
+                    }
+                })
+                this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
             })
-            this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
-        })
+        } else {
+            console.log('Wrong link format!')
+        }
     }
     
     /***********************************************************/
