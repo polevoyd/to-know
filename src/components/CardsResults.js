@@ -4,7 +4,8 @@ import {connect} from 'react-redux';
 import CardPreview from './CardPreview';
 import {showCard} from '../actions/actions';
 import {hideCard} from '../actions/actions';
-import {changeCategory} from '../actions/actions'
+import {changeCategory} from '../actions/actions';
+import {setStateFromLocalStorage} from '../actions/actions'
 
 class CardsResults extends React.Component {
     constructor(props){
@@ -25,6 +26,15 @@ class CardsResults extends React.Component {
 
     
 
+    componentWillMount() {
+
+        const store = JSON.parse(localStorage.getItem('cardsState'));
+
+        // set state from local storage if it exist there
+        if (store) {
+            this.dispatch(setStateFromLocalStorage(store));
+        }
+    }
 
     
     /***********************************************************/
@@ -74,8 +84,10 @@ class CardsResults extends React.Component {
         this.props.dispatch(changeCategory(name, newCategory));
 
         // here we need to save current state to a local storage
-        // localStorage.setItem('cards',   )
-        // console.log(this.props.state)
+        localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
+        
+        // localStorage.setItem('chartData', JSON.stringify(imgsObj));
+        // JSON.parse(localStorage.getItem('chartData'));
     }
 
     /***********************************************************/
