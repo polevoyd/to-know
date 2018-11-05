@@ -17,22 +17,50 @@ class AddCards extends React.Component {
     handleLinkSubmit(event) {
         event.preventDefault();
 
-        const link = `https://to-know.herokuapp.com/`;
+        event.persist();
+       
 
-        fetch(link)
-        .then(res => res.json())
-        .then(res => {
 
-            // get array of cards and dispatch it
-            const arrayOfCards = res.map(card => {
-                return {
-                    name: card.name,
-                    link: card.link,
-                    category: 'new'
-                }
-            })
-            this.props.dispatch(addCards('polevoyd', arrayOfCards));
-        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // ///////////////////////////////////////////////////////////////
+        // const link = `https://to-know.herokuapp.com/`;
+
+        // fetch(link)
+        // .then(res => res.json())
+        // .then(res => {
+
+        //     // get array of cards and dispatch it
+        //     const arrayOfCards = res.map(card => {
+        //         return {
+        //             name: card.name,
+        //             link: card.link,
+        //             category: 'new'
+        //         }
+        //     })
+        //     this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
+        // })
     }
     
     /***********************************************************/
@@ -52,5 +80,9 @@ class AddCards extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {cards: state}
+}
+
 // connect gives access to dispatch as a prop
-export default connect()(AddCards);
+export default connect(mapStateToProps)(AddCards);

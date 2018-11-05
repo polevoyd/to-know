@@ -56,7 +56,6 @@ const cardReducer = (state = initialState, action) => {
         })
 
         case 'SET_CODE_DATA':
-            // console.log('REDUCER =>>>>>>>>>>>>>>>>>>>>' + action.codeData)
             return({
                 showCard: state.showCard,
                 showCardName: state.showCardName,

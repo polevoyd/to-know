@@ -4,6 +4,7 @@
  */
 
 export const ADD_CARDS = 'ADD_CARDS'
+export const ADD_REPO = 'ADD_REPO' 
 export const SHOW_CARD = 'SHOW_CARD'
 export const HIDE_CARD = 'HIDE_CARD'
 export const CHANGE_CATEGORY = 'CHANGE_CATEGORY'
@@ -32,5 +33,4 @@ export function changeCategory(name, newCategory) {
 export function setCodeData(codeData) {
     return { type: SET_CODE_DATA, codeData }
 }
-
 
