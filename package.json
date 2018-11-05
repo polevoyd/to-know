@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://polevoyd.github.io/to-know",
   "dependencies": {
-    "prismjs": "^1.15.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-gist": "^1.2.1",

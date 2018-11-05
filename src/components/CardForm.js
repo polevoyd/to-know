@@ -1,8 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setCodeData} from '../actions/actions';
-import Prism from 'prismjs';
-import '../styles/prism.css';
 
 // TODO
 // add button to copy whole code
@@ -32,7 +30,6 @@ class CardForm extends React.Component{
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
-        Prism.highlightAll();
     }
 
     // make body scrollable when form is closed
@@ -40,12 +37,16 @@ class CardForm extends React.Component{
         document.body.removeAttribute('style');
     }
 
+    handleCopyClick() {
+
+    }
+    
     render(){
         
         const codeTextData = 
             <figure>
                 <pre>
-                    <code className="language-javascript" contentEditable spellCheck={false}>
+                    <code contentEditable spellCheck={false}>
                         {this.props.cards.showCardData}
                     </code>
                 </pre>
@@ -56,7 +57,7 @@ class CardForm extends React.Component{
                 <div className="card-edit-form-header">
                     <h4>{this.props.cardToShow}</h4>
                     <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
-                    <div className="card-form button copy"></div>
+                    <div className="card-form button copy" onClick={this.handleCopyClick}></div>
                     <div className="card-form button try-it"></div>
                 </div>
                 {codeTextData}
