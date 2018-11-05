@@ -19,7 +19,8 @@ class CardsResults extends React.Component {
     // Click on each card preview to show/hide card
 
     handleClick(name) {
-        this.props.dispatch(showCard(name));
+        const link = `https://raw.githubusercontent.com/polevoyd/to-know-content/master/${name}`;
+        this.props.dispatch(showCard(name, link));
     }
 
     /***********************************************************/
@@ -66,7 +67,7 @@ class CardsResults extends React.Component {
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? 
-                <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} user={this.props.cards.user} handlePanelClicks={this.handlePanelClicks}/> : null}
+                <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} user={this.props.cards.user} link={this.props.cards.showCardLink} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
                     <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new">
                         <CardPreview cards={this.props.cards} category="new" onDragStart={this.onDragStart} handleClick={this.handleClick} addSpacesToName={this.addSpacesToName}/>

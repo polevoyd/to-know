@@ -17,8 +17,8 @@ export function addCards(userName, arrayOfCards) {
     return { type: ADD_CARDS, user: userName, arrayOfCards } 
 }
 
-export function showCard(name) {
-    return { type: SHOW_CARD, name: name }
+export function showCard(name, link) {
+    return { type: SHOW_CARD, name: name, link }
 }
 
 export function hideCard() {

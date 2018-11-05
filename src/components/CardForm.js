@@ -6,20 +6,21 @@ class CardForm extends React.Component{
  
     // get textcode from link
     componentWillMount() {
-        var request = new XMLHttpRequest();
-        request.open('GET', "https://raw.githubusercontent.com/polevoyd/js-challenges/master/Misc:%20Candies.js", true);
+        
+        // setting up request
+        const request = new XMLHttpRequest();
+        request.open('GET', this.props.link, true);
         request.responseType = 'blob';
+        
         request.onload = () => {
-            var reader = new FileReader();
+            const reader = new FileReader();
             reader.readAsText(request.response);
+            
             reader.onload =  (e) => {
-                // console.log('DataURL:', e.target.result);
                 this.props.dispatch(setCodeData(e.target.result))
             };
         };
         request.send();
-
-        // console.log(this)
     }
 
     // make body unscrollable when form is open
