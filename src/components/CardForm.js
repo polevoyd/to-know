@@ -8,6 +8,7 @@ import {setCodeData} from '../actions/actions';
 
 class CardForm extends React.Component{
  
+    /***********************************************************/
     // get textcode from link
     componentWillMount() {
         
@@ -27,6 +28,7 @@ class CardForm extends React.Component{
         request.send();
     }
 
+    /***********************************************************/
     // input: format, output: language
     formatToLanguage() {
         const format = this.props.cardToShow.split('.')[this.props.cardToShow.split('.').length-1];
@@ -43,16 +45,19 @@ class CardForm extends React.Component{
         }
     }
 
+    /***********************************************************/
     // make body unscrollable when form is open
     componentDidMount() {
         document.body.style.overflow = 'hidden';
     }
 
+    /***********************************************************/
     // make body scrollable when form is closed
     componentWillUnmount() {
         document.body.removeAttribute('style');
     }
 
+    /***********************************************************/
     // copy code to a clipboard
     handleCopyClick() {
         const text = document.querySelector('code').innerText;
@@ -65,6 +70,7 @@ class CardForm extends React.Component{
         console.log('Text copied to clipboard!');
     }
 
+    /***********************************************************/
     // copy to clipboard and go to repl.it to try
     // arrow cause we need access to global 'this'
     handleTryitClick = () => {
@@ -72,6 +78,7 @@ class CardForm extends React.Component{
         win.focus();
     }
 
+    /***********************************************************/
     render(){
         
         const codeTextData = 
