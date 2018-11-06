@@ -79,6 +79,7 @@ class CardForm extends React.Component {
     /***********************************************************/
     render(){
         
+
         const codeTextData = 
             <figure>
                 <pre>
@@ -87,6 +88,8 @@ class CardForm extends React.Component {
                     </code>
                 </pre>
             </figure>;
+
+
 
         return(
             <div className="card-edit-form">
