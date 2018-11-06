@@ -70,6 +70,8 @@ class CardForm extends React.Component{
     // copy to clipboard and go to repl.it to try
     // arrow cause we need access to global 'this'
     handleTryitClick = () => {
+        // copy content before going to external link
+        this.handleCopyClick();
         const win = window.open(`https://repl.it/languages/${this.formatToLanguage()}`, `_blank`);
         win.focus();
     }
