@@ -79,7 +79,6 @@ class CardForm extends React.Component {
     /***********************************************************/
     render(){
         
-
         const codeTextData = 
             <figure>
                 <pre>
@@ -88,9 +87,6 @@ class CardForm extends React.Component {
                     </code>
                 </pre>
             </figure>;
-
-
-        // const frame = <iframe onClick={document.execCommand('paste')} height="400px" width="100%" src="https://repl.it/repls/StudiousWebbedInsurance?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">this.props.cards.showCardData</iframe>
 
         return(
             <div className="card-edit-form">
