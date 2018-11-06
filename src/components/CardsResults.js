@@ -5,7 +5,7 @@ import CardPreview from './CardPreview';
 import {showCard} from '../actions/actions';
 import {hideCard} from '../actions/actions';
 import {changeCategory} from '../actions/actions';
-import {setStateFromLocalStorage} from '../actions/actions'
+import {updateState} from '../actions/actions'
 
 class CardsResults extends React.Component {
     constructor(props){
@@ -32,7 +32,7 @@ class CardsResults extends React.Component {
     componentWillMount() {
         const store = JSON.parse(localStorage.getItem('cardsState'));
         if (store) {
-            this.props.dispatch(setStateFromLocalStorage(store));
+            this.props.dispatch(updateState(store));
         }
     }
 

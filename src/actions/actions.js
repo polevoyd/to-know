@@ -9,7 +9,7 @@ export const SHOW_CARD = 'SHOW_CARD'
 export const HIDE_CARD = 'HIDE_CARD'
 export const CHANGE_CATEGORY = 'CHANGE_CATEGORY'
 export const SET_CODE_DATA = 'SET_CODE_DATA'
-export const SET_STATE_FROM_LOCAL_STORAGE = 'SET_STATE_FROM_LOCAL_STORAGE'
+export const UPDATE_STATE = 'UPDATE_STATE'
 
 /*
  * action creators
@@ -35,6 +35,6 @@ export function setCodeData(codeData) {
     return { type: SET_CODE_DATA, codeData }
 }
 
-export function setStateFromLocalStorage(state) {
-    return { type: SET_STATE_FROM_LOCAL_STORAGE, state }
+export function updateState(state) {
+    return { type: UPDATE_STATE, state }
 }
