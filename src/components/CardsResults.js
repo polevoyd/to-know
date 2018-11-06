@@ -28,13 +28,14 @@ class CardsResults extends React.Component {
     
     /***********************************************************/
     // Set state from local storage if it exist there
+    // ( uncomment when finished with testing )
 
-    componentWillMount() {
-        const store = JSON.parse(localStorage.getItem('cardsState'));
-        if (store) {
-            this.props.dispatch(setStateFromLocalStorage(store));
-        }
-    }
+    // componentWillMount() {
+    //     const store = JSON.parse(localStorage.getItem('cardsState'));
+    //     if (store) {
+    //         this.props.dispatch(setStateFromLocalStorage(store));
+    //     }
+    // }
 
     
     /***********************************************************/
@@ -57,9 +58,15 @@ class CardsResults extends React.Component {
     // Helper function to add spaces to a card name (for wrapping)
 
     addSpacesToName(name){
-        return [...name].map(letter => {
+        let a = [...name].map(letter => {
             return (letter.charCodeAt(0) > 64 && letter.charCodeAt(0) < 91) ? ' ' + letter : letter
-        }).join('')
+        })
+        .join('')
+        console.log('-------------------------------------------------------------------------------------');
+        let firstIndex = a.indexOf('%20');
+        const word = a.slice(0, firstIndex).concat(a.slice(firstIndex + 3));
+
+        console.log(word)
     }
 
     /***********************************************************/
