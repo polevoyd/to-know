@@ -42,8 +42,20 @@ class AddCards extends React.Component {
                 // save updated state in a local storage
                 // here we need to save current state to a local storage
                 // TODO:
-                // check 'category' calue inside each card object :
-                // if is not equal to
+                // check 'category' value inside each card object :
+                // if is not equal to 'new' - then use category value from a localStorage
+
+                // let tempOldState = JSON.parse(localStorage.getItem('cardsState')).cardsObjects;
+
+                // let tempNewState = this.props.cards.cardsObjects;
+
+               
+
+
+                // console.log(tempNewState)
+
+
+
                 localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
             })
         } else {
