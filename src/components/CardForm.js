@@ -94,8 +94,6 @@ class CardForm extends React.Component {
                 </pre>
             </figure>;
 
-        const text = this.props.cards.showCardData;
-
         return(
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
