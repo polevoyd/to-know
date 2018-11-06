@@ -15,9 +15,11 @@ const cardReducer = (state = initialState, action) => {
         case 'ADD_CARDS':
             return {
                 ...initialState,
-                user: action.user,
-                cardsObjects: action.arrayOfCards
+                cardsObjects: action.newStateCardsArray
             }
+
+        case 'ADD_USERNAME':
+            return {...initialState, user: action.user }
 
         case 'SHOW_CARD':
         return {

@@ -10,13 +10,14 @@ export const HIDE_CARD = 'HIDE_CARD'
 export const CHANGE_CATEGORY = 'CHANGE_CATEGORY'
 export const SET_CODE_DATA = 'SET_CODE_DATA'
 export const UPDATE_STATE = 'UPDATE_STATE'
+export const ADD_USERNAME = 'ADD_USERNAME'
 
 /*
  * action creators
  */
 
-export function addCards(userName, arrayOfCards) {
-    return { type: ADD_CARDS, user: userName, arrayOfCards } 
+export function addCards(newStateCardsArray) {
+    return { type: ADD_CARDS, newStateCardsArray } 
 }
 
 export function showCard(name, link) {
@@ -37,4 +38,8 @@ export function setCodeData(codeData) {
 
 export function updateState(state) {
     return { type: UPDATE_STATE, state }
+}
+
+export function addUsername(userName) {
+    return { type: ADD_USERNAME, user: userName }
 }
