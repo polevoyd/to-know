@@ -41,7 +41,8 @@ body {
   left: 10%;
   top: 10%;
 
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -240,8 +241,17 @@ body {
   /* display: inline-block; */
 }
 
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.code-block {
+  width: 100%;
+  overflow-x: scroll;
+}
 pre, code {
   font-family: monospace, monospace;
+  border: 1px solid black;
+
 }
 
 pre {

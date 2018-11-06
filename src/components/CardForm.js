@@ -110,7 +110,9 @@ class CardForm extends React.Component {
                     <div className="card-form button repl" onClick={this.handleReplClick}></div>
                     <div className="card-form button github" onClick={this.handleGithubClick}></div>
                 </div>
-                {codeTextData}
+                <div className="code-block">
+                    {codeTextData}
+                </div>
             </div>
         );
     }
