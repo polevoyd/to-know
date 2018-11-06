@@ -1,7 +1,8 @@
 /* * { outline: 1px solid orchid } */
 
 iframe {
-  border: none;
+  border: 1px solid black;
+  
 }
 
 /* ///////////////////////////////////////////////////////// */
