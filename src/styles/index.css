@@ -195,12 +195,11 @@ html {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  border: 1px solid black;
-  border-radius: 1vw;
+  
   margin: 0;
   padding: 0;
 }
-pre, code, figure {
+figure {
   font-family: monospace, monospace;
   width: 100%;
   height: 100%;
@@ -208,14 +207,19 @@ pre, code, figure {
 }
 
 pre {
+  border: 1px solid black;
   overflow: scroll;
-  /* overflow */
+  width: 99%;
+  height: 90%;
+  font-family: monospace, monospace;
 }
 
 pre > code {
   display: block;
-  /* padding: 1rem; */
+  padding: 1rem;
   word-wrap: normal;
+  height: 90%;
+  width: 90%;
 }
 
 * {
