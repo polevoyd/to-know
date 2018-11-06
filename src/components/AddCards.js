@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addCards} from '../actions/actions';
-import {updateState} from '../actions/actions';
 import {addUsername} from '../actions/actions'
 
 /***********************************************************/
@@ -46,19 +45,24 @@ class AddCards extends React.Component {
                 // here we need to save current state to a local storage
                 // but first, check for a cards that already been moved
 
-                let oldState = JSON.parse(localStorage.getItem('cardsState')).cardsObjects;
                 let newStateCardsArray = arrayOfCards;
 
-                const cardsWithChangedCategories = oldState.filter(card => card.category !== 'new');
-                
-                for (let card of cardsWithChangedCategories) {
-                    for (let cardNew of newStateCardsArray) {
-                        if (card.name === cardNew.name) {
-                            cardNew.category = card.category;
+                if (localStorage.getItem('cardsState')) {
+                    
+                    // if we already have some set in local storage
+                    let oldState = JSON.parse(localStorage.getItem('cardsState')).cardsObjects;
+                    const cardsWithChangedCategories = oldState.filter(card => card.category !== 'new');
+
+                    // checking for alternated categories
+                    for (let card of cardsWithChangedCategories) {
+                        for (let cardNew of newStateCardsArray) {
+                            if (card.name === cardNew.name) {
+                                cardNew.category = card.category;
+                            }
                         }
                     }
                 }
-
+                
                 // send updated cards
                 this.props.dispatch(addCards(newStateCardsArray));
             })

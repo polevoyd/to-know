@@ -13,6 +13,7 @@ const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'ADD_CARDS':
+        console.log(action.newStateCardsArray)
             return {
                 ...state,
                 cardsObjects: action.newStateCardsArray
