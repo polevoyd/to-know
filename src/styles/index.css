@@ -1,8 +1,12 @@
+* { outline: 1px orchid solid; }
+
+
 
 html {
   min-height: 100%;
+  max-width: 100%;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -46,12 +50,14 @@ body {
 .card-preview{
   border: 1px solid lightgray;
   min-height: 10%;
+  
   min-width: 10%;
-  margin: 1em;
+  max-width: 100%;
+  margin: 5vw;
   display: grid;
  
   transition: 0.3s;
-  border-radius: 0.8em;
+  border-radius: 1.5vw;
 }
 
 .card-preview:hover {
@@ -60,7 +66,7 @@ body {
 
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 4vw;
+  font-size: 2vw;
 
   width: 100%;
   text-align: center;
@@ -195,18 +201,23 @@ body {
 
 /* DRAG SECTIONS  */
 .drag-sections {
-  width: 100%;
+  width: 90%;
   height: 90%;
-  position: absolute
+  position: absolute;
+  left: 5%;
+
+
+
 }
 
-.drag-sections > div{
+.drag-sections > div {
   display: inline-block;
-  width: 33%;
-  height: 900px;
+  /* width: 33%; */
+  height: 100%;
   /* overflow: hidden; */
   overflow-y: scroll;
   z-index: -1;
+
 }
 
 .new {
@@ -214,6 +225,7 @@ body {
   /* white-space: nowrap; */
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 33%;
 }
 
 .active {
@@ -221,13 +233,15 @@ body {
   /* white-space: nowrap; */
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 33%;
 }
 
-.done {
+.complete {
   background-color:beige;
   /* white-space: nowrap; */
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 34%;
 }
 
 .drag-sections .card-preview {
