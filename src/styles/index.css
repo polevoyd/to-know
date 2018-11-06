@@ -2,7 +2,7 @@
 
 iframe {
   border: 1px solid black;
-  
+
 }
 
 /* ///////////////////////////////////////////////////////// */
@@ -170,13 +170,22 @@ body {
   background-color: rgb(255, 222, 75);
 }
 
-.card-edit-form-header .button.try-it {
+.card-edit-form-header .button.repl {
   background-color: rgb(145, 255, 118);
 }
 
-.card-edit-form-header .button.try-it:hover {
+.card-edit-form-header .button.repl:hover {
   background-color: rgb(70, 255, 64);
 }
+
+.card-edit-form-header .button.github {
+  background-color: rgb(126, 126, 126);
+}
+
+.card-edit-form-header .button.github:hover {
+  background-color: rgb(100, 100, 100);
+}
+
 .card-edit-form-header .button {
   margin: 1em 1em 1em 0.5em;
   height: 1.5em;

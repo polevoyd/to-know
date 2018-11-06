@@ -69,10 +69,23 @@ class CardForm extends React.Component {
     /***********************************************************/
     // copy to clipboard and go to repl.it to try
     // arrow cause we need access to global 'this'
-    handleTryitClick = () => {
+    handleReplClick = () => {
         // copy content before going to external link
         this.handleCopyClick();
         const win = window.open(`https://repl.it/languages/${this.formatToLanguage()}`, `_blank`);
+        win.focus();
+    }
+
+    /***********************************************************/
+    // go to original github page
+    handleGithubClick = () => {
+        let rawLink = this.props.cards.showCardLink.split('/');
+        let name = rawLink[rawLink.length-4];
+        let repo = rawLink[rawLink.length-3];
+        let file = rawLink[rawLink.length-1];
+        let link = ['https://github.com'].concat(name).concat(repo).concat(['blob/master']).concat(file).join('/');
+
+        const win = window.open(link, `_blank`);
         win.focus();
     }
 
@@ -94,7 +107,8 @@ class CardForm extends React.Component {
                     <h4>{this.props.cardToShow}</h4>
                     <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
                     <div className="card-form button copy" onClick={this.handleCopyClick}></div>
-                    <div className="card-form button try-it" onClick={this.handleTryitClick}></div>
+                    <div className="card-form button repl" onClick={this.handleReplClick}></div>
+                    <div className="card-form button github" onClick={this.handleGithubClick}></div>
                 </div>
                 {codeTextData}
             </div>
