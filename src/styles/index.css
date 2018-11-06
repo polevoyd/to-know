@@ -12,21 +12,16 @@ html {
 /* -------------------------------------  */
 /* CardsResults component  */
 
-/* font-family: 'Work Sans', sans-serif; */
-
-.cards-all-results {
-  width: 100%;
-}
-
-.cards-all-results .card-edit-form {
-  /* position: absolute; */
+.card-edit-form {
   position: fixed;
   left: 10%;
   top: 10%;
 
-  overflow-y: scroll;
+  overflow-y: scroll; 
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+
+
 }
 
 .cards-all-results .card-edit-form *{
@@ -46,6 +41,7 @@ html {
   border-radius: 1.5vw;
 }
 
+
 .card-preview:hover {
   box-shadow: 0px 2px 8px 0px rgba(150,150,150,1);
 }
@@ -58,6 +54,7 @@ html {
   align-self: center
 }
 
+/* --------------------------------edit form-------------------------------  */
 
 .card-preview .close {
   margin: 1em 1em 1em 1em;
@@ -75,8 +72,8 @@ html {
 /* CardForm Component  */
 
 .card-edit-form {
-  /* position: fixed; */
-  /* display: grid; */
+  position: fixed;
+  display: grid;
   background-color: #f4f4f4;
   border: 1px solid #e4e4e4;
   width: 80%;
@@ -196,20 +193,29 @@ html {
 
 .code-block {
   width: 100%;
-  overflow-x: scroll;
-}
-pre, code {
-  font-family: monospace, monospace;
+  overflow-x: hidden;
+  overflow-y: hidden;
   border: 1px solid black;
-
+  margin: 0;
+  padding: 0;
+}
+pre, code, figure {
+  font-family: monospace, monospace;
+  width: 100%;
+  height: 100%;
+  /* overflow-y: hidden; */
 }
 
 pre {
-  overflow: auto;
+  overflow: scroll;
 }
 
 pre > code {
   display: block;
-  padding: 1rem;
+  /* padding: 1rem; */
   word-wrap: normal;
+}
+
+* {
+  /* outline: 1px solid orchid; */
 }
