@@ -38,7 +38,6 @@ class AddCards extends React.Component {
                         category: 'new'
                     }
                 })
-                // this.props.dispatch(addCards(event.target[0].value, arrayOfCards));
                 this.props.dispatch(addUsername(event.target[0].value));
                 return arrayOfCards;
             })
