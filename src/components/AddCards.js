@@ -45,37 +45,7 @@ class AddCards extends React.Component {
                 // check 'category' value inside each card object :
                 // if is not equal to 'new' - then use category value from a localStorage
 
-                let tempOldState = JSON.parse(localStorage.getItem('cardsState'));
-
-                let tempNewState = this.props.cards;
-
-                
-
-               let updatedState = tempNewState.cardsObjects.map(card => {
-
-                let tempCard = card;
-                
-                   if (tempOldState.cardsObjects.includes(card)) {
-                       if (tempOldState.cardsObjects[tempOldState.cardsObjects.indexOf(card)].category !== 'new') {
-                           card.category = tempOldState.cardsObjects[tempOldState.cardsObjects.indexOf(card)].category;
-                       }
-                   }
-                   
-                   return tempCard;
-               })
-
-             
-               let tempStateFinal = this.props.cards;
-               tempStateFinal.cardsObjects = updatedState;
-
-               
-
-            //    console.log('he!')
-                // console.log(updatedState)
-
-
-
-                localStorage.setItem('cardsState', JSON.stringify(tempStateFinal));
+                localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
             })
         } else {
             console.log('Wrong link format!')
