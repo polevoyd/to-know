@@ -2,12 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setCodeData} from '../actions/actions';
 
-///////////////////////////////////////////////////////////
-
-
-
-///////////////////////////////////////////////////////////
-
 class CardForm extends React.Component {
  
     /***********************************************************/
