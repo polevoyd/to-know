@@ -2,6 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setCodeData} from '../actions/actions';
 
+///////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////
+
 class CardForm extends React.Component {
  
     /***********************************************************/
@@ -87,6 +93,8 @@ class CardForm extends React.Component {
                     </code>
                 </pre>
             </figure>;
+
+        const text = this.props.cards.showCardData;
 
         return(
             <div className="card-edit-form">
