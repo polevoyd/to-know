@@ -1,4 +1,4 @@
-* { outline: 1px solid orange }
+/* * { outline: 1px solid orchid } */
 
 iframe {
   border: none;
@@ -189,22 +189,19 @@ body {
   font-weight: bold;
 }
 
-* {
-  /* outline: 1px solid orange; */
-}
-
 /* DRAG SECTIONS  */
 .drag-sections {
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: absolute
 }
 
 .drag-sections > div{
   display: inline-block;
   width: 33%;
-  height: 1600px;
-  overflow: hidden;
+  height: 900px;
+  /* overflow: hidden; */
+  overflow-y: scroll;
   z-index: -1;
 }
 
