@@ -1,20 +1,10 @@
-* { outline: 1px orchid solid; }
-
-
 
 html {
   min-height: 100%;
   max-width: 100%;
   position: relative;
-  /* overflow-x: hidden; */
 }
 
-body {
-  height: 100%;
-}
-
-/* -------------------------------------------------- */
- /* app level  */
 .app {
   padding: 5% 10% 5% 10%;
 }
@@ -27,10 +17,6 @@ body {
 .cards-all-results {
   width: 100%;
 }
-
-/* .cards-all-results .card-preview {
-  float: left;
-} */
 
 .cards-all-results .card-edit-form {
   /* position: absolute; */
@@ -67,54 +53,11 @@ body {
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
   font-size: 2vw;
-
   width: 100%;
   text-align: center;
   align-self: center
 }
 
-.card-preview p {
-  font-family: 'Work Sans', sans-serif;
-  display: block;
-  background-color: rgb(224, 224, 224);
-  margin: 0;
-  padding: 6px;
-  overflow-wrap: break-word;
-  border-radius: 0em 0em 0.8em 0.8em;
-}
-
-/* * {outline: 1px solid orange} */
-
-.card-preview .category-buttons {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
-  align-self: center;
-  justify-self: center;
-}
-
-.card-preview .category-buttons .group-one {
-  background-color: rgb(255, 118, 118);
-}
-
-.card-preview .category-buttons .group-two {
-  background-color: rgb(246, 255, 118);
-}
-
-.card-preview .category-buttons .group-three {
-  background-color: rgb(118, 255, 118);
-}
-
-.card-preview .category-buttons * {
-  /* margin: 1em 1em 1em 1em; */
-  height: 1.5em;
-  width: 1.5em;
-  border-radius: 50%;
-  background-color: rgb(255, 118, 118);
-}
 
 .card-preview .close {
   margin: 1em 1em 1em 1em;
