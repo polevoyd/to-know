@@ -14,7 +14,6 @@ class CardsResults extends React.Component {
         // bind cause it is modifying state
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
-        // this.componentWillMount = this.componentWillMount.bind(this);
     }
     
     //-----------------------------------
@@ -30,12 +29,12 @@ class CardsResults extends React.Component {
     // Set state from local storage if it exist there
     // ( uncomment when finished with testing )
 
-    // componentWillMount() {
-    //     const store = JSON.parse(localStorage.getItem('cardsState'));
-    //     if (store) {
-    //         this.props.dispatch(setStateFromLocalStorage(store));
-    //     }
-    // }
+    componentWillMount() {
+        const store = JSON.parse(localStorage.getItem('cardsState'));
+        if (store) {
+            this.props.dispatch(setStateFromLocalStorage(store));
+        }
+    }
 
     
     /***********************************************************/
