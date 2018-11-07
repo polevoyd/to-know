@@ -6,6 +6,9 @@ html {
   min-height: 100%;
   max-width: 100%;
   position: relative;
+  /* background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+
 }
 
 .app {
@@ -56,28 +59,28 @@ html {
   height: 100%;
   overflow-y: scroll;
   z-index: -1;
-
 }
 
 .new {
-  background-color: aliceblue;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 33%;
 }
 
 .active {
-  background-color: antiquewhite;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 33%;
 }
 
 .complete {
-  background-color:beige;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 34%;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 /* ---------------------------------------------------------------  */
