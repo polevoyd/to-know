@@ -133,6 +133,10 @@ html {
   grid-template-columns: 1fr;
   border: 2px solid rgb(122, 177, 209);
   background-color: rgb(181, 229, 231);
+
+
+  border: 2px solid rgb(168, 168, 168);
+  background-color: rgb(236, 236, 236);
   width: 80vw;
   min-width: 210px;
   max-width: 80vw;
