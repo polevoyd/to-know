@@ -106,11 +106,13 @@ class CardForm extends React.Component {
         return(
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
+                <div className="text-wrapper">
                     <h4>{this.props.cardToShow}</h4>
-                    <div className="card-form button copy" onClick={this.handleCopyClick}><i className="far fa-clone"></i></div>
-                    <div className="card-form button repl" onClick={this.handleReplClick}><i class="fas fa-terminal"></i></div>
-                    <div className="card-form button github" onClick={this.handleGithubClick}><i className="fab fa-github-square"></i></div>
-                    <div className="card-form button close" onClick={this.props.handlePanelClicks}><i className="far fa-window-close"></i></div>
+                </div>
+                    <div className="icon-wrap" onClick={this.handleCopyClick} ><i  className="far fa-clone card-form button copy"></i></div>
+                    <div className="icon-wrap" onClick={this.handleReplClick}><i className="fas fa-terminal card-form button repl"></i></div>
+                    <div className="icon-wrap" onClick={this.handleGithubClick}><i className="fab fa-github-square card-form button github"></i></div>
+                    <div className="icon-wrap" onClick={this.props.handlePanelClicks}><i className="far fa-window-close card-form button close"></i></div>
                 </div>
                 <div className="code-block">
                     {codeTextData}
