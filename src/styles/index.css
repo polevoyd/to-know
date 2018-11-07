@@ -1,3 +1,6 @@
+/* ---------------------------------------------------------------  */
+/* GENERAL  */
+/* ---------------------------------------------------------------  */
 
 html {
   min-height: 100%;
@@ -10,7 +13,8 @@ html {
 }
 
 /* ---------------------------------------------------------------  */
-/* CardsResults component  */
+/* RESULTS STATE  */
+/* ---------------------------------------------------------------  */
 
 .card-preview {
   border: 1px solid #e4e4e4;
@@ -37,7 +41,48 @@ html {
 }
 
 /* ---------------------------------------------------------------  */
-/* CardForm Component  */
+/* DRAG & DROP SECTIONS  */
+/* ---------------------------------------------------------------  */
+
+.drag-sections {
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  left: 5vw;
+}
+
+.drag-sections > div {
+  display: inline-block;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: -1;
+
+}
+
+.new {
+  background-color: aliceblue;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 33%;
+}
+
+.active {
+  background-color: antiquewhite;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 33%;
+}
+
+.complete {
+  background-color:beige;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 34%;
+}
+
+/* ---------------------------------------------------------------  */
+/* OPENED CARD FORM  */
+/* ---------------------------------------------------------------  */
 
 .card-edit-form {
   position: fixed;
@@ -149,45 +194,9 @@ html {
   font-weight: bold;
 }
 
-/* DRAG SECTIONS  */
-.drag-sections {
-  width: 90vw;
-  height: 90vh;
-  position: absolute;
-  left: 5vw;
-}
-
-.drag-sections > div {
-  display: inline-block;
-  height: 100%;
-  overflow-y: scroll;
-  z-index: -1;
-
-}
-
-.new {
-  background-color: aliceblue;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 33%;
-}
-
-.active {
-  background-color: antiquewhite;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 33%;
-}
-
-.complete {
-  background-color:beige;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 34%;
-}
-
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
-
+/* ---------------------------------------------------------------  */
+/* CODE SECTION  */
+/* ---------------------------------------------------------------  */
 
 .code-block {
   width: 100%;
@@ -209,9 +218,6 @@ figure {
   overflow: hidden;
 }
 
-
-
-
 pre {
   border: 1px solid #e4e4e4;
   overflow: scroll;
@@ -230,9 +236,5 @@ pre > code {
   width: 90%;
   border-bottom-left-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
-}
-
-* {
-  /* outline: 1px solid orchid; */
 }
 
