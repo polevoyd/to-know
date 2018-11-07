@@ -51,6 +51,7 @@ html {
   border: 1px solid #e4e4e4;
   width: 80vw;
   min-width: 410px;
+  max-width: 80vw;
   /* play with a height ?  */
   max-height: 80vh;
   border-radius: 1.5vw;
@@ -64,7 +65,7 @@ html {
 }
 
 .card-edit-form-header {
-  width: 100%;
+  width: 60%;
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 1px;
   grid-column: 1;
@@ -73,7 +74,7 @@ html {
 }
 
 .card-edit-form .text-wrapper {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .card-edit-form-header h4 {
@@ -95,28 +96,29 @@ html {
 }
 
 .card-edit-form-header .button.close {
-  background-color: rgb(255, 118, 118);
+  color: rgb(255, 118, 118);
+  /* display: block; */
   float: right;
 }
 
 .card-edit-form-header .button.close:hover {
-  background-color: rgb(255, 79, 79);
+  color: rgb(255, 79, 79);
 }
 
 .card-edit-form-header .button.copy {
-  background-color: rgb(255, 242, 121);
+  color: rgb(255, 242, 121);
 }
 
 .card-edit-form-header .button.copy:hover {
-  background-color: rgb(255, 222, 75);
+  color: rgb(255, 222, 75);
 }
 
 .card-edit-form-header .button.repl {
-  background-color: rgb(145, 255, 118);
+  color: rgb(145, 255, 118);
 }
 
 .card-edit-form-header .button.repl:hover {
-  background-color: rgb(70, 255, 64);
+  color: rgb(70, 255, 64);
 }
 
 .card-edit-form-header .button.github {
