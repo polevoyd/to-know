@@ -65,16 +65,29 @@ html {
 }
 
 .card-edit-form-header {
-  width: 60%;
+  width: 100%;
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 1px;
   grid-column: 1;
   grid-row: 1;
   overflow: hidden;
+
+  height: 20vh;
+  
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  grid-gap: 0;
+
 }
 
+* { outline: 1px orange solid;}
 .card-edit-form .text-wrapper {
-  /* width: 50%; */
+  grid-row: 1;
+}
+
+.card-edit-form .buttons-wrapper {
+  grid-row: 2;
 }
 
 .card-edit-form-header h4 {
