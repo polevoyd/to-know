@@ -210,11 +210,6 @@ pre {
   margin: 0 auto;
   border-bottom-left-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
-  
-  /* position: absolute; */
-
-  /* top: 5vh; */
-  
 }
 
 pre > code {
