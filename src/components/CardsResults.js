@@ -15,16 +15,7 @@ class CardsResults extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handlePanelClicks = this.handlePanelClicks.bind(this);
     }
-    
-    //-----------------------------------
-    //              TODO:
-    //-----------------------------------
-  
-    // Create persistance with a local storage
 
-    // Styling embedded code + button to clipboard copy
-
-    
     /***********************************************************/
     // Set state from local storage if it exist there
     // ( uncomment when finished with testing )
