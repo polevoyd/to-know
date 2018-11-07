@@ -79,6 +79,8 @@ class CardForm extends React.Component {
     /***********************************************************/
     // go to original github page
     handleGithubClick = () => {
+
+        console.log('lol!')
         let rawLink = this.props.cards.showCardLink.split('/');
         let name = rawLink[rawLink.length-4];
         let repo = rawLink[rawLink.length-3];
@@ -105,10 +107,10 @@ class CardForm extends React.Component {
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
                     <h4>{this.props.cardToShow}</h4>
-                    <div className="card-form button copy" onClick={this.handleCopyClick}></div>
-                    <div className="card-form button repl" onClick={this.handleReplClick}></div>
-                    <div className="card-form button github" onClick={this.handleGithubClick}></div>
-                    <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
+                    <div className="card-form button copy" onClick={this.handleCopyClick}><i className="far fa-clone"></i></div>
+                    <div className="card-form button repl" onClick={this.handleReplClick}><i class="fas fa-terminal"></i></div>
+                    <div className="card-form button github" onClick={this.handleGithubClick}><i className="fab fa-github-square"></i></div>
+                    <div className="card-form button close" onClick={this.props.handlePanelClicks}><i className="far fa-window-close"></i></div>
                 </div>
                 <div className="code-block">
                     {codeTextData}
