@@ -72,17 +72,16 @@ html {
   grid-column: 1;
   grid-row: 1;
   overflow: hidden;
-
-  height: 8vh;
-
+  height: 10vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 0px;
+  grid-gap: 1vh;
+  margin-bottom: 1vh;
 
 }
 
-* { outline: 1px orange solid;}
+/* * { outline: 1px orange solid;} */
 
 
 
@@ -94,12 +93,18 @@ html {
   grid-row: 2;
   margin: 0;
   height: 0;
+  width: 100%;
+  justify-self: center;
+}
+
+.card-edit-form .buttons-wrapper * {
+  margin: 0 1vw 0 1vw;
 }
 
 .card-edit-form-header h4 {
   width: 100%;
-  margin: 0 0;
-  text-align: center;
+  margin: 0 1vw;
+  text-align: left;
   height: 100%;
   font-size: 2vh;
   display: block;
