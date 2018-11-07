@@ -112,36 +112,36 @@ html {
 }
 
 .card-edit-form-header .button.close {
-  color: rgb(255, 118, 118);
+  color: black;
   float: right;
 }
 
 .card-edit-form-header .button.close:hover {
-  color: rgb(255, 79, 79);
+  color: gray;
 }
 
 .card-edit-form-header .button.copy {
-  color: rgb(255, 242, 121);
+  color: black;
 }
 
 .card-edit-form-header .button.copy:hover {
-  color: rgb(255, 222, 75);
+  color:gray;
 }
 
 .card-edit-form-header .button.repl {
-  color: rgb(145, 255, 118);
+  color: black;
 }
 
 .card-edit-form-header .button.repl:hover {
-  color: rgb(70, 255, 64);
+  color: gray;
 }
 
 .card-edit-form-header .button.github {
-  color: rgb(126, 126, 126);
+  color: black;
 }
 
 .card-edit-form-header .button.github:hover {
-  color: rgb(100, 100, 100);
+  color: gray;
 }
 
 .add-card {
