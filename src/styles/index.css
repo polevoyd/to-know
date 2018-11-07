@@ -204,8 +204,7 @@ html {
 }
 
 .card-edit-form-header .button.close:hover {
-  transform: scale(1.1);
-  color: rgb(181, 229, 231);
+  transform: scale(1.2);
 }
 
 .card-edit-form-header .button.copy {
@@ -213,8 +212,7 @@ html {
 }
 
 .card-edit-form-header .button.copy:hover {
-  transform: scale(1.1);
-  color: rgb(181, 229, 231);
+  transform: scale(1.2);
 }
 
 .card-edit-form-header .button.repl {
@@ -222,8 +220,7 @@ html {
 }
 
 .card-edit-form-header .button.repl:hover {
-  transform: scale(1.1);
-  color: rgb(181, 229, 231);
+  transform: scale(1.2);
 }
 
 .card-edit-form-header .button.github {
@@ -231,8 +228,7 @@ html {
 }
 
 .card-edit-form-header .button.github:hover {
-  transform: scale(1.1);
-  color: rgb(181, 229, 231);
+  transform: scale(1.2);
 }
 
 .add-card {
