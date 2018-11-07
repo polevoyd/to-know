@@ -12,11 +12,6 @@ html {
   overflow: hidden;
 }
 
-body {
-  z-index: 50;
-  background-color: greenyellow;
-}
-
 .app {
   padding: 5% 10% 5% 10%;
 }
@@ -26,7 +21,7 @@ body {
 /* ---------------------------------------------------------------  */
 
 .card-preview {
-  border: 1px solid #e4e4e4;
+  /* border: 1px solid #e4e4e4; */
   min-height: 10vh;
   min-width: 10%;
   max-width: 100%;
@@ -36,8 +31,42 @@ body {
   border-radius: 1.5vw;
 }
 
-.card-preview:hover {
-  box-shadow: 0px 2px 8px 0px rgba(150,150,150,1);
+.card-preview {
+  background-color: rgb(55, 112, 144);
+  color: white;
+}
+
+.new .card-preview {
+  box-shadow: 0vh 0vh 4vh 0vh rgb(171, 216, 210), inset 0vh 0vh 5vh -5vh rgba(0,0,0,1);
+}
+
+.active .card-preview {
+  box-shadow: 0vh 0vh 4vh 0vh rgb(171, 216, 210), inset 0vh 0vh 6vh -5vh rgba(0,0,0,1);
+}
+
+.complete .card-preview {
+  box-shadow: 0vh 0vh 4vh 0vh rgb(171, 216, 210), inset 0vh 0vh 5vh -5vh rgba(0,0,0,1);
+}
+
+.new .card-preview:hover {
+  box-shadow: 0 0 0 0 rgb(128, 208, 199), inset 0vh 0vh 5vh -4vh rgba(0,0,0,1);
+  transform: scale(1.1);
+  background-color: rgb(125, 207, 255);
+  color: black;
+}
+
+.active .card-preview:hover {
+  box-shadow: 0 0 0 0 rgb(128, 208, 199), inset 0vh 0vh 5vh -4vh rgba(0,0,0,1);
+  transform: scale(1.1);
+  background-color: rgb(125, 207, 255);
+  color: black;
+}
+
+.complete .card-preview:hover {
+  box-shadow: 0 0 0 0 rgb(128, 208, 199), inset 0vh 0vh 5vh -4vh rgba(0,0,0,1);
+  transform: scale(1.1);
+  background-color: rgb(125, 207, 255);
+  color: black;
 }
 
 .card-preview h4 {
@@ -68,9 +97,8 @@ body {
   -webkit-overflow-scrolling: touch;
   z-index: -1;
   margin-right: -5px;
-  
   background-color: #0093E9;
-  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 100%);
+  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #0093e9 100%);
 }
 
 .new {
