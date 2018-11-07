@@ -34,7 +34,7 @@ html {
 
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.2vh;
+  font-size: 1.4vh;
   width: 80%;
   text-align: center;
   align-self: center;
@@ -57,6 +57,7 @@ html {
   display: inline-block;
   height: 100%;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   z-index: -1;
   margin-right: -5px;
   
