@@ -131,8 +131,8 @@ html {
   display: grid;
   grid-template-rows: 1fr 10fr;
   grid-template-columns: 1fr;
-  background-color: #f4f4f4;
-  border: 1px solid #e4e4e4;
+  border: 2px solid rgb(122, 177, 209);
+  background-color: rgb(181, 229, 231);
   width: 80vw;
   min-width: 210px;
   max-width: 80vw;
@@ -140,9 +140,9 @@ html {
   border-radius: 1.5vw;
   z-index: 10;
 
-  -webkit-box-shadow: inset 10px 15px 25px -25px rgb(0, 0, 0);
-  -moz-box-shadow: inset 10px 15px 25px -25px rgb(0, 0, 0);
-  box-shadow: inset 10px 15px 25px -25px rgb(0, 0, 0);
+  -webkit-box-shadow: inset 10px 15px 25px -25px rgb(0, 62, 98);
+  -moz-box-shadow: inset 10px 15px 25px -25px  rgb(0, 62, 98);
+  box-shadow: inset 10px 15px 25px -25px  rgb(0, 62, 98);
 }
 
 .cards-all-results .card-edit-form * {
@@ -178,12 +178,12 @@ html {
 }
 
 .card-edit-form .buttons-wrapper * {
-  margin: 0 1.5vw 0 1.5vw;
+  margin: 0 2vw 0 2vw;
 }
 
 .card-edit-form-header h4 {
   width: 100%;
-  margin: 0 3vw;
+  margin: 1vh 4vw;
   text-align: left;
   height: 100%;
   font-size: 2vh;
@@ -195,6 +195,7 @@ html {
   height: 4vh;
   width: 4vh;
   float: right;
+  transition: 0.3s;
 }
 
 .card-edit-form-header .button.close {
@@ -203,7 +204,8 @@ html {
 }
 
 .card-edit-form-header .button.close:hover {
-  color: gray;
+  transform: scale(1.1);
+  color: rgb(181, 229, 231);
 }
 
 .card-edit-form-header .button.copy {
@@ -211,7 +213,8 @@ html {
 }
 
 .card-edit-form-header .button.copy:hover {
-  color:gray;
+  transform: scale(1.1);
+  color: rgb(181, 229, 231);
 }
 
 .card-edit-form-header .button.repl {
@@ -219,7 +222,8 @@ html {
 }
 
 .card-edit-form-header .button.repl:hover {
-  color: gray;
+  transform: scale(1.1);
+  color: rgb(181, 229, 231);
 }
 
 .card-edit-form-header .button.github {
@@ -227,7 +231,8 @@ html {
 }
 
 .card-edit-form-header .button.github:hover {
-  color: gray;
+  transform: scale(1.1);
+  color: rgb(181, 229, 231);
 }
 
 .add-card {
