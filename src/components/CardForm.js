@@ -105,10 +105,10 @@ class CardForm extends React.Component {
             <div className="card-edit-form">
                 <div className="card-edit-form-header">
                     <h4>{this.props.cardToShow}</h4>
-                    <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
                     <div className="card-form button copy" onClick={this.handleCopyClick}></div>
                     <div className="card-form button repl" onClick={this.handleReplClick}></div>
                     <div className="card-form button github" onClick={this.handleGithubClick}></div>
+                    <div className="card-form button close" onClick={this.props.handlePanelClicks}></div>
                 </div>
                 <div className="code-block">
                     {codeTextData}

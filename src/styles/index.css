@@ -17,8 +17,8 @@ html {
   left: 10%;
   top: 10%;
 
-  overflow-y: scroll; 
-  overflow-x: hidden;
+  /* overflow-y: scroll;  */
+  /* overflow-x: hidden; */
   -webkit-overflow-scrolling: touch;
 
 
@@ -30,7 +30,7 @@ html {
 
 .card-preview{
   border: 1px solid lightgray;
-  min-height: 10%;
+  min-height: 10vh;
   
   min-width: 10%;
   max-width: 100%;
@@ -48,16 +48,16 @@ html {
 
 .card-preview h4 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 2vw;
-  width: 100%;
+  font-size: 1.2vh;
+  width: 80%;
   text-align: center;
-  align-self: center
+  align-self: center;
+  justify-self: center;
 }
 
 /* --------------------------------edit form-------------------------------  */
 
 .card-preview .close {
-  margin: 1em 1em 1em 1em;
   height: 1.5em;
   width: 1.5em;
   border-radius: 50%;
@@ -79,27 +79,27 @@ html {
   width: 80%;
   height: 80vh;
   
-  border-radius: 2em;
-  border-top-right-radius: 2em;
+  border-radius: 1.5vw;
 
   box-shadow: 0px 2px 8px 0px rgba(150,150,150,1);
   z-index: 99;
-  /* justify-self: center; */
-  border-collapse: separate;
 }
 
 .card-edit-form-header{
   width: 100%;
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 1px;
+  height: 5vh;
+  overflow: hidden;
 }
 
-.card-edit-form-header h4{
+.card-edit-form-header *{
   margin: 1em 1em 1em 1em;
 }
 
 .card-edit-form-header .button.close {
   background-color: rgb(255, 118, 118);
+  float: right;
 }
 
 .card-edit-form-header .button.close:hover {
@@ -131,7 +131,6 @@ html {
 }
 
 .card-edit-form-header .button {
-  margin: 1em 1em 1em 1em;
   height: 1.5em;
   width: 1.5em;
   border-radius: 50%;
@@ -207,23 +206,24 @@ figure {
   font-family: monospace, monospace;
   width: 100%;
   height: 100%;
-  margin: 0.4vw 0.4vw 0.4vw 0.4vw;
+  margin: 0;
 }
 
 pre {
   border: 1px solid black;
   overflow: scroll;
   width: 99%;
-  height: 90%;
+  height: 50%;
   font-family: monospace, monospace;
-  justify-self: center;
-  align-self: center;
+  /* margin-right: 1em; */
+  /* justify-self: center; */
+  /* align-self: baseline; */
 }
 
 pre > code {
-  display: block;
+  /* display: block; */
   padding: 1rem;
-  word-wrap: normal;
+  /* word-wrap: normal; */
   height: 90%;
   width: 90%;
 }
