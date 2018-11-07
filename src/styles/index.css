@@ -6,10 +6,10 @@ html {
   min-height: 100%;
   max-width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   /* background-color: #0093E9;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
 }
 
 .app {
@@ -49,10 +49,11 @@ background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
 /* ---------------------------------------------------------------  */
 
 .drag-sections {
-  width: 100vw;
+  width: 102vw;
   height: 100vh;
   position: absolute;
-
+  top: 0;
+  left: 0;
 }
 
 .drag-sections > div {
