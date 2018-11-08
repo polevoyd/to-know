@@ -317,6 +317,9 @@ pre > code {
 
 .settings-tab * {
   outline: 1px solid orange;
+  justify-self: center;
+  align-self: center;
+  margin: 1vw 1vh;
 }
 
 .settings-tab {
@@ -328,9 +331,13 @@ pre > code {
   width: 100%;
   height: 30%;
   border-bottom: 1px solid lightgray;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
   padding: 2vh;
+  background-color: #FAD961;
+  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
 }
 
 .add-card {
@@ -338,8 +345,13 @@ pre > code {
   grid-column: 1/4;
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
+  align-self: center;
+  justify-self: center;
 }
 
+.add-card * {
+  margin: 1vh 1vw;
+}
 .picker-one {
   grid-row: 3;
   grid-column: 1;
