@@ -55,15 +55,6 @@ class CardPreview extends React.Component {
 
     render() {
 
-
-        // // will take color from a state
-        // const getStyleFromState = {
-        //     // backgroundColor: this.props.cards.categoryColors
-        // }
-
-
-
-        
         // filter cards by specific category
         const cards = this.props.cards;
         const categoryToFilter = this.props.category;
@@ -87,8 +78,8 @@ class CardPreview extends React.Component {
     }
 }
 
-const stateToProps = (state) => {
+const mapStateToProps = (state) => {
     return { cards : state }
 }
 
-export default connect(stateToProps)(CardPreview);
+export default connect(mapStateToProps)(CardPreview);
