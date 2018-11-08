@@ -79,14 +79,16 @@ class AddCards extends React.Component {
     
     render(){
         return(
-            <div className="add-card">
-                <form onSubmit={this.handleLinkSubmit}>
-                    <label>
-                        Profile Link:
-                        <input type="text" defaultValue="https://github.com/polevoyd/to-know-content"/>
-                    </label>
-                    <input type="submit" value="Submit"/>
-                </form>
+            <div className="settings-tab">
+                <div className="add-card">
+                    <form onSubmit={this.handleLinkSubmit}>
+                        <label>
+                            Profile Link:
+                            <input type="text" defaultValue="https://github.com/polevoyd/to-know-content"/>
+                        </label>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
             </div>
         );
     }
