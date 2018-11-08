@@ -4,20 +4,6 @@ import {connect} from 'react-redux';
 class CardPreview extends React.Component {
 
     /***********************************************************/
-    // Returns random color
-
-    randomizeColor() {
-
-
-        // 'rgba(159, 211, 86, 1)'
-
-        return `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
-        
-    }
-
-
-
-    /***********************************************************/
     // Return a class name depending on category
 
     pickClass(category) {
@@ -37,6 +23,9 @@ class CardPreview extends React.Component {
         }
     }
 
+    /***********************************************************/
+    // returns style with { backgroundColor: COLOR_IN_STATE }
+    
     getStyleFromState(category) {
 
         switch (category) {
