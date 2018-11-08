@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addCards} from '../actions/actions';
-import {addUsername} from '../actions/actions'
+import {addUsername} from '../actions/actions';
+import {updateColors} from '../actions/actions';
 
 /***********************************************************/
 
@@ -77,9 +78,13 @@ class SettingsTab extends React.Component {
     
     handleColorChange = (event) => {
 
-        console.log(event.target.value)
+        // console.log(event.target.parentNode.parentNode.childNodes)
 
-        console.log(this.props.cards.categoryColors[0])
+        const one = document.querySelector('#color-one').value;
+        const two = document.querySelector('#color-two').value;
+        const three = document.querySelector('#color-three').value;
+
+        this.props.dispatch(updateColors([one, two, three]));
     }
 
     /***********************************************************/
