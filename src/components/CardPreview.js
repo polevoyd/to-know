@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 class CardPreview extends React.Component {
 
@@ -36,15 +37,29 @@ class CardPreview extends React.Component {
         }
     }
 
+    getStyleFromState(category) {
+
+        switch (category) {
+            case 'new':
+                return { backgroundColor: this.props.cards.categoryColors[0] }
+            case 'active':
+                return { backgroundColor: this.props.cards.categoryColors[1] }
+            case 'complete':
+                return { backgroundColor: this.props.cards.categoryColors[2] }
+            default:
+                break
+        }
+    }
+
     /***********************************************************/
 
     render() {
 
-        // will take color from a state
-        const customStyleFromState = {
-            // color: ,
-            // backgroundColor: 
-        }
+
+        // // will take color from a state
+        // const getStyleFromState = {
+        //     // backgroundColor: this.props.cards.categoryColors
+        // }
 
 
 
@@ -57,7 +72,7 @@ class CardPreview extends React.Component {
         .filter(cardObj => cardObj.category === categoryToFilter)
         .map(card => {
             return(<div key={categoryToFilter + card.name} 
-                style={customStyleFromState}
+                style={this.getStyleFromState(categoryToFilter)}
                 className={this.pickClass(this.props.category)} 
                 onClick={() => this.props.handleClick(card.name)}
                 onDragStart={(event) => this.props.onDragStart(event, card.name)}
@@ -72,4 +87,8 @@ class CardPreview extends React.Component {
     }
 }
 
-export default CardPreview;
+const stateToProps = (state) => {
+    return { cards : state }
+}
+
+export default connect(stateToProps)(CardPreview);
