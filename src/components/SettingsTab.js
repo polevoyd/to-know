@@ -75,6 +75,13 @@ class SettingsTab extends React.Component {
         }
     }
     
+    handleColorChange = (event) => {
+
+        console.log(event.target.value)
+
+        console.log(this.props.cards.categoryColors[0])
+    }
+
     /***********************************************************/
     
     render(){
@@ -95,16 +102,16 @@ class SettingsTab extends React.Component {
                     </form>
                 </div>
                 <div className="picker-one">
-                    <label for="color-one">First column</label>
-                    <input type="color" id="color-one" name="color-one" value="#FFFAE2"></input> 
+                    <label>First column</label>
+                    <input onChange={this.handleColorChange} type="color" id="color-one" name="color-one" value={this.props.cards.categoryColors[0]}></input> 
                 </div>
                 <div className="picker-two">
-                    <label for="color-two">Second column</label>
-                    <input type="color" id="color-two" name="color-two" value="#FFFAE2"></input>
+                    <label>Second column</label>
+                    <input onChange={this.handleColorChange} type="color" id="color-two" name="color-two" value={this.props.cards.categoryColors[1]}></input>
                 </div>
                 <div className="picker-three">
-                    <label for="color-three">Third column</label>
-                    <input type="color" id="color-three" name="color-three" value="#FFFAE2"></input>
+                    <label>Third column</label>
+                    <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
             </div>
         );
