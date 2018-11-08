@@ -11,6 +11,7 @@ export const CHANGE_CATEGORY = 'CHANGE_CATEGORY'
 export const SET_CODE_DATA = 'SET_CODE_DATA'
 export const UPDATE_STATE = 'UPDATE_STATE'
 export const ADD_USERNAME = 'ADD_USERNAME'
+export const UPDATE_COLORS = 'UPDATE_COLORS'
 
 /*
  * action creators
@@ -42,4 +43,8 @@ export function updateState(state) {
 
 export function addUsername(userName) {
     return { type: ADD_USERNAME, user: userName }
+}
+
+export function updateColors(newColors) {
+    return { type: UPDATE_COLORS, categoryColors: newColors }
 }
