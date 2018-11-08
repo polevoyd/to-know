@@ -86,8 +86,8 @@ html {
   -webkit-overflow-scrolling: touch;
   z-index: -1;
   margin-right: -10px;
-  background-color: #FAD961;
-  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+  /* background-color: #FAD961;
+  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%); */
 }
 
 .new {
