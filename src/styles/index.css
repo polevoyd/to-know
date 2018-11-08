@@ -111,11 +111,8 @@ html {
   -webkit-overflow-scrolling: touch;
   z-index: -1;
   margin-right: -10px;
-  /* background-color: #0093E9;
-  background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #0093e9 100%); */
-
-  background-color: white;
-
+  background-color: #dbf0ff;
+  background-image: linear-gradient(0deg, #dbf0ff 0%, #ffffff 60%);
 }
 
 .new {
@@ -163,7 +160,7 @@ html {
 
   -webkit-box-shadow: inset 10px 15px 25px -25px rgb(0, 62, 98);
   -moz-box-shadow: inset 10px 15px 25px -25px  rgb(0, 62, 98);
-  box-shadow: inset 10px 15px 25px -25px  rgb(0, 62, 98);
+  box-shadow: inset 10px 15px 25px -25px  rgb(0, 0, 0);
 }
 
 .cards-all-results .card-edit-form * {
@@ -226,7 +223,7 @@ html {
 }
 
 .card-edit-form-header .button.close:hover {
-  transform: scale(1.2);
+  color: #FE5D26;
 }
 
 .card-edit-form-header .button.copy {
@@ -234,7 +231,7 @@ html {
 }
 
 .card-edit-form-header .button.copy:hover {
-  transform: scale(1.2);
+  color: #FE5D26;
 }
 
 .card-edit-form-header .button.repl {
@@ -242,7 +239,7 @@ html {
 }
 
 .card-edit-form-header .button.repl:hover {
-  transform: scale(1.2);
+  color: #FE5D26;
 }
 
 .card-edit-form-header .button.github {
@@ -250,7 +247,7 @@ html {
 }
 
 .card-edit-form-header .button.github:hover {
-  transform: scale(1.2);
+  color: #FE5D26;
 }
 
 [tooltip] {
