@@ -56,6 +56,13 @@ class CardForm extends React.Component {
     /***********************************************************/
     // copy code to a clipboard
     handleCopyClick() {
+
+        /**
+         * TODO: change tooltip text to "Copied!"
+         */
+
+        
+
         const text = document.querySelector('code').innerText;
         const tempEl = document.createElement('textarea');
         tempEl.value = text;

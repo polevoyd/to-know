@@ -277,10 +277,9 @@ html {
     z-index: 99;
     opacity: 0;
     transition: 0.3s;
-    
 }
 
-[tooltip]:hover::after,[tooltip]:hover::before {
+[tooltip]:hover::after {
   opacity:1;
   transform: scale(1.2) translateX(15%) translateY(-65%);  
 }
