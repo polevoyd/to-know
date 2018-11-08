@@ -80,6 +80,11 @@ class SettingsTab extends React.Component {
     render(){
         return(
             <div className="settings-tab">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>
@@ -89,8 +94,17 @@ class SettingsTab extends React.Component {
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>
-                <div className="color-pickers">
-
+                <div className="picker-one">
+                    <label for="color-one">First column</label>
+                    <input type="color" id="color-one" name="color-one" value="#FFFAE2"></input> 
+                </div>
+                <div className="picker-two">
+                    <label for="color-two">Second column</label>
+                    <input type="color" id="color-two" name="color-two" value="#FFFAE2"></input>
+                </div>
+                <div className="picker-three">
+                    <label for="color-three">Third column</label>
+                    <input type="color" id="color-three" name="color-three" value="#FFFAE2"></input>
                 </div>
             </div>
         );
