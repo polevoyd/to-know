@@ -334,6 +334,7 @@ pre > code {
   border-bottom: 1px solid lightgray;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  padding: 2vh;
 }
 
 .add-card {
@@ -356,4 +357,9 @@ pre > code {
 .picker-three {
   grid-row: 3;
   grid-column: 3;
+}
+
+.text-block {
+  grid-row: 1;
+  grid-column: 1/4;
 }
