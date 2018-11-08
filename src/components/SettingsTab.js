@@ -101,7 +101,7 @@ class SettingsTab extends React.Component {
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>
                             Repository Link:
-                            <input type="text" defaultValue="https://github.com/polevoyd/to-know-content"/>
+                            <input type="text" defaultValue={this.props.cards.repositoryLink}/>
                         </label>
                         <input type="submit" value="Submit"/>
                     </form>

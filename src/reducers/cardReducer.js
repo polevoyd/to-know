@@ -7,7 +7,8 @@ const initialState =
     showCardLink: null,
     user: '',
     cardsObjects: [],
-    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356']
+    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356'],
+    repositoryLink: 'https://github.com/polevoyd/to-know-content'
 }
 
 const cardReducer = (state = initialState, action) => {
