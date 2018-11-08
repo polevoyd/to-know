@@ -76,9 +76,10 @@ class SettingsTab extends React.Component {
         }
     }
     
+    /***********************************************************/
+    // on color changes
+    
     handleColorChange = (event) => {
-
-        // console.log(event.target.parentNode.parentNode.childNodes)
 
         const one = document.querySelector('#color-one').value;
         const two = document.querySelector('#color-two').value;
@@ -87,7 +88,7 @@ class SettingsTab extends React.Component {
         this.props.dispatch(updateColors([one, two, three]));
         
         localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
-        
+
     }
 
     /***********************************************************/
