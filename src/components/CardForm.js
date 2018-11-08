@@ -128,9 +128,3 @@ const mapStateToProps = (state) => {
 
 // connect to access store (this.props.cardToShow)
 export default connect(mapStateToProps)(CardForm);
-
-
-// TODO :
-
-// 1 Add cards panel + info button 
-// 2 color randomizer through React state

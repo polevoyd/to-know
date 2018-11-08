@@ -1,10 +1,10 @@
 import React from 'react';
 import CardsResults from './CardsResults';
-import AddCards from './AddCards';
+import SettingsTab from './SettingsTab';
 
 const CardsMain = () => (
     <div>
-        <AddCards />
+        <SettingsTab />
         <CardsResults />
     </div>
 );

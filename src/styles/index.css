@@ -332,12 +332,9 @@ pre > code {
   width: 100%;
   height: 30%;
   border-bottom: 1px solid lightgray;
-
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
-
-
 
 .add-card {
   grid-row: 2;

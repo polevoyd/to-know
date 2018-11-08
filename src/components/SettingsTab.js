@@ -5,7 +5,7 @@ import {addUsername} from '../actions/actions'
 
 /***********************************************************/
 
-class AddCards extends React.Component {
+class SettingsTab extends React.Component {
 
     constructor(props){
         super(props);
@@ -99,4 +99,4 @@ const mapStateToProps = (state) => {
 }
 
 // connect gives access to dispatch as a prop
-export default connect(mapStateToProps)(AddCards);
+export default connect(mapStateToProps)(SettingsTab);
