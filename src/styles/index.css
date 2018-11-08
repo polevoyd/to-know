@@ -216,7 +216,7 @@ html {
 }
 
 .card-edit-form-header .button.close {
-  color: black;
+  color: rgb(0, 0, 0);
   float: right;
 }
 
