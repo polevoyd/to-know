@@ -235,9 +235,33 @@ html {
   transform: scale(1.2);
 }
 
-.add-card {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bold;
+[tooltip] {
+  margin: 2vw;
+  position: relative;
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translateX(-50%)   translateY(-100%);
+    background: #1d1f21;
+    text-align: center;
+    font-family: monospace, monospace;
+    color: white;
+    padding:4px 4px;
+    font-size: 10px;
+    min-width: 100px;
+    border-radius: 1em;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+[tooltip]:hover::after,[tooltip]:hover::before {
+  opacity:1
 }
 
 /* ---------------------------------------------------------------  */
@@ -293,4 +317,10 @@ pre > code {
 
 ::-webkit-scrollbar { 
   display: none; 
+}
+
+/* -------------------------------- */
+.add-card {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
 }

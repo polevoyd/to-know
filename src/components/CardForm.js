@@ -110,7 +110,7 @@ class CardForm extends React.Component {
                     <h4>{this.props.cardToShow}</h4>
                 </div>
                 <div className="buttons-wrapper">
-                    <div className="icon-wrap" onClick={this.handleCopyClick} ><i  className="far fa-clone card-form button copy"></i></div>
+                    <div className="icon-wrap" onClick={this.handleCopyClick} tooltip="Copy code to clipboard"><i  className="far fa-clone card-form button copy"></i></div>
                     <div className="icon-wrap" onClick={this.handleReplClick}><i className="fas fa-terminal card-form button repl"></i></div>
                     <div className="icon-wrap" onClick={this.handleGithubClick}><i className="fab fa-github-square card-form button github"></i></div>
                     <div className="icon-wrap" onClick={this.props.handlePanelClicks}><i className="far fa-window-close card-form button close"></i></div>
