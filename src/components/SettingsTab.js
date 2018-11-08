@@ -83,11 +83,14 @@ class SettingsTab extends React.Component {
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>
-                            Profile Link:
+                            Repository Link:
                             <input type="text" defaultValue="https://github.com/polevoyd/to-know-content"/>
                         </label>
                         <input type="submit" value="Submit"/>
                     </form>
+                </div>
+                <div className="color-pickers">
+
                 </div>
             </div>
         );
