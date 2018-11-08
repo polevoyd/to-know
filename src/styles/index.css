@@ -374,4 +374,13 @@ pre > code {
   grid-column: 1/4;
   justify-self: center;
   align-self: center;
+  margin-right: 20vh;
+  margin-left: 15vh;
+}
+
+.name-tag {
+  grid-row: 4;
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
 }

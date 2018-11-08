@@ -96,7 +96,7 @@ class SettingsTab extends React.Component {
     render(){
         return(
             <div className="settings-tab">
-                <p className="text-block">Hi! This is a simple organiser interface for a GitHub repository. Every file from a repo will be shown as a card, which you can move across three different categories. I use it to study (that's where name came from) concepts that I need to know.</p>
+                <p className="text-block">This is a organiser interface for a GitHub repository. Every file from a repo will be shown as a card, which you can move across three different categories. It makes comfortable to study concepts and code challanges, while managing them in one place. Hope you'll enjoy it!</p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>
@@ -118,6 +118,7 @@ class SettingsTab extends React.Component {
                     <label>Third Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
+                <p className="name-tag">Made by<a href="http://www.polevoy.in" target="blank">polevoy</a> </p>
             </div>
         );
     }
