@@ -78,7 +78,7 @@ class SettingsTab extends React.Component {
     
     /***********************************************************/
     // on color changes
-    
+
     handleColorChange = (event) => {
 
         const one = document.querySelector('#color-one').value;
@@ -96,11 +96,7 @@ class SettingsTab extends React.Component {
     render(){
         return(
             <div className="settings-tab">
-                <p className="text-block">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </p>
+                <p className="text-block">Hi! This is a simple organiser interface for a GitHub repository. Every file from a repo will be shown as a card, which you can move across three different categories. I use it to study (that's where name came from) concepts that I need to know.</p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>

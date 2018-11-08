@@ -320,6 +320,7 @@ pre > code {
   justify-self: center;
   align-self: center;
   margin: 1vw 1vh;
+  margin-right: 5vh;
 }
 
 .settings-tab {
@@ -352,6 +353,7 @@ pre > code {
 .add-card * {
   margin: 1vh 1vw;
 }
+
 .picker-one {
   grid-row: 3;
   grid-column: 1;
@@ -370,4 +372,6 @@ pre > code {
 .text-block {
   grid-row: 1;
   grid-column: 1/4;
+  justify-self: center;
+  align-self: center;
 }
