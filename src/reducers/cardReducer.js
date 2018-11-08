@@ -6,14 +6,14 @@ const initialState =
     showCardData: null,
     showCardLink: null,
     user: '',
-    cardsObjects: []
+    cardsObjects: [],
+    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356']
 }
 
 const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'ADD_CARDS':
-        console.log(action.newStateCardsArray)
             return {
                 ...state,
                 cardsObjects: action.newStateCardsArray
@@ -50,6 +50,9 @@ const cardReducer = (state = initialState, action) => {
         
         case 'UPDATE_STATE':
             return action.state;
+
+        case 'UPDATE_COLORS':
+            return { ...state, categoryColors: action.categoryColors }
 
         default:
             return state;
