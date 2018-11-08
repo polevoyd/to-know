@@ -316,7 +316,7 @@ pre > code {
 /* ---------------------------------------------------------------  */
 
 .settings-tab * {
-  outline: 1px solid orange;
+  /* outline: 1px solid orange; */
   justify-self: center;
   align-self: center;
   margin: 1vw 1vh;
