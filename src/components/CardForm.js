@@ -79,8 +79,6 @@ class CardForm extends React.Component {
     /***********************************************************/
     // go to original github page
     handleGithubClick = () => {
-
-        console.log('lol!')
         let rawLink = this.props.cards.showCardLink.split('/');
         let name = rawLink[rawLink.length-4];
         let repo = rawLink[rawLink.length-3];
@@ -130,3 +128,9 @@ const mapStateToProps = (state) => {
 
 // connect to access store (this.props.cardToShow)
 export default connect(mapStateToProps)(CardForm);
+
+
+// TODO :
+
+// 1 Add cards panel + info button 
+// 2 color randomizer through React state
