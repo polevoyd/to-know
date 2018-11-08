@@ -23,8 +23,13 @@ class CardPreview extends React.Component {
     }
 
     /***********************************************************/
-    
+
     render() {
+
+        const divStyle = {
+            color: 'black',
+            backgroundColor: 'orange'
+        }
 
         // filter cards by specific category
         const cards = this.props.cards;
@@ -34,6 +39,7 @@ class CardPreview extends React.Component {
         .filter(cardObj => cardObj.category === categoryToFilter)
         .map(card => {
             return(<div key={categoryToFilter + card.name} 
+                style={divStyle} 
                 className={this.pickClass(this.props.category)} 
                 onClick={() => this.props.handleClick(card.name)}
                 onDragStart={(event) => this.props.onDragStart(event, card.name)}
