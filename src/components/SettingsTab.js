@@ -85,6 +85,9 @@ class SettingsTab extends React.Component {
         const three = document.querySelector('#color-three').value;
 
         this.props.dispatch(updateColors([one, two, three]));
+        
+        localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
+        
     }
 
     /***********************************************************/
@@ -107,15 +110,15 @@ class SettingsTab extends React.Component {
                     </form>
                 </div>
                 <div className="picker-one">
-                    <label>First column</label>
+                    <label>First Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-one" name="color-one" value={this.props.cards.categoryColors[0]}></input> 
                 </div>
                 <div className="picker-two">
-                    <label>Second column</label>
+                    <label>Second Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-two" name="color-two" value={this.props.cards.categoryColors[1]}></input>
                 </div>
                 <div className="picker-three">
-                    <label>Third column</label>
+                    <label>Third Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
             </div>
