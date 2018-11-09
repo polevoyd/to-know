@@ -361,7 +361,8 @@ pre > code {
   border-radius: 1vh;
 }
 .settings-tab input:hover {
-  background-color: rgb(255, 212, 132);
+  outline: 1px orange solid;
+  background-color: white;
 }
 
 .picker-one {
