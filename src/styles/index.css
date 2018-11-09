@@ -471,7 +471,14 @@ a {
 /* ---------------------------------------------------------------  */
 
 .greeting {
-  position: absolute;
-  top: 25%;
   z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25vw;
+  margin-top: -25vh;
+  width: 50vw;
+  height: 50vh;
+  text-align: center;
+  
 }

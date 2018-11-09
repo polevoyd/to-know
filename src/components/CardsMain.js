@@ -21,13 +21,11 @@ class CardsMain extends React.Component {
     /***********************************************************/
 
     render(){
-   
-        
         return(
             <div>
                 <div className="menu-icon" onClick={this.handleMenuToggle}><i className="far fa-caret-square-down"></i></div>
                 {this.props.cards.menuIsOpened ? <SettingsTab /> : null}
-                <Greeting />
+                {localStorage.getItem('cardsState') ? null : <Greeting />}
                 <CardsResults />
             </div>
         );
