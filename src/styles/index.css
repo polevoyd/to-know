@@ -127,7 +127,6 @@ html {
   max-height: 80vh;
   border-radius: 1.5vw;
   z-index: 10;
-
   -webkit-box-shadow: inset 10px 15px 25px -25px rgb(0, 62, 98);
   -moz-box-shadow: inset 10px 15px 25px -25px  rgb(0, 62, 98);
   box-shadow: inset 10px 15px 25px -25px  rgb(0, 0, 0);
@@ -373,6 +372,12 @@ pre > code {
   width: 12vh;
 }
 
+.settings-tab input[type=color] {
+  width: 100%;
+  border-radius: 0px;
+  padding: 0px;
+}
+
 .settings-tab input[type=text], .settings-tab button, .settings-tab input[type=submit] {
   font-size: 2vh;
 }
@@ -438,6 +443,17 @@ pre > code {
   justify-self: center;
   align-self: center;
   color: black;
+  font-weight: bold;
+  font-size: 1.4vh;
+  text-decoration: none;
+}
+
+.name-tag a {
+  text-decoration: none;
+}
+
+.name-tag a:hover {
+  color: #FE5D26;
 }
 
 a {
@@ -482,4 +498,12 @@ a {
 
 .greetings-website-link {
   margin-top: 20vh;
+  color: black;
+font-weight: bold;
+font-size: 1.4vh;
+text-decoration: none;
+}
+
+.greetings-website-link a {
+  text-decoration: none;
 }
