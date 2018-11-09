@@ -400,6 +400,16 @@ pre > code {
   grid-column: 3;
 }
 
+.picker-background {
+  grid-row: 4;
+  grid-column: 1;
+}
+
+.picker-font {
+  grid-row: 4;
+  grid-column: 3;
+}
+
 .text-block {
   grid-row: 1;
   grid-column: 1/5;
