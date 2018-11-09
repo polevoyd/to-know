@@ -360,6 +360,9 @@ pre > code {
   border: 1px solid orange;
   border-radius: 1vh;
 }
+.settings-tab input:hover {
+  background-color: rgb(255, 212, 132);
+}
 
 .picker-one {
   grid-row: 3;

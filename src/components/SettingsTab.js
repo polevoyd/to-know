@@ -92,8 +92,20 @@ class SettingsTab extends React.Component {
     }
 
     /***********************************************************/
-    
+    // returns link: users or default
+
+    setRepositoryLink() {
+        console.log('hello!')
+        if (localStorage.getItem('cardsState')) {
+            return JSON.parse(localStorage.getItem('cardsState')).user;
+        } else {
+            return 'https://github.com/polevoyd/to-know-content';
+        }
+    }
+
+    /***********************************************************/
     render(){
+
         return(
             <div className="settings-tab">
                 <p className="text-block">This is a organiser interface for a GitHub repository. Every file from a repo will be shown as a card, which you can open and drag and drop across three different categories. It makes comfortable to study concepts and code challanges, while making managing them in one place effortless. Hope you'll find it helpful for yourself too!</p>
@@ -101,7 +113,7 @@ class SettingsTab extends React.Component {
                     <form onSubmit={this.handleLinkSubmit}>
                         <label>
                             Repository Link:
-                            <input type="text" defaultValue={this.props.cards.repositoryLink}/>
+                            <input type="text" defaultValue={this.setRepositoryLink()}/>
                         </label>
                         <input type="submit" value="Upload"/>
                     </form>
