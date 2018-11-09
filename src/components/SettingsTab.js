@@ -86,7 +86,7 @@ class SettingsTab extends React.Component {
         const three = document.querySelector('#color-three').value;
         const fontColor = document.querySelector('#color-font').value;
 
-        this.props.dispatch(updateColors([one, two, three, bckground, fontColor]));
+        this.props.dispatch(updateColors([one, two, three, fontColor]));
         localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
     }
 
@@ -105,7 +105,7 @@ class SettingsTab extends React.Component {
     // cleans storage
 
     handleResetButtonClick() {
-        console.log('hi!')
+        localStorage.removeItem('cardsState');
     }
 
     /***********************************************************/
