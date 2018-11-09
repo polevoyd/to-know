@@ -12,6 +12,7 @@ export const SET_CODE_DATA = 'SET_CODE_DATA'
 export const UPDATE_STATE = 'UPDATE_STATE'
 export const ADD_USERNAME = 'ADD_USERNAME'
 export const UPDATE_COLORS = 'UPDATE_COLORS'
+export const TOGGLE_MENU = 'TOGGLE_MENU'
 
 /*
  * action creators
@@ -47,4 +48,8 @@ export function addUsername(userName) {
 
 export function updateColors(newColors) {
     return { type: UPDATE_COLORS, categoryColors: newColors }
+}
+
+export function toggleMenu() {
+    return { type: TOGGLE_MENU }
 }

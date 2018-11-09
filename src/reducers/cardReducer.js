@@ -7,7 +7,8 @@ const initialState =
     showCardLink: null,
     user: '',
     cardsObjects: [],
-    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356']
+    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356'],
+    menuIsOpened: false
 }
 
 const cardReducer = (state = initialState, action) => {
@@ -53,6 +54,9 @@ const cardReducer = (state = initialState, action) => {
 
         case 'UPDATE_COLORS':
             return { ...state, categoryColors: action.categoryColors }
+
+        case 'TOGGLE_MENU':
+            return { ...state, menuIsOpened: !state.menuIsOpened }
 
         default:
             return state;

@@ -1,27 +1,39 @@
 import React from 'react';
 import CardsResults from './CardsResults';
 import SettingsTab from './SettingsTab';
+import { connect } from 'react-redux';
+import { toggleMenu } from '../actions/actions';
 
 class CardsMain extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleMenuToggle = this.handleMenuToggle.bind(this);
+    }
 
     /***********************************************************/
     // Toggle a menu
 
-    toggleMenu(){
-
+    handleMenuToggle(){
+        this.props.dispatch(toggleMenu());
     }
 
     /***********************************************************/
 
     render(){
+   
+        
         return(
             <div>
-                <div className="menu-icon"><i className="far fa-caret-square-down"></i></div>
-                <SettingsTab />
+                <div className="menu-icon" onClick={this.handleMenuToggle}><i className="far fa-caret-square-down"></i></div>
+                {this.props.cards.menuIsOpened ? <SettingsTab /> : null}
                 <CardsResults />
             </div>
         );
     }
 }
 
-export default CardsMain;
+const mapStateToProps = (state) => {
+    return { cards: state }
+}
+
+export default connect(mapStateToProps)(CardsMain);

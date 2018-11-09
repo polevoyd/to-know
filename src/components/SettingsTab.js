@@ -95,7 +95,6 @@ class SettingsTab extends React.Component {
     // returns link: users or default
 
     setRepositoryLink() {
-        console.log('hello!')
         if (localStorage.getItem('cardsState')) {
             return JSON.parse(localStorage.getItem('cardsState')).user;
         } else {
