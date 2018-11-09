@@ -3,6 +3,7 @@ import CardsResults from './CardsResults';
 import SettingsTab from './SettingsTab';
 import { connect } from 'react-redux';
 import { toggleMenu } from '../actions/actions';
+import Greeting from './Greeting';
 
 class CardsMain extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class CardsMain extends React.Component {
             <div>
                 <div className="menu-icon" onClick={this.handleMenuToggle}><i className="far fa-caret-square-down"></i></div>
                 {this.props.cards.menuIsOpened ? <SettingsTab /> : null}
+                <Greeting />
                 <CardsResults />
             </div>
         );
