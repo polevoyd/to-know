@@ -486,9 +486,10 @@ a {
   z-index: 99;
   color: #FE5D26;
   position: absolute;
-  top: 6vh;
-  left: 1vh;
+  top: 1vh;
+  right: 1vh;
   font-size: 4vh;
+  padding: 0;
   transition: 0.3s;
 }
 
