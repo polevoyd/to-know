@@ -58,6 +58,9 @@ const cardReducer = (state = initialState, action) => {
         case 'TOGGLE_MENU':
             return { ...state, menuIsOpened: !state.menuIsOpened }
 
+        case 'UPDATE_CARDS_ARRAY':
+            return { ...state, cardsObjects: action.newCardsArray }
+
         default:
             return state;
     }

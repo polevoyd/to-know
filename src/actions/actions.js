@@ -13,6 +13,7 @@ export const UPDATE_STATE = 'UPDATE_STATE'
 export const ADD_USERNAME = 'ADD_USERNAME'
 export const UPDATE_COLORS = 'UPDATE_COLORS'
 export const TOGGLE_MENU = 'TOGGLE_MENU'
+export const UPDATE_CARDS_ARRAY = 'UPDATE_CARDS_ARRAY'
 
 /*
  * action creators
@@ -52,4 +53,8 @@ export function updateColors(newColors) {
 
 export function toggleMenu() {
     return { type: TOGGLE_MENU }
+}
+
+export function updateCardsArray(newStateCardsArray) {
+    return { type: UPDATE_CARDS_ARRAY, newCardsArray: newStateCardsArray }
 }
