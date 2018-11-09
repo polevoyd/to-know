@@ -70,6 +70,7 @@ class SettingsTab extends React.Component {
             .then(() => {
                 // finally, saving updated state
                 localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
+                this.props.dispatch(toggleMenu())
             })
         } else {
             console.log('Wrong link format!')
@@ -113,7 +114,7 @@ class SettingsTab extends React.Component {
     // close settings tab when mouse out
 
     handleMouseOut = () => {
-        this.props.dispatch(toggleMenu())
+        // this.props.dispatch(toggleMenu())
     }
 
     /***********************************************************/
