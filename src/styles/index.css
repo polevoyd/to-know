@@ -325,8 +325,8 @@ pre > code {
   width: 100%;
   height: 60%;
   border-bottom: 1px solid lightgray;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
   padding-top: 2vh;
@@ -480,4 +480,8 @@ a {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
+}
+
+.greetings-website-link {
+  margin-top: 20vh;
 }
