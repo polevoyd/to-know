@@ -333,11 +333,16 @@ pre > code {
   font-weight: bold;
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
-  padding: 2vh;
+  padding-top: 2vh;
   background-color: #FAD961;
   background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
   font-size: 2vh;
   transform: scale(1);
+}
+
+.settings-tab a {
+  display: block;
+  margin: 0 auto;
 }
 
 .add-card {
@@ -359,9 +364,20 @@ pre > code {
   border: 1px solid orange;
   border-radius: 1vh;
 }
+
 .settings-tab input:hover {
   outline: 1px orange solid;
   background-color: white;
+}
+
+.settings-tab form * {
+  display: block;
+  margin: 0 auto;
+}
+
+.settings-tab div * {
+  display: block;
+  margin: 0 auto;
 }
 
 .picker-one {
