@@ -24,7 +24,7 @@ class CardsMain extends React.Component {
         return(
             <div>
                 <div className="menu-icon" onClick={this.handleMenuToggle}><i className="far fa-caret-square-down"></i></div>
-                <div className="refresh-icon" onClick={this.handleMenuToggle}><i class="fas fa-retweet"></i></div>
+                <div className="refresh-icon" onClick={this.handleMenuToggle}><i className="fas fa-retweet"></i></div>
                 {this.props.cards.menuIsOpened ? <SettingsTab /> : null}
                 {localStorage.getItem('cardsState') ? null : <Greeting />}
                 <CardsResults />
