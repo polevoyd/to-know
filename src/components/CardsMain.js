@@ -3,7 +3,7 @@ import CardsResults from './CardsResults';
 import SettingsTab from './SettingsTab';
 import { connect } from 'react-redux';
 import Greeting from './Greeting';
-import {addCards, toggleMenu, updateCardsArray} from '../actions/actions';
+import {toggleMenu, updateCardsArray} from '../actions/actions';
 
 class CardsMain extends React.Component {
     constructor(props) {
