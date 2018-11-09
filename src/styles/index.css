@@ -365,7 +365,7 @@ pre > code {
 .settings-tab input {
   border: none;
   height: 4vh;
-  border: 1px solid orange;
+  border: 1px solid #FE5D26;
   border-radius: 1vh;
 }
 
@@ -383,14 +383,14 @@ pre > code {
 
 .settings-tab button {
   height: 4vh;
-  border: 1px solid orange;
+  border: 1px solid #FE5D26;
   border-radius: 1vh;
   width: 12vh;
 }
 
 .settings-tab input:hover, .settings-tab input:focus, .settings-tab button:hover {
   color: white;
-  background-color: orange;
+  background-color: #FE5D26;
 }
 
 .settings-tab form * {
@@ -457,7 +457,7 @@ a {
   color: #FE5D26;
   position: absolute;
   top: 1vh;
-  left: 1vw;
+  left: 1vh;
   font-size: 4vh;
   transition: 0.3s;
 }
@@ -482,4 +482,4 @@ a {
   text-align: center;
 }
 
-* { outline: 1px solid orange; }
+/* * { outline: 1px solid orange; } */
