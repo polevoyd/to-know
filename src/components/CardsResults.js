@@ -86,6 +86,11 @@ class CardsResults extends React.Component {
     /***********************************************************/
     
     render(){
+
+        const customBackgroundColor = {
+            backgroundColor: this.props.cards.categoryColors[3]
+        }
+        
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? 

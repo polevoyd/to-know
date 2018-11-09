@@ -84,8 +84,10 @@ class SettingsTab extends React.Component {
         const one = document.querySelector('#color-one').value;
         const two = document.querySelector('#color-two').value;
         const three = document.querySelector('#color-three').value;
+        const bckground = document.querySelector('#color-background').value;
+        const fontColor = document.querySelector('#color-font').value;
 
-        this.props.dispatch(updateColors([one, two, three]));
+        this.props.dispatch(updateColors([one, two, three, bckground, fontColor]));
         
         localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
 
