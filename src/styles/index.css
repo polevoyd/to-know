@@ -473,10 +473,11 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -25vw;
+  margin-left: -40vw;
   margin-top: -25vh;
-  width: 50vw;
+  width: 80vw;
   height: 50vh;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
 }
