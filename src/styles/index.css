@@ -369,14 +369,35 @@ pre > code {
   border-radius: 1vh;
 }
 
-.settings-tab input:hover {
-  outline: 1px orange solid;
-  background-color: white;
+.settings-tab label {
+  text-align: center;
 }
 
+.settings-tab input[type=submit] {
+  width: 12vh;
+}
+
+.settings-tab input[type=text], .settings-tab button, .settings-tab input[type=submit] {
+  font-size: 2vh;
+}
+
+.settings-tab button {
+  height: 4vh;
+  border: 1px solid orange;
+  border-radius: 1vh;
+  width: 12vh;
+}
+
+.settings-tab input:hover, .settings-tab input:focus, .settings-tab button:hover {
+  color: white;
+  background-color: orange;
+}
+
+* { outline: 1px solid orange; }
+
+
 .settings-tab form * {
-  display: block;
-  margin: 0 auto;
+  padding: 5px;
 }
 
 .settings-tab div * {
