@@ -337,7 +337,6 @@ pre > code {
   background-color: #FAD961;
   background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
   font-size: 2vh;
-  transform: scale(1);
 }
 
 .settings-tab a {
