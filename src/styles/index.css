@@ -400,8 +400,8 @@ pre > code {
   grid-column: 1/5;
   justify-self: center;
   align-self: center;
-  margin-right: 20vh;
-  margin-left: 15vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
 }
 
 .name-tag {
