@@ -499,9 +499,9 @@ a {
 .greetings-website-link {
   margin-top: 20vh;
   color: black;
-font-weight: bold;
-font-size: 1.4vh;
-text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4vh;
+  text-decoration: none;
 }
 
 .greetings-website-link a {
