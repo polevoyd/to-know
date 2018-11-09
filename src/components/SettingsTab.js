@@ -128,8 +128,7 @@ class SettingsTab extends React.Component {
                     <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
                 <div className="picker-background">
-                    <label>Background: </label>
-                    <input onChange={this.handleColorChange} type="color" id="color-background" name="color-background" value={this.props.cards.categoryColors[3]}></input>
+                   <button>Reset</button>
                 </div>
                 <div className="picker-font">
                     <label>Font: </label>
