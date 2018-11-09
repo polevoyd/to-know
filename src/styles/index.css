@@ -384,4 +384,9 @@ pre > code {
   grid-column: 2;
   justify-self: center;
   align-self: center;
+  color: black;
+}
+
+a {
+  color: black;
 }

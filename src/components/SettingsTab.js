@@ -118,7 +118,7 @@ class SettingsTab extends React.Component {
                     <label>Third Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
-                <p className="name-tag">Made by<a href="http://www.polevoy.in" target="blank">polevoy</a> </p>
+                <p className="name-tag"><a href="http://www.polevoy.in" target="blank">www.polevoy.in</a> </p>
             </div>
         );
     }
