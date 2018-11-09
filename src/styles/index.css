@@ -85,8 +85,10 @@ html {
   -webkit-overflow-scrolling: touch;
   z-index: 1;
   margin-right: -10px;
-  background-color: white;
-  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+  /* pick background color  */
+  background-color: #FAACA8;
+  background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
+  
 }
 
 .new {
@@ -119,10 +121,6 @@ html {
   display: grid;
   grid-template-rows: 1fr 10fr;
   grid-template-columns: 1fr;
-  border: 2px solid rgb(122, 177, 209);
-  background-color: rgb(181, 229, 231);
-
-
   border: 2px solid rgb(168, 168, 168);
   background-color: rgb(236, 236, 236);
   width: 80vw;
@@ -334,8 +332,9 @@ pre > code {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
   padding-top: 2vh;
-  background-color: #FAD961;
-  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+  background-color: #FAACA8;
+  background-image: linear-gradient(180deg, #FAACA8 0%, #DDD6F3 100%);
+  
   font-size: 2vh;
   animation: slide-from-top 0.3s cubic-bezier(0.250, 0.500, 0.350, 0.750) both;
 }
