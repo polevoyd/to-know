@@ -403,16 +403,9 @@ a {
 
 .menu-icon {
   z-index: 99;
-  color: #000000;
-  
+  color: #FE5D26;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.far.fa-caret-square-down {
-  height: 10vh;
-  width: 10vw;
-  color: red;
-  background-color: red;
+  top: 1vh;
+  left: 1vw;
+  font-size: 4vh;
 }

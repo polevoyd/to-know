@@ -4,7 +4,7 @@ import SettingsTab from './SettingsTab';
 
 const CardsMain = () => (
     <div>
-        <div className="menu-icon" tooltip="What is it?"><i className="far fa-caret-square-down"></i></div>
+        <div className="menu-icon"><i className="far fa-caret-square-down"></i></div>
         <SettingsTab />
         <CardsResults />
     </div>
