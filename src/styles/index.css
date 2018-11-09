@@ -393,9 +393,6 @@ pre > code {
   background-color: orange;
 }
 
-* { outline: 1px solid orange; }
-
-
 .settings-tab form * {
   padding: 5px;
 }
@@ -462,4 +459,9 @@ a {
   top: 1vh;
   left: 1vw;
   font-size: 4vh;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  color: rgb(255, 255, 255);
 }
