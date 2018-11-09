@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addCards} from '../actions/actions';
+import {addCards, toggleMenu} from '../actions/actions';
 import {addUsername} from '../actions/actions';
 import {updateColors} from '../actions/actions';
 
@@ -110,10 +110,17 @@ class SettingsTab extends React.Component {
     }
 
     /***********************************************************/
+    // close settings tab when mouse out
+
+    handleMouseOut = () => {
+        this.props.dispatch(toggleMenu())
+    }
+
+    /***********************************************************/
     render(){
 
         return(
-            <div className="settings-tab">
+            <div className="settings-tab" onMouseLeave={this.handleMouseOut}>
                 <p className="text-block">Paste a link to a repository and click <b>'Upload'</b> to start.<br></br> Press <b>'Reset'</b> button to remove all the cards.</p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
