@@ -402,13 +402,17 @@ a {
 }
 
 .menu-icon {
-  height: 100px;
-  width: 100px;
   z-index: 99;
-  background-color: black;
   color: #000000;
   
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.far.fa-caret-square-down {
+  height: 10vh;
+  width: 10vw;
+  color: red;
+  background-color: red;
 }
