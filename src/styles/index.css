@@ -472,6 +472,6 @@ a {
 
 .greeting {
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 25%;
+  z-index: 5;
 }
