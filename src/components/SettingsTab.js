@@ -102,10 +102,11 @@ class SettingsTab extends React.Component {
     }
 
     /***********************************************************/
-    // cleans storage
+    // cleans storage and reload page
 
     handleResetButtonClick() {
         localStorage.removeItem('cardsState');
+        window.location.reload();
     }
 
     /***********************************************************/
