@@ -103,7 +103,7 @@ class SettingsTab extends React.Component {
                             Repository Link:
                             <input type="text" defaultValue={this.props.cards.repositoryLink}/>
                         </label>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="Upload"/>
                     </form>
                 </div>
                 <div className="picker-one">

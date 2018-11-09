@@ -355,8 +355,11 @@ pre > code {
   margin: 1vh 1vw;
 }
 
-.add-card input {
-  width: 50vw;
+.settings-tab input {
+  border: none;
+  height: 4vh;
+  border: 1px solid orange;
+  border-radius: 1vh;
 }
 
 .picker-one {
