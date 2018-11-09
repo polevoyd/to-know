@@ -460,6 +460,15 @@ a {
   color: black;
 }
 
+.settings-tab em {
+  color: #FE5D26;
+  font-size: 2.4vh;
+}
+
+.settings-tab em:hover {
+  color: white;
+}
+
 /* ---------------------------------------------------------------  */
 /* MENU ICON  */
 /* ---------------------------------------------------------------  */
@@ -525,4 +534,13 @@ a {
 
 .greetings-website-link a {
   text-decoration: none;
+}
+
+.greeting b {
+  color: #FE5D26;
+  font-size: 3vh;
+}
+
+.greeting b:hover {
+  color: white;
 }

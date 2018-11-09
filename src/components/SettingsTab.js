@@ -115,7 +115,10 @@ class SettingsTab extends React.Component {
 
         return(
             <div className="settings-tab" onMouseLeave={this.handleMouseOut}>
-                <p className="text-block">Paste a link to a repository and click <b>'Upload'</b> to start.<br></br><br></br> Press <b>'Reset'</b> button to remove all the cards.</p>
+                <p className="text-block">
+                Paste a link to a repository and click <b>'Upload'</b> to start.<br></br><br></br> 
+                Press <em><i className="fas fa-retweet"></i></em> to upload cards from previous link <br></br><br></br>
+                Press <b>'Reset'</b> button to remove all the cards.</p> <br></br><br></br>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label> Link:<input type="text" defaultValue={this.setRepositoryLink()}/>
