@@ -25,23 +25,15 @@ class CardsMain extends React.Component {
             fetch(link)
             .then(res => res.json())
             .then(res => {
-
-                // get array of cards and dispatch it
-                const arrayOfCards = res.map(card => {
+                return res.map(card => {
                     return {
                         name: card.name,
                         link: card.link,
                         category: 'new'
                     }
                 })
-                
-                return arrayOfCards;
             })
             .then((arrayOfCards) => {
-                // save updated state in a local storage
-                // here we need to save current state to a local storage
-                // but first, check for a cards that already been moved
-
                 let newStateCardsArray = arrayOfCards;
                 if (localStorage.getItem('cardsState')) {
                     
@@ -58,13 +50,6 @@ class CardsMain extends React.Component {
                         }
                     }
                 }
-                
-                //////////////////////////////////////////////////
-                //////////////////////////////////////////////////
-                //////////////////////////////////////////////////
-
-                console.log(newStateCardsArray)
-
                 // send updated cards
                 this.props.dispatch(updateCardsArray(newStateCardsArray));
                 localStorage.clear();
