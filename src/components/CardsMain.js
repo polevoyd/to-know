@@ -4,6 +4,15 @@ import SettingsTab from './SettingsTab';
 
 class CardsMain extends React.Component {
 
+    /***********************************************************/
+    // Toggle a menu
+
+    toggleMenu(){
+
+    }
+
+    /***********************************************************/
+
     render(){
         return(
             <div>
