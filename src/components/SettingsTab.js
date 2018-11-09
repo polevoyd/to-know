@@ -113,7 +113,7 @@ class SettingsTab extends React.Component {
 
         return(
             <div className="settings-tab">
-                <p className="text-block">This is a organiser interface for a GitHub repository. Every file from a repo will be shown as a card, which you can open and drag and drop across three different categories. It makes comfortable to study concepts and code challanges, while making managing them in one place effortless. Hope you'll find it helpful for yourself too!</p>
+                <p className="text-block">Paste a link to a repository and click 'Upload' to start. Press 'Reset' button to remove all the cards.</p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label> Link:<input type="text" defaultValue={this.setRepositoryLink()}/>

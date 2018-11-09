@@ -315,8 +315,6 @@ pre > code {
 .settings-tab * {
   justify-self: center;
   align-self: center;
-  /* margin: 1vh 1vw 1vh 1vw; */
-  /* margin-right: 5vh; */
 }
 
 .settings-tab {
@@ -480,6 +478,5 @@ a {
   width: 50vw;
   height: 50vh;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
-
-/* * { outline: 1px solid orange; } */
