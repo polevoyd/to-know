@@ -132,7 +132,7 @@ class SettingsTab extends React.Component {
                     <input onChange={this.handleColorChange} type="color" id="color-background" name="color-background" value={this.props.cards.categoryColors[3]}></input>
                 </div>
                 <div className="picker-font">
-                    <label>Background: </label>
+                    <label>Font: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-font" name="color-font" value={this.props.cards.categoryColors[4]}></input>
                 </div>
                 <p className="name-tag"><a href="http://www.polevoy.in" target="blank">www.polevoy.in</a> </p>
