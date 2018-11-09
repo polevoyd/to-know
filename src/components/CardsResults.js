@@ -86,18 +86,13 @@ class CardsResults extends React.Component {
     /***********************************************************/
     
     render(){
-
-        const customBackgroundColor = {
-            backgroundColor: 'black'
-        }
-
         return(
             <div className="cards-all-results">
                 {this.props.cards.showCard ? 
                 <CardForm cardToShow={this.addSpacesToName(this.props.cards.showCardName)} user={this.props.cards.user} link={this.props.cards.showCardLink} handlePanelClicks={this.handlePanelClicks}/> : null}
                 <div className="drag-sections">
                     <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'new')} className="new">
-                        <CardPreview style={customBackgroundColor} cards={this.props.cards} category="new" onDragStart={this.onDragStart} handleClick={this.handleClick} addSpacesToName={this.addSpacesToName}/>
+                        <CardPreview cards={this.props.cards} category="new" onDragStart={this.onDragStart} handleClick={this.handleClick} addSpacesToName={this.addSpacesToName}/>
                         </div>
                     <div onDragOver={(event) => this.onDragOver(event)} onDrop={(event) => this.onDrop(event, 'active')} className="active">
                         <CardPreview cards={this.props.cards} category="active" onDragStart={this.onDragStart} handleClick={this.handleClick} addSpacesToName={this.addSpacesToName}/>
