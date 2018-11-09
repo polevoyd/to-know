@@ -111,18 +111,11 @@ class SettingsTab extends React.Component {
     }
 
     /***********************************************************/
-    // close settings tab when mouse out
-
-    handleMouseOut = () => {
-        // this.props.dispatch(toggleMenu())
-    }
-
-    /***********************************************************/
     render(){
 
         return(
             <div className="settings-tab" onMouseLeave={this.handleMouseOut}>
-                <p className="text-block">Paste a link to a repository and click <b>'Upload'</b> to start.<br></br> Press <b>'Reset'</b> button to remove all the cards.</p>
+                <p className="text-block">Paste a link to a repository and click <b>'Upload'</b> to start.<br></br><br></br> Press <b>'Reset'</b> button to remove all the cards.</p>
                 <div className="add-card">
                     <form onSubmit={this.handleLinkSubmit}>
                         <label> Link:<input type="text" defaultValue={this.setRepositoryLink()}/>
