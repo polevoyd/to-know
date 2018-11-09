@@ -85,10 +85,8 @@ html {
   -webkit-overflow-scrolling: touch;
   z-index: 1;
   margin-right: -10px;
-  /* pick background color  */
   background-color: #FAACA8;
   background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
-  
 }
 
 .new {
