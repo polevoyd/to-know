@@ -30,11 +30,11 @@ class CardPreview extends React.Component {
 
         switch (category) {
             case 'new':
-                return { backgroundColor: this.props.cards.categoryColors[0] , color: this.props.cards.categoryColors[4]}
+                return { backgroundColor: this.props.cards.categoryColors[0] , color: this.props.cards.categoryColors[3]}
             case 'active':
-                return { backgroundColor: this.props.cards.categoryColors[1] , color: this.props.cards.categoryColors[4]}
+                return { backgroundColor: this.props.cards.categoryColors[1] , color: this.props.cards.categoryColors[3]}
             case 'complete':
-                return { backgroundColor: this.props.cards.categoryColors[2] , color: this.props.cards.categoryColors[4]}
+                return { backgroundColor: this.props.cards.categoryColors[2] , color: this.props.cards.categoryColors[3]}
             default:
                 break
         }

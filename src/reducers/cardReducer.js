@@ -7,7 +7,7 @@ const initialState =
     showCardLink: null,
     user: '',
     cardsObjects: [],
-    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356', '#FFFFFF', '#000000'],
+    categoryColors: ['#FFFAE2', '#FCEC52', '#9FD356', '#000000'],
     menuIsOpened: false
 }
 

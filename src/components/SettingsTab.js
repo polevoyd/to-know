@@ -84,7 +84,6 @@ class SettingsTab extends React.Component {
         const one = document.querySelector('#color-one').value;
         const two = document.querySelector('#color-two').value;
         const three = document.querySelector('#color-three').value;
-        const bckground = document.querySelector('#color-background').value;
         const fontColor = document.querySelector('#color-font').value;
 
         this.props.dispatch(updateColors([one, two, three, bckground, fontColor]));
@@ -100,6 +99,13 @@ class SettingsTab extends React.Component {
         } else {
             return 'https://github.com/polevoyd/to-know-content';
         }
+    }
+
+    /***********************************************************/
+    // cleans storage
+
+    handleResetButtonClick() {
+        console.log('hi!')
     }
 
     /***********************************************************/
@@ -127,8 +133,8 @@ class SettingsTab extends React.Component {
                     <label>Third Category: </label>
                     <input onChange={this.handleColorChange} type="color" id="color-three" name="color-three" value={this.props.cards.categoryColors[2]}></input>
                 </div>
-                <div className="picker-background">
-                   <button>Reset</button>
+                <div className="button-reset">
+                   <button onClick={this.handleResetButtonClick}>Reset</button>
                 </div>
                 <div className="picker-font">
                     <label>Font: </label>

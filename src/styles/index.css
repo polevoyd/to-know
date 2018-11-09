@@ -400,12 +400,12 @@ pre > code {
   grid-column: 3;
 }
 
-.picker-background {
+.picker-font {
   grid-row: 4;
   grid-column: 1;
 }
 
-.picker-font {
+.button-reset {
   grid-row: 4;
   grid-column: 3;
 }
