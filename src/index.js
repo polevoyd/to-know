@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
+import './styles/mobile.css';
 import CardsMain from './components/CardsMain';
 
 import {createStore} from 'redux';

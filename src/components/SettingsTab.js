@@ -47,7 +47,6 @@ class SettingsTab extends React.Component {
                 // but first, check for a cards that already been moved
 
                 let newStateCardsArray = arrayOfCards;
-
                 if (localStorage.getItem('cardsState')) {
                     
                     // if we already have some set in local storage
