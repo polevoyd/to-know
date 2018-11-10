@@ -160,11 +160,11 @@
     height: 0;
     width: 100%;
     justify-self: center;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
   }
   
-  .card-edit-form .buttons-wrapper * {
-    margin: 0 2vw 0 2vw;
-  }
+  
   
   .card-edit-form-header h4 {
     width: 100%;
