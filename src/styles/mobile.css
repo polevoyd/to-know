@@ -257,7 +257,7 @@
     /* ---------------------------------------------------------------  */
 
     .code-block {
-      width: 100%;
+      width: 80vw;
       overflow-x: hidden;
       overflow-y: hidden;
       grid-column: 1;
@@ -297,8 +297,8 @@
 
     pre > code {
       padding: 1rem;
-      height: 90%;
-      width: 90%;
+      height: 130vh;
+      width: 130vw;
       border-bottom-left-radius: 1.5vw;
       border-bottom-right-radius: 1.5vw;
     }
