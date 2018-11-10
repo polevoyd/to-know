@@ -1,3 +1,7 @@
+@media only screen and (max-width: 411px) {
+
+
+
 /* ---------------------------------------------------------------  */
 /* GENERAL  */
 /* ---------------------------------------------------------------  */
@@ -22,7 +26,6 @@
   
   .card-preview {
     max-height: 20vh;
-    
     max-width: 80vw;
     margin: 5vh 5vw;
     display: grid;
@@ -75,6 +78,7 @@
     height: 100vh;
     position: absolute;
     top: 0;
+    overflow: hidden;
   }
   
   .drag-sections > div {
@@ -86,7 +90,7 @@
     margin-right: -10px;
     background-color: #FAACA8;
     background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
-    width: 36vw
+    width: 35vw;
   }
   
   .new {
@@ -541,3 +545,5 @@
   .greeting b:hover {
     color: white;
   }
+
+}
