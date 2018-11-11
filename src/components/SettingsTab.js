@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {addCards, toggleMenu} from '../actions/actions';
 import {addUsername} from '../actions/actions';
 import {updateColors} from '../actions/actions';
+import Greeting from './Greeting';
 
 /***********************************************************/
 
@@ -114,6 +115,7 @@ class SettingsTab extends React.Component {
 
         return(
             <div className="settings-tab" onMouseLeave={this.handleMouseOut}>
+                <Greeting />
                 <p className="text-block">
                 Paste a link to a repository and click <b>'Upload'</b> to start.<br></br><br></br> 
                 Press <em><i className="fas fa-retweet"></i></em> to upload cards from previous link <br></br><br></br>

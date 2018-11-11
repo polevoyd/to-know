@@ -321,12 +321,12 @@ pre > code {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60%;
+  height: 100%;
   border-bottom: 1px solid lightgray;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
   padding-top: 2vh;
   background-color: #FAACA8;
   background-image: linear-gradient(180deg, #FAACA8 0%, #DDD6F3 100%);
@@ -340,13 +340,27 @@ pre > code {
   100% { transform: translateY(0); opacity: 1; }
 }
 
+.greeting {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  grid-row: 1;
+  grid-column: 1/4;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+}
+
+.greeting * {
+  width: 80vw;
+}
+
 .settings-tab a {
   display: block;
   margin: 0 auto;
 }
 
 .add-card {
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 1/4;
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
@@ -405,32 +419,32 @@ pre > code {
 }
 
 .picker-one {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 1;
 }
 
 .picker-two {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 2;
 }
 
 .picker-three {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 3;
 }
 
 .picker-font {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 1;
 }
 
 .button-reset {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 3;
 }
 
 .text-block {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 1/5;
   justify-self: center;
   align-self: center;
@@ -439,7 +453,7 @@ pre > code {
 }
 
 .name-tag {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 2;
   justify-self: center;
   align-self: center;
@@ -505,43 +519,4 @@ a {
 
 .refresh-icon:hover {
   color: rgb(255, 255, 255);
-}
-
-/* ---------------------------------------------------------------  */
-/* GREETING  */
-/* ---------------------------------------------------------------  */
-
-.greeting {
-  z-index: 5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40vw;
-  margin-top: -25vh;
-  width: 80vw;
-  height: 50vh;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 1px;
-}
-
-.greetings-website-link {
-  margin-top: 10vh;
-  color: black;
-  font-weight: bold;
-  font-size: 1.4vh;
-  text-decoration: none;
-}
-
-.greetings-website-link a {
-  text-decoration: none;
-}
-
-.greeting b {
-  color: #FE5D26;
-  font-size: 3vh;
-}
-
-.greeting b:hover {
-  color: white;
 }
