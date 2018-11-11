@@ -13,14 +13,28 @@ class CardsMain extends React.Component {
     }
 
     /***********************************************************/
+    // returns link to repo
+     
+    checkForLinkToFetch() {
+        if (localStorage.getItem('cardsState') && localStorage.getItem('cardsState').user) {
+            return JSON.parse(localStorage.getItem('cardsState').user)
+        } else if (this.props.cards.user) {
+            return this.props.cards.user;
+        } else {
+            return 'https://github.com/polevoyd/cpp-challenges'
+        }
+    }
+
+    /***********************************************************/
     // on refresh 
 
     handleRefreshCards = (event) => {
         event.preventDefault();
 
-        if (localStorage.getItem('cardsState')) {
-            
-            const previousLink = JSON.parse(localStorage.getItem('cardsState')).user;
+            const previousLink = this.checkForLinkToFetch();
+
+            console.log(previousLink)
+
             const link = `https://to-know.herokuapp.com?repo=${previousLink}`;
             fetch(link)
             .then(res => res.json())
@@ -59,9 +73,6 @@ class CardsMain extends React.Component {
                 localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
                 // window.location.reload();
             })
-        } else {
-            console.log('There is no previously saved link.')
-        }
     }
 
     /***********************************************************/
@@ -79,7 +90,6 @@ class CardsMain extends React.Component {
                 <div className="menu-icon" onClick={this.handleMenuToggle}><i className="far fa-caret-square-down"></i></div>
                 <div className="refresh-icon" onClick={this.handleRefreshCards}><i className="fas fa-retweet"></i></div>
                 {this.props.cards.menuIsOpened ? <SettingsTab /> : null}
-                {localStorage.getItem('cardsState') ? null : <Greeting />}
                 <CardsResults />
             </div>
         );
