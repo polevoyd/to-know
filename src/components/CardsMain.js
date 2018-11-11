@@ -2,19 +2,22 @@ import React from 'react';
 import CardsResults from './CardsResults';
 import SettingsTab from './SettingsTab';
 import { connect } from 'react-redux';
-import Greeting from './Greeting';
-import {toggleMenu, updateCardsArray} from '../actions/actions';
+import {toggleMenu, updateCardsArray, addUsername} from '../actions/actions';
 
 class CardsMain extends React.Component {
     constructor(props) {
         super(props);
         this.handleMenuToggle = this.handleMenuToggle.bind(this);
         this.handleRefreshCards = this.handleRefreshCards.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
+    componentDidMount() {
+        this.handleRefreshCards();
+    }
     /***********************************************************/
     // returns link to repo
-     
+
     checkForLinkToFetch() {
         if (localStorage.getItem('cardsState') && localStorage.getItem('cardsState').user) {
             return JSON.parse(localStorage.getItem('cardsState').user)
@@ -28,24 +31,24 @@ class CardsMain extends React.Component {
     /***********************************************************/
     // on refresh 
 
-    handleRefreshCards = (event) => {
-        event.preventDefault();
-
+    handleRefreshCards = () => {
             const previousLink = this.checkForLinkToFetch();
-
-            console.log(previousLink)
 
             const link = `https://to-know.herokuapp.com?repo=${previousLink}`;
             fetch(link)
             .then(res => res.json())
             .then(res => {
-                return res.map(card => {
+
+                // get array of cards and dispatch it
+                const arrayOfCards = res.map(card => {
                     return {
                         name: card.name,
                         link: card.link,
                         category: 'new'
                     }
                 })
+                this.props.dispatch(addUsername(previousLink));
+                return arrayOfCards;
             })
             .then((arrayOfCards) => {
                 let newStateCardsArray = arrayOfCards;
