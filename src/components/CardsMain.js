@@ -2,7 +2,7 @@ import React from 'react';
 import CardsResults from './CardsResults';
 import SettingsTab from './SettingsTab';
 import { connect } from 'react-redux';
-import {toggleMenu, updateCardsArray, addUsername} from '../actions/actions';
+import {toggleMenu, updateCardsArray, addUsername, closeMenu} from '../actions/actions';
 
 class CardsMain extends React.Component {
     constructor(props) {
@@ -74,7 +74,7 @@ class CardsMain extends React.Component {
             .then(() => {
                 // finally, saving updated state
                 localStorage.setItem('cardsState', JSON.stringify(this.props.cards));
-                // window.location.reload();
+                this.props.dispatch(closeMenu());
             })
     }
 

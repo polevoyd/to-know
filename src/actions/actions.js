@@ -14,6 +14,7 @@ export const ADD_USERNAME = 'ADD_USERNAME'
 export const UPDATE_COLORS = 'UPDATE_COLORS'
 export const TOGGLE_MENU = 'TOGGLE_MENU'
 export const UPDATE_CARDS_ARRAY = 'UPDATE_CARDS_ARRAY'
+export const MENU_CLOSE = 'MENU_CLOSE';
 
 /*
  * action creators
@@ -57,4 +58,8 @@ export function toggleMenu() {
 
 export function updateCardsArray(newStateCardsArray) {
     return { type: UPDATE_CARDS_ARRAY, newCardsArray: newStateCardsArray }
+}
+
+export function closeMenu() {
+    return { type: MENU_CLOSE }
 }

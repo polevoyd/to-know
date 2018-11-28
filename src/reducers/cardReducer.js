@@ -26,6 +26,7 @@ const cardReducer = (state = initialState, action) => {
         case 'SHOW_CARD':
         return {
             ...state,
+            menuIsOpened: false,
             showCard: !state.showCard,
             showCardName: action.name,
             showCardLink: action.link
@@ -35,6 +36,7 @@ const cardReducer = (state = initialState, action) => {
         return {...initialState,
             showCard: !state.showCard,
             user: state.user,
+            menuIsOpened: false,
             cardsObjects: state.cardsObjects
         }
 
@@ -53,14 +55,21 @@ const cardReducer = (state = initialState, action) => {
             return action.state;
 
         case 'UPDATE_COLORS':
-            return { ...state, categoryColors: action.categoryColors }
+            return { ...state, 
+                categoryColors: action.categoryColors }
 
         case 'TOGGLE_MENU':
-            return { ...state, menuIsOpened: !state.menuIsOpened }
+            return { ...state,
+                menuIsOpened: !state.menuIsOpened }
 
         case 'UPDATE_CARDS_ARRAY':
-            return { ...state, cardsObjects: action.newCardsArray }
+            return { ...state,  
+                cardsObjects: action.newCardsArray }
 
+        case 'MENU_CLOSE':
+                return {...state,
+                menuIsOpened: false }
+                
         default:
             return state;
     }
